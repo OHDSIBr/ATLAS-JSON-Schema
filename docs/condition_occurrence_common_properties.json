@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "First" : {"type" : "boolean","title":"Add First Diagnosis","headerTemplate":" For the first time in the person's history.","format":"checkbox","description":"Limit Condition Occurrences to new diagnosis."},
+        "Age" : {"title":"Add Age at Occurrence","headerTemplate":"with age in years at occurrence ","description":"Filter Condition Occurrences by age at occurrence.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Gender"   : {"title":"Add Gender","headerTemplate":"with gender of: ","description":"Filter Condition Occurrences based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+        "OccurrenceStartDate" : {"title":"Add Condition Start Date","headerTemplate":"occurrence start is: ","description":"Filter Condition Occurrences by the Condition Start Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "OccurrenceEndDate" : {"title":"Add Condition End Date","headerTemplate":"occurrence end is: ","description":"Filter Condition Occurrences by the Condition End Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "ConditionTypeExclude" : {"type" : "boolean","title":"Exclude Condition Type","headerTemplate":" Condition Type is not any of selected","format":"checkbox","description":"Condition type is none of the following: "},
+        "ConditionType"   : {"title":"Add Condition Type...","headerTemplate":"with Condition Type of: ","description":"Filter Condition Occurrences by the Condition Type.","id": "arr_item","$ref" : "condition_type_criteria.json"},
+        "ProviderSpecialty"   : {"title":"Add Provider Specialty...","headerTemplate":"with a Provider Specialty of: ","description":"Filter Condition Occurrences based on provider specialty.","id": "arr_item","$ref" : "condition_type_criteria.json"},
+        "OccurrenceCount" : {"title":"Add Condition Count Criteria","headerTemplate":"with ocurrence count: ","description":"Filter Condition Eras by the Condition Count.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "CorrelatedCriteriaRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}}
+        }
+}

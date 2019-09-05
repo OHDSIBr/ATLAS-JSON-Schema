@@ -1,0 +1,270 @@
+    "required":["DemographicCriteriaList"],
+        "DemographicCriteriaList":{
+          "title": "Add: ",
+          "options":{"required_by_default":false,"no_additional_properties": true,"display_required_only":true},
+          "properties":{
+        }
+      }
+
+  "options":{"display_required_only":false},
+  ,"no_additional_properties":true
+    "minItems": 1,
+
+  "options":{"required_by_default":false,"no_additional_properties": true,"display_required_only":true},
+  "patternProperties": {
+    "^Op$": { "type": "string" },
+    "^Value$": { "type": "string" },
+    "^Extent$": { "type": "string" }
+  },
+{
+           "STANDARD_CONCEPT_CAPTION":{
+            "title":"Standard Concept",
+            "type":"string",
+            "default": "Standard",
+            "enum":["Standard","Classification","Non-Standard",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+            }
+          },
+          "STANDARD_CONCEPT":{
+            "type":"string",
+            "maxLength": 1,
+            "readOnly":true,
+            "watch":{
+              "stdc":"STANDARD_CONCEPT_CAPTION"
+            },
+          "options": {
+            "hidden": true
+          },
+            "enumSource": "stdc"
+          },
+          "INVALID_REASON_CAPTION":{
+            "title":"Invalid Reason",
+            "type":"string",
+            "default": "Valid",
+            "enum":["Valid","Deleted","Upgraded",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+            }
+          },
+          "INVALID_REASON":{
+            "type":"string",
+            "maxLength": 1,
+            "options": {
+              "hidden": true
+            },
+            "readOnly":true,
+            "watch":{
+              "irc":"INVALID_REASON_CAPTION"
+            },
+            "enumSource": "irc"
+          },
+          "CONCEPT_CLASS_ID":{
+            "title":"Concept Class",
+            "type":"string",
+            "maxLength": 20,
+            "options":{"grid_columns": 4}
+          }
+      }
+
+          "patternProperties": {
+        "^STANDARD_CONCEPT_CAPTION$": { "type": "string" },
+        "^STANDARD_CONCEPT$": { "type": "string" },
+        "^INVALID_REASON_CAPTION$": { "type": "string" },
+        "^INVALID_REASON$": { "type": "string" },
+        "^CONCEPT_CLASS_ID$": { "type": "string" }
+        },
+
+  "allOf":[
+      {"$ref":"primary/concept_core.json"},
+      {
+        "properties":{
+          "STANDARD_CONCEPT_CAPTION":{
+            "title":"Standard Concept",
+            "type":"string",
+            "default": "Standard",
+            "enum":["Standard","Classification","Non-Standard",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+            }
+          },
+          "STANDARD_CONCEPT":{
+            "type":"string",
+            "maxLength": 1,
+            "readOnly":true,
+            "watch":{
+              "stdc":"STANDARD_CONCEPT_CAPTION"
+            },
+          "options": {
+            "hidden": true
+          },
+            "enumSource": "stdc"
+          },
+          "INVALID_REASON_CAPTION":{
+            "title":"Invalid Reason",
+            "type":"string",
+            "default": "Valid",
+            "enum":["Valid","Deleted","Upgraded",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+            }
+          },
+          "INVALID_REASON":{
+            "type":"string",
+            "maxLength": 1,
+            "options": {
+              "hidden": true
+            },
+            "readOnly":true,
+            "watch":{
+              "irc":"INVALID_REASON_CAPTION"
+            },
+            "enumSource": "irc"
+          },
+          "CONCEPT_CLASS_ID":{
+            "title":"Concept Class",
+            "type":"string",
+            "maxLength": 20,
+            "options":{"grid_columns": 4}
+          }
+        }
+      }
+    ]
+{
+  "type": "object",
+      "$ref":"http://localhost:8080/docs/primary/concept_core.json",
+
+        "properties":{
+          "STANDARD_CONCEPT_CAPTION":{
+            "title":"Standard Concept",
+            "type":"string",
+            "enum":["Standard","Classification","Non-Standard",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+            }
+          },
+          "STANDARD_CONCEPT":{
+            "type":"string",
+            "minLength": 1,
+            "maxLength": 1,
+            "readOnly":true,
+            "watch":{
+              "stdc":"STANDARD_CONCEPT_CAPTION"
+            },
+          "options": {
+            "hidden": true
+          },
+            "enumSource": "stdc"
+          },
+          "INVALID_REASON_CAPTION":{
+            "title":"Invalid Reason",
+            "type":"string",
+            "default": "Valid",
+            "enum":["Valid","Deleted","Upgraded",""],
+            "options":{
+              "grid_columns": 4,
+              "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+            }
+          },
+          "INVALID_REASON":{
+            "type":"string",
+            "maxLength": 1,
+            "options": {
+              "hidden": true
+            },
+            "readOnly":true,
+            "watch":{
+              "irc":"INVALID_REASON_CAPTION"
+            },
+            "enumSource": "irc"
+          },
+          "CONCEPT_CLASS_ID":{
+            "title":"Concept Class",
+            "type":"string",
+            "maxLength": 20,
+            "options":{"grid_columns": 4}
+          }
+        }
+,
+
+  "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+"adittionalProperties":false,
+
+  "dependencies": {
+    "credit_card": {
+"adittionalProperties":false,
+      "properties": {
+        "billing_address": { "type": "string" }
+      }
+    }
+{
+      "$ref":"http://localhost:8080/docs/ConceptSetsType.json"
+}
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id":"ConceptType",
+  "type": "object",
+  "title":"Concept",
+  "format":"grid-strict",
+  "additionalProperties":false,
+  "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+    "properties":{
+      "Concept":{"$ref":"http://localhost:8080/docs/primary/concept_core.json"},
+      "STANDARD_CONCEPT_CAPTION":{
+          "title":"Standard Concept",
+          "type":"string",
+          "default": "Standard",
+          "enum":["Standard","Classification","Non-Standard",""],
+          "options":{
+            "grid_columns": 4,
+            "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+          }
+        },
+        "STANDARD_CONCEPT":{
+          "type":"string",
+          "maxLength": 1,
+          "readOnly":true,
+          "watch":{
+            "stdc":"STANDARD_CONCEPT_CAPTION"
+          },
+        "options": {
+          "hidden": true
+        },
+          "enumSource": "stdc"
+        },
+        "INVALID_REASON_CAPTION":{
+          "title":"Invalid Reason",
+          "type":"string",
+          "default": "Valid",
+          "enum":["Valid","Deleted","Upgraded",""],
+          "options":{
+            "grid_columns": 4,
+            "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+          }
+        },
+        "INVALID_REASON":{
+          "type":"string",
+          "maxLength": 1,
+          "options": {
+            "hidden": true
+          },
+          "readOnly":true,
+          "watch":{
+            "irc":"INVALID_REASON_CAPTION"
+          },
+          "enumSource": "irc"
+        },
+        "CONCEPT_CLASS_ID":{
+          "title":"Concept Class",
+          "type":"string",
+          "maxLength": 20,
+          "options":{"grid_columns": 4}
+        }
+      }
+}

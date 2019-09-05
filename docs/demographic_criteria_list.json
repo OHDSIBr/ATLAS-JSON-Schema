@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Filter events based on Demographic criteria:",
+  "description":"Add attributes using the Properties button...",
+  "additionalProperties": true,
+  "items": {
+    "$id": "/properties/PrimaryCriteria/properties/DemographicCriteriaList/items",
+    "title": "Demographic Criteria: ",
+    "headerTemplate": "Filter events based on: ",
+    "type":"object",
+    "additionalProperties": false,
+    "options":{
+        "no_additional_properties": true,
+        "display_required_only":true,
+        "required_by_default":false,
+        "remove_empty_properties": true,
+        "disable_edit_json":true,
+        "disable_collapse":false,
+        "disable_properties":false
+      },
+    "properties":
+      {
+        "Age":{"title":"Age Criteria","description":"With age: ","$ref":"NumericRange.json"},
+        "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"primary/concept_array.json"},
+        "OccurrenceStartDate":{"title":"Event Start Date Criteria","description":"Occurence start is: ","$ref":"DateRange.json"},
+        "OccurrenceEndDate":{"title":"Event End Date Criteria","description":"Occurence end is: ","$ref":"DateRange.json"},
+        "Race":{"title":"Race Criteria","description":"With a race of: ","$ref":"primary/concept_array.json"},
+        "Ethnicity":{"title":"Ethnicity Criteria","description":"With a ethnicity of: ","$ref":"primary/concept_array.json"}
+      }
+    }
+}
+  

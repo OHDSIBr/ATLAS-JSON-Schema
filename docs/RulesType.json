@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items":{
+    "id": "arr_item",
+    "title":"Concept Element",
+    "required":["concept","includeDescendants","includeMapped"],
+    "type":"object",
+    "properties":{
+            "concept":{"$ref":"primary/ConceptType.json"},
+            "includeDescendants": {"type":"boolean","title":"Include Descendants"},
+            "includeMapped": {"type":"boolean","title":"Include Mapped"}
+    }
+  }
+}

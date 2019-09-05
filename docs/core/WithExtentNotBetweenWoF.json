@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "required":["Value","Op","Extent"],
+	"format":"grid-strict",
+  "options":{
+    "remove_empty_properties":true,
+    "display_required_only":false
+  },
+  "properties":{
+    "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "!bt" ],"options":{"grid_columns":4,"enum_titles":["Not Between"]}},
+    "Value":{"title":"date:","type": "string","options":{"grid_columns":4}},
+    "Extent":{"title":"and","type": "string","options":{"grid_columns":4}}
+  }
+}

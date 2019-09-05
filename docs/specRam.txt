@@ -1,0 +1,9 @@
+DDR2, 667MHz, Non-ECC, CL5, 1.8V, Unbuffered, SODIMM, 200-pin
+2 GB
+
+Dual-Channel Memory Kit 
+Module organisation 512Mx64
+200pin SO-DIMM DDR2 - PC2-6400 - 800MHz
+
+For Micron 4GB 667Mhz DDR2 PC2 5300 SODIMM 200Pin Laptop Notebook Memory 1.8V DL
+

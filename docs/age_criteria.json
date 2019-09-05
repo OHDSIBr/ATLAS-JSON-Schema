@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "format":"grid-strict",
+    "required":["Age"],
+    "options":{
+        "disable_edit_json":true,
+        "disable_properties":true,
+        "keep_oneof_values": false
+        },
+        "additionalProperties": true,
+        "properties":{
+        "Age":{"title":"With age: ","$ref":"NumericRange.json"}
+    }
+}

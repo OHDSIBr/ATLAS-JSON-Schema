@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "$id": "WindowType",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "defaultProperties": [
+    "Start",
+    "End"
+  ],
+  "required": [
+    "Start",
+    "End"
+  ],
+  "properties":{
+    "Start":{
+    "title":"Start",
+    "$ref":"windowLimit.json"
+    },
+    "End":{
+    "type": "object",
+    "options":{"disable_edit_json":true,"disable_properties":true},
+    "title":"End",
+    "properties":{
+      "Days":{"$ref":"primary/windowDayOptions.json"},
+      "Coeff":{"$ref":"primary/windowCoeffOptions.json"},
+      "UseEventEnd":{"format":"checkbox","type":"boolean"}
+      }
+    }
+  }
+}

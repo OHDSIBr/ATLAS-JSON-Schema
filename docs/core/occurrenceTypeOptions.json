@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"integer",
+  "description" : "The type of occurrence; '0' is 'EXACTLY', '1' is 'AT MOST', '2' is 'AT LEAST'",
+  "enum":[0,1,2],
+  "options":{
+    "enum_titles":["exactly","at most","at least"]
+  }
+}

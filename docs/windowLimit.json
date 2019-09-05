@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"object",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "required":["Days","Coeff"],
+  "properties":{
+      "Days":{"$ref":"primary/windowDayOptions.json"},
+      "Coeff":{"$ref":"primary/windowCoeffOptions.json"}
+  }
+}

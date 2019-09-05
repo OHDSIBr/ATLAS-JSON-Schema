@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "format":"grid-strict",
+    "required":["OccurrenceStartDate"],
+    "options": {
+        "keep_oneof_values": false
+    },
+    "additionalProperties": true,
+    "properties":{
+        "OccurrenceStartDate" : {"title":"Occurence start is: ","$ref" : "DateRange.json"}
+    }
+}

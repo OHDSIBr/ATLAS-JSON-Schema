@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "First" : {"type" : "boolean","title":"Add First Diagnosis Criteria","headerTemplate":" For the first time in the person's history.","format":"checkbox"},
+        "AgeAtStart" : {"title":"Add Age at Era Start Criteria","headerTemplate":"with age in years at era start","description":"Filter Condition Eras by age at era start.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "AgeAtEnd" : {"title":"Add Age at Era End Criteria","headerTemplate":"with age in years at era end","description":"Filter Condition Eras by age at era end.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Gender"   : {"title":"Add Gender Criteria...","headerTemplate":"with gender of: ","description":"Filter Condition Eras based on gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+        "EraStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"era start is: ","description":"Filter Condition Eras by Era Start Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "EraEndDate" : {"title":"Add End Date Criteria","headerTemplate":"era end is: ","description":"Filter Condition Eras by Era End Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "OccurrenceCount" : {"title":"Add Condition Count Criteria","headerTemplate":"with ocurrence count: ","description":"Filter Condition Eras by the Condition Count.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "CorrelatedCriteriaRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}}
+        }
+}

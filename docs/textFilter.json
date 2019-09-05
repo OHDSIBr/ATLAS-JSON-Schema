@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type":"object",
+  "description" : "TextFilter: A text filter",
+  "required":["Text","Op"],
+  "properties":{
+    "Text":{
+        "type": "string"
+    },
+    "Op":{"$ref":"primary/textOperationOptions.json"}
+  }
+}

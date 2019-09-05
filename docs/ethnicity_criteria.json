@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "With a ethnicity of..",
+  "type":"array",
+  "items":{
+    "id": "arr_item",
+    "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
+    "options": {
+      "grid_columns":8,
+      "keep_oneof_values": false,
+      "disable_collapse":false,
+      "disable_edit_json":true,
+      "disable_properties":true,
+      "additionalProperties": false
+    },
+    "properties":{
+      "Ethnicity":{"title":"With a ethnicity of: ","$ref":"primary/concept_core.json"}
+    }
+  }
+}

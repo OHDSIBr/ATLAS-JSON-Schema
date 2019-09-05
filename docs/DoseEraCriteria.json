@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Dose Era Criteria...",
+  "required":["DoseEra"],
+  "additionalProperties": false,
+  "type":"object",
+  "properties":{
+    "DoseEra":{"$ref" : "condition_era_property.json"}
+  }
+}

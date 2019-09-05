@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title":"Drug Exposure Criteria",
+    "type":"object",
+    "additionalProperties": false,
+    "properties":{
+      "CodesetId":{"type":"integer"},
+      "OccurrenceStartDate":{"type":"string","format":"date"},
+      "OccurrenceEndDate":{"type":"string","format":"date"},
+      "DrugType":{"type":"string"},
+      "StopReason":{"type":"string"},
+      "Refills":{"type":"string"},
+      "Quantity":{"type":"string"},
+      "DaysSupply":{"type":"string"},
+      "RouteConcept":{"type":"string"},
+      "EffectiveDrugDose":{"type":"string"},
+      "DoseUnit":{"type":"string"},
+      "LotNumber":{"type":"string"},
+      "DrugSourceConcept":{"type":"string"},
+      "DerivedFields":{
+          "type":"object",
+          "properties":{
+            "First":{"type":"string","format":"date"},
+            "Age":{"type":"integer"},
+            "Gender":{"type":"string"},
+            "ProviderSpeciality":{"type":"string"},
+            "VisitType":{"type":"string"}
+          }
+        }
+    }
+  }

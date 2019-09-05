@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "definitions": {
+    "address": {
+      "$id": "concept_essence",
+      "type": "object",
+      "title": "Concept Essence",
+      "aditionalProperties": false,
+      "required": [
+        "CONCEPT_CODE",
+        "CONCEPT_ID",
+        "CONCEPT_NAME",
+        "DOMAIN_ID",
+        "VOCABULARY_ID"
+      ],
+      "properties": {
+        "CONCEPT_CODE": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "CONCEPT_ID": {
+          "type": "integer"
+        },
+        "CONCEPT_NAME": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "DOMAIN_ID": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "VOCABULARY_ID": {
+          "type": "string",
+          "maxLength": 20
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "billing_address": {
+      "$ref": "#/definitions/address"
+    },
+    "shipping_address": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/address"
+        },
+        {
+          "properties": {
+            "STANDARD_CONCEPT_CAPTION": {
+              "type": "string",
+              "default": "Standard",
+              "enum": [
+                "Standard",
+                "Classification",
+                "Non-Standard",
+                ""
+              ],
+              "options": {
+                "enum_titles": [
+                  "Standard",
+                  "Classification",
+                  "Non-Standard",
+                  "Unknown"
+                ]
+              }
+            },
+            "STANDARD_CONCEPT": {
+              "type": "string",
+              "maxLength": 1,
+              "readOnly": true,
+              "watch": {
+                "stdc": "shipping_address.STANDARD_CONCEPT_CAPTION"
+              },
+              "options": {
+                "hidden": true
+              },
+              "enumSource": "stdc"
+            },
+            "INVALID_REASON_CAPTION": {
+              "type": "string",
+              "default": "Valid",
+              "enum": [
+                "Valid",
+                "Deleted",
+                "Upgraded",
+                ""
+              ],
+              "options": {
+                "enum_titles": [
+                  "Valid",
+                  "Deleted",
+                  "Upgraded",
+                  "Unknown"
+                ]
+              }
+            },
+            "INVALID_REASON": {
+              "type": "string",
+              "maxLength": 1,
+              "options": {
+                "hidden": true
+              },
+              "readOnly": true,
+              "watch": {
+                "irc": "shipping_address.INVALID_REASON_CAPTION"
+              },
+              "enumSource": "irc"
+            },
+            "CONCEPT_CLASS_ID": {
+              "type": "string",
+              "maxLength": 20
+            }
+          },
+          "required": [
+            "CONCEPT_ID",
+            "CONCEPT_NAME",
+            "STANDARD_CONCEPT_CAPTION",
+            "INVALID_REASON_CAPTION",
+            "STANDARD_CONCEPT",
+            "INVALID_REASON",
+            "CONCEPT_CODE",
+            "DOMAIN_ID",
+            "VOCABULARY_ID",
+            "CONCEPT_CLASS_ID"
+          ]
+        }
+      ]
+    }
+  }
+}

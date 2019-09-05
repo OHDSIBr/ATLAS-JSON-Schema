@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"string",
+  "default":"ALL",
+  "enum":["ALL","ANY","AT_LEAST","AT_MOST"],
+  "options":{
+    "enum_titles":["all","any","at least","at most"]
+  }
+}

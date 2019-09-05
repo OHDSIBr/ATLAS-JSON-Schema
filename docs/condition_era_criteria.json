@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Condition Era...",
+  "required":["ConditionEra"],
+  "additionalProperties": false,
+  "type":"object",
+  "options": {
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "ConditionEra":{"$ref" : "condition_era_property.json"}
+  }
+}

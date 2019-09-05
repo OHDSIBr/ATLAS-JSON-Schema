@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Atlas Fenotype",
+  "type": "object",
+  "format": "categories",
+ "required":[
+     "ConceptSets"
+    ,"PrimaryCriteria"
+    ,"QualifiedLimit"
+    ,"ExpressionLimit"
+    ,"InclusionRules"
+    ,"CensoringCriteria"
+    ,"CollapseSettings"
+    ,"CensorWindow"
+    ,"EndStrategy"
+  ],
+  "additionalProperties":false,
+  "options": {
+    "disable_properties":true,
+    "disable_edit_json":false,
+    "display_required_only":true,
+    "no_additional_properties":true,
+    "remove_empty_properties": false
+  },
+  "properties": {
+    "ConceptSets": {"$ref":"docs/concept_sets.json"},
+    "PrimaryCriteria":{
+      "title":"Cohort Entry Events",
+      "description":"Events having any of the following criteria:",
+      "type": "object",
+      "format": "categories",
+      "additionalProperties":false,
+      "required":["CriteriaList","ObservationWindow","PrimaryCriteriaLimit"],
+      "options": {
+        "disable_collapse":true,
+        "disable_edit_json":false,
+        "disable_properties":true,
+        "display_required_only":true,
+        "no_additional_properties":true,
+        "remove_empty_properties": false
+      },
+      "properties": {
+        "CriteriaList":{
+          "$id": "/properties/PrimaryCriteria/properties/CriteriaList",
+          "$ref":"docs/CorrelatedCriteriaListType.json",
+          "additionalProperties":false,
+          "options": {
+            "disable_collapse":true,
+            "disable_edit_json":false,
+            "disable_properties":true,
+            "display_required_only":true,
+            "no_additional_properties":true,
+            "remove_empty_properties": false
+          }
+            },
+        "ObservationWindow":{
+          "$id": "/properties/PrimaryCriteria/properties/ObservationWindow",
+          "title": "Observation Window",
+          "headerTemplate":" ",
+          "description":"With continuous observation of at least:",
+          "$ref":"docs/observation_window.json"
+        },
+        "PrimaryCriteriaLimit":{
+          "type": "object",
+          "title": "Result Limit Options",
+          "headerTemplate":" ",
+          "required":["Type"],
+          "options": {
+            "disable_collapse":true,
+            "disable_edit_json":true,
+            "disable_properties":true,
+            "display_required_only":true,
+            "no_additional_properties":true,
+            "remove_empty_properties": false
+          },
+          "properties":{
+              "Type": {
+              "title": "Limit initial events to:",
+              "description": " ...per person",
+              "$ref":"docs/primary/resultLimitOptions.json"
+            }
+          }
+        }
+      }
+    },
+    "QualifiedLimit": {
+      "type": "object",
+      "properties":{
+        "Type": {"$ref":"docs/primary/resultLimitOptions.json"}
+      }
+    },
+    "InclusionRules": {
+      "title":"Inclusion Criteria",
+      "description":"The qualifying cohort will be defined as all persons who have an initial event, satisfy the initial event inclusion criteria, and fulfill all additional qualifying inclusion criteria. Each qualifying inclusion criteria will be evaluated to determine the impact of the criteria on the attrition of persons from the initial cohort.",
+      "$ref":"docs/Rules.json"
+    },
+    "ExpressionLimit": {
+      "type": "object",
+      "title":"Inclusion Criteria - Limit",
+      "properties":{
+        "Type": {
+          "title":"Limit qualifying events to: ",
+          "description":" ...per person.",
+          "$ref":"docs/primary/resultLimitOptions.json"
+        }
+      }
+    },
+    "CollapseSettings": {
+      "title":"Cohort Eras: Gap Size",
+      "type": "object",
+      "description": "Defines collapse settings",
+      "properties":{
+        "collapseType": {
+        "type":"string",
+        "enum":["ERA"],
+        "options": {"hidden": true}
+        },
+        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"docs/primary/dayOptions.json"}
+      }
+    },
+    "EndStrategy":{
+        "headerTemplate":"Event will persist until: ",
+        "title":"Cohort Exit - Event Persistence",
+        "type":"object",
+        "required":true,
+        "options":{"disable_edit_json":false,"disable_properties":false},
+        "$ref":"docs/EndStrategyType.json"
+    },
+    "CensoringCriteria": {
+      "title":"Cohort Exit - Censoring Events",
+      "description":"Exit Cohort based on the following criteria:",
+      "$ref":"docs/CorrelatedCriteriaListType.json"
+    },
+    "CensorWindow": {
+      "title":"Cohort Eras: Censoring",
+      "description":"Add trimming options...",
+      "required":true,
+      "defaultProperties":["StartDate","EndDate"],
+      "$ref":"docs/primary/CensoringPeriod.json"
+    }
+  }
+}

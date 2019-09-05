@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Custom Era",
+  "description": "OK - The drug custom era strategy",
+  "type":"object",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "required":["drugCodesetId","GapDays","Offset"],
+  "properties":{
+    "drugCodesetId": {
+      "title":"Concept set containing the drug(s) of interest: ",
+      "$ref" : "primary/codeset_id_type.json"
+    },
+    "GapDays":{
+      "title":"Persistence window: allow for a maximum of... ",
+      "description": " ...days between exposure records when inferring the era of persistence exposure.",
+      "default": 0,
+      "$ref":"primary/dayOptionsInteger.json"
+    },
+    "Offset":{
+      "title":"Surveillance window: add... ",
+      "description":" ...days to the end of the era of persistence exposure as an additional period of surveillance prior to cohort exit.",
+      "$ref":"primary/dayOptionsInteger.json",
+      "default": 0
+    }
+  }
+}

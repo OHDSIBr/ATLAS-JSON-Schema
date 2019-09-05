@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Initial event",
+  "headerTemplate":"Add Initial Event",
+  "description":"People having any of the following events...",
+  "options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
+  "items": {
+  "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
+  "title": "Initial Event: ",
+  "type":"object",
+  "aditionalProperties":"false",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "properties":{
+      "Criteria":{
+        "title": "Add: ",
+        "oneOf":[
+            {"$ref":"condition_era_criteria.json"},
+            {"$ref":"ConditionOccurrenceCriteria.json"},
+            {"$ref":"DeathCriteria.json"},
+            {"$ref":"DeviceExposureCriteria.json"},
+            {"$ref":"DoseEraCriteria.json"},
+            {"$ref":"drug_era_criteria.json"},
+            {"$ref":"drug_exposure_criteria.json"},
+            {"$ref":"VisitOccurrenceCriteria.json"}
+          ]
+      }
+    }
+  }
+}

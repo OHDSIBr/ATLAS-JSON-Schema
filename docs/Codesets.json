@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"array",
+  "items":{
+    "headerTemplate": "{{ i1 }} - {{ self.name }}",
+    "properties":{
+      "name":{"type":"string"},
+      "expression":{
+        "type":"object",
+        "properties":{
+          "items":{"$ref":"ConceptSetsType.json"}
+        }
+      }    
+    }
+  }
+}

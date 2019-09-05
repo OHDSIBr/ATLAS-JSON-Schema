@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Visit Occurrence Criteria ",
+  "type" : "object",
+  "description" : "Visit Occurrence Criteria",
+  "required":["First"],
+  "options":{"required_by_default":false,"disable_edit_json":true,"disable_properties":false},
+  "aditionalProperties":"false",
+  "properties" : {
+    "First" : {"type" : "boolean","title":"For the first time in the person's history.","format":"checkbox"},
+    "Age" : {"title":"With age: ","$ref" : "NumericRange.json"},
+    "CodesetId":{"title":"Visit Type: ","$ref" : "primary/codeset_id_type.json"},
+    "Gender" : {
+      "title":"With a gender of...",
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/components/schemas/Concept"
+      }
+    },
+    "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref" : "DateRange.json"},
+    "OccurrenceStartDate" : {"title":"Occurence start is: ","$ref" : "DateRange.json"},
+    "PlaceOfService" : {
+      "type" : "array",
+      "items" : {"$ref" : "#/definitions/Concept"}
+    },
+    "ProviderSpecialty" : {
+      "title":"With a Provider Speciality of: ",
+      "type" : "array",
+      "items" : {"$ref" : "#/definitions/Concept"}
+    },
+    "VisitLength" : {
+      "title":"With visit duration: ",
+      "type" : "array",
+      "items" : {"$ref" : "NumericRange.json"}
+    },
+    "VisitSourceConcept" : {"type" : "integer"},
+    "VisitType" : {
+      "title":"Visit Type: ",
+      "type" : "array",
+      "items" : {"$ref" : "#/definitions/Concept"}
+    },
+    "VisitTypeExclude" : {"type" : "boolean"}
+  }
+}

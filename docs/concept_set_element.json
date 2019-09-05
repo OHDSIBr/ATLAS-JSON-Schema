@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id":"ConceptSet",
+  "type": "array",
+  "items":{
+    "id": "arr_item",
+    "title":"Concept Element",
+    "format":"grid-strict",
+    "headerTemplate": "{{ i1 }} - {{ self.concept.CONCEPT_NAME }}: {{ self.concept.DOMAIN_ID }}",
+    "required":["concept","isExcluded","includeDescendants","includeMapped"],
+    "defaultProperties":["concept","isExcluded","includeDescendants","includeMapped"],
+    "type":"object",
+    "additionalProperties":false,
+    "options": {
+      "disable_edit_json":true,
+      "disable_properties":true,
+      "display_required_only":true,
+      "no_additional_properties":true
+    },
+      "properties":{
+            "concept":{"$ref":"primary/concept_core_extended.json"},
+            "isExcluded":{"type":"boolean","format": "checkbox","default":false,"title":"Exclude Concept","options": {"grid_columns": 4}},
+            "includeDescendants": {"type":"boolean","format": "checkbox","title":"Include Descendants","options": {"grid_columns": 4}},
+            "includeMapped": {"type":"boolean","format": "checkbox","title":"Include Mapped","options": {"grid_columns": 4}}
+    }
+  }
+}

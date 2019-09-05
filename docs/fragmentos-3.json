@@ -1,0 +1,571 @@
+    "additionalProperties": false,
+      "keep_oneof_values": false,
+      "no_additional_properties": true,
+      "required_by_default":true,
+              ,
+              {"title":"Event Start Date Criteria","$ref":"occurrence_start_date_criteria.json"},
+              {"title":"Event Start End Criteria","$ref":"occurrence_end_date_criteria.json"},
+              {"title":"Race Criteria","$ref":"race_criteria.json"},
+              {"title":"Ethnicity Criteria","$ref":"ethnicity_criteria.json"}
+
+    "additionalProperties": false,
+    "options": {
+    },
+
+
+  "title": "With a gender of...",
+  "additionalProperties": false,
+        "keep_oneof_values": false,
+        "required_by_default": true
+
+
+    "aditionalProperties":"false",
+
+
+-----------------
+[
+  {
+    "path": "root.0.DemographicCriteriaList",
+    "property": "oneOf",
+    "message": "Value must validate against exactly one of the provided schemas. 
+    It currently validates against 0 of the schemas."
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[0]",
+    "property": "required",
+    "message": "Object is missing the required property 'Age'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[1]",
+    "property": "type",
+    "message": "Value must be of type array"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[1]",
+    "property": "required",
+    "message": "Object is missing the required property 'Gender'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate",
+    "property": "additionalProperties",
+    "message": "No additional properties allowed, but property Op is set"
+  }
+]
+
+[
+  {
+    "path": "root.0.DemographicCriteriaList",
+    "property": "oneOf",
+    "message": "Value must validate against exactly one of the provided schemas. It currently validates against 0 of the schemas."
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[0]",
+    "property": "required",
+    "message": "Object is missing the required property 'Age'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[1]",
+    "property": "type",
+    "message": "Value must be of type array"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[1]",
+    "property": "required",
+    "message": "Object is missing the required property 'Gender'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate",
+    "property": "oneOf",
+    "message": "Value must validate against exactly one of the provided schemas. It currently validates against 0 of the schemas."
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[0]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[1]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[1].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[2]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[2].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[3]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[3].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[4]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[4].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[5]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[5]",
+    "property": "required",
+    "message": "Object is missing the required property 'Extent'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[5].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[6]",
+    "property": "required",
+    "message": "Object is missing the required property 'Value'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[6]",
+    "property": "required",
+    "message": "Object is missing the required property 'Extent'"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate.oneOf[6].Op",
+    "property": "enum",
+    "message": "Value must be one of the enumerated values"
+  },
+  {
+    "path": "root.0.DemographicCriteriaList.oneOf[2].OccurrenceStartDate",
+    "property": "additionalProperties",
+    "message": "No additional properties allowed, but property Op is set"
+  }
+]
+
+[
+  {
+    "DemographicCriteriaList": [
+      {
+        "Gender": {
+          "CONCEPT_CODE": "",
+          "CONCEPT_NAME": "",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      }
+    ]
+  }
+]
+
+[
+  {
+    "DemographicCriteriaList": {
+      "Age": {
+        "Op": "lt",
+        "Value": 0
+      }
+    }
+  }
+]
+
+[
+  {
+    "DemographicCriteriaList": [
+      {
+        "Gender": {
+          "CONCEPT_CODE": "",
+          "CONCEPT_NAME": "",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      },
+      {
+        "Gender": {
+          "CONCEPT_CODE": "",
+          "CONCEPT_NAME": "",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      }
+    ]
+  }
+]
+
+    "DemographicCriteriaList": [
+      {
+        "Age": {
+          "Op": "gt"
+        },
+        "OccurrenceStartDate": {
+          "Op": "lt"
+        }
+      }
+    ],
+
+  "AdditionalCriteria": {
+    "Type": "ALL",
+    "CriteriaList": [],
+    "DemographicCriteriaList": [
+      {
+        "Age": {
+          "Op": "gt"
+        },
+        "OccurrenceStartDate": {
+          "Op": "lt"
+        }
+      }
+    ],
+    "Groups": []
+  },
+
+[
+  {
+    "Age": {
+      "Age": {
+        "Op": "bt",
+        "Value": 5,
+        "Extent": 18
+      }
+    }
+  },
+  {
+    "Gender": [
+      {
+        "Gender": {
+          "CONCEPT_CODE": "1K0..00",
+          "CONCEPT_NAME": "Male",
+          "DOMAIN_ID": "Gender",
+          "CONCEPT_ID": 45438358,
+          "VOCABULARY_ID": "Read"
+        }
+      }
+    ]
+  }
+]
+      "display_required_only":true,
+[
+  {
+    "Age": {
+      "Age": {
+        "Op": "lt",
+        "Value": 5
+      }
+    },
+    "Gender": [
+      {
+        "Gender": {
+          "CONCEPT_CODE": "123",
+          "CONCEPT_NAME": "Male",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      }
+    ],
+    "EventStartDate": {
+      "OccurrenceStartDate": {
+        "Op": "lt",
+        "Value": "2019-08-04"
+      }
+    },
+    "EventEndDate": {
+      "OccurrenceEndDate": {
+        "Op": "bt",
+        "Value": "2019-08-22",
+        "Extent": "2019-08-30"
+      }
+    },
+    "Race": [
+      {
+        "Race": {
+          "CONCEPT_CODE": "333",
+          "CONCEPT_NAME": "Caucasian",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      }
+    ],
+    "Ethnicity": [
+      {
+        "Ethnicity": {
+          "CONCEPT_CODE": "444",
+          "CONCEPT_NAME": "White",
+          "DOMAIN_ID": "",
+          "CONCEPT_ID": 0,
+          "VOCABULARY_ID": ""
+        }
+      }
+    ]
+  }
+]
+    "DemographicCriteriaList": [
+      {
+        "Age": {
+          "Value": 5,
+          "Extent": 18,
+          "Op": "bt"
+        },
+        "Gender": [
+          {
+            "CONCEPT_CODE": "1K0..00",
+            "CONCEPT_ID": 45438358,
+            "CONCEPT_NAME": "Male",
+            "DOMAIN_ID": "Gender",
+            "VOCABULARY_ID": "Read"
+          }
+        ],
+        "Race": [
+          {
+            "CONCEPT_CODE": "1",
+            "CONCEPT_ID": 8657,
+            "CONCEPT_NAME": "American Indian or Alaska Native",
+            "DOMAIN_ID": "Race",
+            "VOCABULARY_ID": "Race"
+          }
+        ],
+        "Ethnicity": [
+          {
+            "CONCEPT_CODE": "Hispanic",
+            "CONCEPT_ID": 38003563,
+            "CONCEPT_NAME": "Hispanic or Latino",
+            "DOMAIN_ID": "Ethnicity",
+            "VOCABULARY_ID": "Ethnicity"
+          }
+        ],
+        "OccurrenceStartDate": {
+          "Value": "2019-07-28",
+          "Extent": "2019-07-31",
+          "Op": "!bt"
+        },
+        "OccurrenceEndDate": {
+          "Value": "2019-07-31",
+          "Op": "lt"
+        }
+      }
+    ]
+
+    ,
+      "oneOf":[
+        {"properties":{"Age":{"title":"Age Criteria","$ref":"age_criteria.json"}}},
+        {"properties":{"Gender":{"title":"Gender Criteria","$ref":"gender_criteria.json"}}},
+        {"properties":{"EventStartDate":{"title":"Event Start Date Criteria","$ref":"occurrence_start_date_criteria.json"}}}
+
+      ]
+
+        "items": {
+      "$id": "/properties/PrimaryCriteria/properties/DemographicCriteriaList/items",
+      "title": "Attribute: ",
+      "minItems": 1,
+      "maxItems": 1,
+      "headerTemplate": "Filter events based on: ",
+      "type":"object",
+      "additionalProperties": false,
+      "allOf":[
+        {"properties":{
+          "Age":{"title":"Age","type":"object","properties": {"value":{"type":"integer"}}}
+        }},
+        {"properties":{
+          "Ethnicity":{"title":"Ethnicity","type":"object","properties": {"code":{"type":"integer"}}}
+        }},
+        {"properties":{
+          "Gender":{"title":"Gender","type":"object","properties": {"name":{"type":"string"}}}
+        }}
+      ]
+    }
+
+{"$ref":"http://localhost:8080/-docs/demographic_criteria_list.json"}
+
+
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "format":"grid-strict",
+    "required":["OccurrenceStartDate"],
+    "options": {
+        "keep_oneof_values": false
+    },
+    "additionalProperties": true,
+    "properties":{
+        "OccurrenceStartDate" : {"title":"Occurence start is: ","$ref" : "DateRange.json"}
+    }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Initial event",
+  "description":"People having any of the following events...",
+  "items": {
+  "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
+  "title": "Event: ",
+  "type":"object",
+  "oneOf":[
+      {"$ref":"condition_era_criteria.json"},
+      {"$ref":"ConditionOccurrenceCriteria.json"},
+      {"$ref":"DeathCriteria.json"},
+      {"$ref":"DeviceExposureCriteria.json"},
+      {"$ref":"DoseEraCriteria.json"},
+      {"$ref":"drug_era_criteria.json"},
+      {"$ref":"drug_exposure_criteria.json"},
+      {"$ref":"MeasurementCriteria.json"},
+      {"$ref":"ObservationCriteria.json"},
+      {"$ref":"ObservationPeriodCriteria.json"},
+      {"$ref":"PlayerPlanPeriodCriteria.json"},
+      {"$ref":"ProcedureOcurrenceCriteria.json"},
+      {"$ref":"SpecimenCriteria.json"},
+      {"$ref":"VisitOccurrenceCriteria.json"}
+    ]
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Initial event",
+  "description":"People having any of the following events...",
+  "items": {
+  "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
+  "title": "Initial Event: ",
+  "type":"object",
+  "aditionalProperties":"false",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "properties":{
+      "Criteria":{
+        "title": "Add: ",
+        "oneOf":[
+            {"$ref":"condition_era_criteria.json"},
+            {"$ref":"ConditionOccurrenceCriteria.json"},
+            {"$ref":"DeathCriteria.json"},
+            {"$ref":"DeviceExposureCriteria.json"},
+            {"$ref":"DoseEraCriteria.json"},
+            {"$ref":"drug_era_criteria.json"},
+            {"$ref":"drug_exposure_criteria.json"},
+            {"$ref":"MeasurementCriteria.json"},
+            {"$ref":"ObservationCriteria.json"},
+            {"$ref":"ObservationPeriodCriteria.json"},
+            {"$ref":"PlayerPlanPeriodCriteria.json"},
+            {"$ref":"ProcedureOcurrenceCriteria.json"},
+            {"$ref":"SpecimenCriteria.json"},
+            {"$ref":"VisitOccurrenceCriteria.json"}
+          ]
+      }
+    }
+  }
+}
+{
+  "ConceptSets": [
+    {
+      "id": 0,
+      "name": "TestSet",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": 201820,
+              "CONCEPT_NAME": "Diabetes mellitus",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "73211009",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            }
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 21600712,
+              "CONCEPT_NAME": "DRUGS USED IN DIABETES",
+              "STANDARD_CONCEPT": "C",
+              "STANDARD_CONCEPT_CAPTION": "Classification",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "A10",
+              "DOMAIN_ID": "Drug",
+              "VOCABULARY_ID": "ATC",
+              "CONCEPT_CLASS_ID": "ATC 2nd"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "OutroTest",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": 376065,
+              "CONCEPT_NAME": "Neurologic disorder associated with type 2 diabetes mellitus",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "421326000",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [],
+    "ObservationWindow": {
+      "PriorDays": 0,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "First"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "First"
+  },
+  "InclusionRules": [],
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {}
+}
+
+{
+  "type":"array",
+  "items":{
+    "properties":{
+    "name":{"type":"string"},
+    "expression":{"type":"object","properties":{"items":{"$ref":"#/definitions/ConceptSetsType"}}}
+    
+    }
+  }
+},

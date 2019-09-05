@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"string",
+  "required":true,
+  "default":"First",
+  "enum":["All","First","Last"],
+  "options":{
+    "enum_titles":["all events","earliest event","latest event"]
+  }
+}

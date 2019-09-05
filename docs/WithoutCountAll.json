@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+  "type":"object",
+  "format":"grid",
+  "additionalProperties": false,
+  "properties":{
+    "Type":{"readOnly":"true","type": "string", "enum": [ "ALL" ],"options":{"hidden":true,"enum_titles":["All"]}},
+    "CriteriaList":{"title":"Add criteria...","$ref":"CriteriaListType.json"},
+    "DemographicCriteriaList":{"title":"Add demographic...","description":"filter events based on demographic criteria: ","$ref":"CriteriaListType.json"},
+    "Groups":{"title":"Add group...","description":"Add a group to combine criteria using and/or relationships. ","$ref":"CriteriaListType.json"}
+  }
+}

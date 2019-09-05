@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type":"object",
+  "required":["IsDistinct","Type","Count"],
+  "properties":{
+    "IsDistinct":{
+        "type": "boolean",
+        "format": "checkbox"
+    },
+    "Type":{"$ref":"primary/occurrenceTypeOptions"},
+    "Count":{"$ref":"primary/occurrenceCountOptions"}
+  }
+}

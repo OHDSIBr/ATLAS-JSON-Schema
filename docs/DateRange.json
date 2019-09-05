@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type":"object",
+  "format":"grid-strict",
+  "required": ["Op","Value"],
+  "options": {
+    "grid_columns":8,
+    "disable_collapse":true,
+    "disable_properties":true,
+    "disable_edit_json":true,
+    "no_additional_properties":true,
+    "remove_empty_properties": true,
+    "keep_oneof_values": false
+  },
+  "patternProperties": {
+    "^Op$": { "type": "string" },
+    "^Value$": { "type": "string" },
+    "^Extent$": { "type": "string" }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+                { "title":"Before","$ref": "primary/WithoutExtentBefore.json"},
+                { "title":"On or Before","$ref": "primary/WithoutExtentOnOrBefore.json"},
+                { "title":"On","$ref": "primary/WithoutExtentOn.json"},
+                { "title":"After","$ref": "primary/WithoutExtentAfter.json"},
+                { "title":"On or After","$ref": "primary/WithoutExtentOnOrAfter.json"},
+                { "title":"Between","$ref": "primary/WithExtentBetween.json"},
+                { "title":"Not Between","$ref": "primary/WithExtentNotBetween.json"}
+            ]
+}

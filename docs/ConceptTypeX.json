@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id":"ConceptType",
+  "type": "object",
+  "title":"Concept",
+  "format":"grid-strict",
+  "additionalProperties":false,
+  "required":[ "concept","STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CLASS_ID" ],
+    "properties":{
+      "concept":{"$ref":"http://localhost:8080/docs/primary/concept_core.json"},
+        "STANDARD_CONCEPT_CAPTION":{
+          "title":"Standard Concept",
+          "type":"string",
+          "default": "Standard",
+          "enum":["Standard","Deleted","Non-standard",""],
+          "options":{
+            "grid_columns": 4,
+            "enum_titles":["Standard","Deleted","Non-standard","Unknown"]
+          }
+        },
+        "STANDARD_CONCEPT":{
+          "type":"string",
+          "maxLength": 1,
+          "options": {
+            "hidden": true
+          },
+          "readOnly":true,
+            "watch":{
+            "irs":"STANDARD_CONCEPT_CAPTION"
+          },
+          "enumSource": "irs"
+        },
+        "INVALID_REASON_CAPTION":{
+          "title":"Invalid Reason",
+          "type":"string",
+          "default": "Valid",
+          "enum":["Valid","Deleted","Upgraded",""],
+          "options":{
+            "grid_columns": 4,
+            "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+          }
+        },
+        "INVALID_REASON":{
+          "type":"string",
+          "maxLength": 1,
+          "options": {
+            "hidden": true
+          },
+          "readOnly":true,
+          "watch":{
+            "irc":"INVALID_REASON_CAPTION"
+          },
+          "enumSource": "irc"
+        },
+        "CONCEPT_CLASS_ID":{
+          "title":"Concept Class",
+          "type":"string",
+          "maxLength": 20,
+          "options":{"grid_columns": 4}
+        }
+      }
+}

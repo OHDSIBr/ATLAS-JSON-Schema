@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+	"options":{"disable_edit_json":true,"disable_properties":true},
+	"anyOf":[
+	  {"title":"end of continuous observation ","additionalProperties": false,"schema": {"type":"object"}},
+	  {"title":"a fixed duration relative to initial event ","additionalProperties": false,"$ref":"DateOffsetStrategy.json"},
+	  {"title":"end of a continuous drug exposure ","additionalProperties": false,"$ref":"CustomEraStrategy.json"}
+	]
+}

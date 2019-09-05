@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "OK - The date offset strategy",
+  "required":["DateField","Offset"],
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "properties":{
+    "DateField":{
+      "title":"Event date to offset from: ",
+      "type": "string",
+      "default": "StartDate",
+      "enum":["StartDate","EndDate"]
+     },
+    "Offset":{
+      "title":"Number of days offset: ",
+      "$ref":"primary/dayOptionsInteger.json",
+      "default": 0
+    }
+  }
+}

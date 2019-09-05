@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "Type": {
+        "$id": "/properties/AdditionalCriteria/properties/Type",
+        "type": "string",
+        "title": "The Type Schema ",
+        "default": "",
+        "description": [
+          "ALL"
+        ]
+      },
+      "CriteriaList": {
+        "$id": "/properties/AdditionalCriteria/properties/CriteriaList",
+        "type": "array",
+        "items": {
+          "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items",
+          "type": "object",
+          "properties": {
+            "Criteria": {
+              "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/Criteria",
+              "type": "object"
+                        },
+            "StartWindow": {
+              "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow",
+              "type": "object",
+              "properties": {
+                "Start": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow/properties/Start",
+                  "type": "object",
+                  "properties": {
+                    "Coeff": {
+                      "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow/properties/Start/properties/Coeff",
+                      "type": "integer",
+                      "title": "The Coeff Schema ",
+                      "default": 0,
+                      "description": [
+                        -1
+                      ]
+                    }
+                  }
+                },
+                "End": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow/properties/End",
+                  "type": "object",
+                  "properties": {
+                    "Days": {
+                      "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow/properties/End/properties/Days",
+                      "type": "string",
+                      "title": "The Days Schema ",
+                      "default": "",
+                      "description": [
+                        "0"
+                      ]
+                    },
+                    "Coeff": {
+                      "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/StartWindow/properties/End/properties/Coeff",
+                      "type": "integer",
+                      "title": "The Coeff Schema ",
+                      "default": 0,
+                      "description": [
+                        -1
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "EndWindow": {
+              "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/EndWindow",
+              "type": "object",
+              "properties": {
+                "Start": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/EndWindow/properties/Start",
+                  "type": "object",
+                  "properties": {
+                    "Coeff": {
+                      "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/EndWindow/properties/Start/properties/Coeff",
+                      "type": "integer",
+                      "title": "The Coeff Schema ",
+                      "default": 0,
+                      "description": [
+                        -1
+                      ]
+                    }
+                  }
+                },
+                "End": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/EndWindow/properties/End",
+                  "type": "object",
+                  "properties": {
+                    "Coeff": {
+                      "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/EndWindow/properties/End/properties/Coeff",
+                      "type": "integer",
+                      "title": "The Coeff Schema ",
+                      "default": 0,
+                      "description": [
+                        1
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "Occurrence": {
+              "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/Occurrence",
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/Occurrence/properties/Type",
+                  "type": "integer",
+                  "title": "The Type Schema ",
+                  "default": 0,
+                  "description": [
+                    0
+                  ]
+                },
+                "Count": {
+                  "$id": "/properties/AdditionalCriteria/properties/CriteriaList/items/properties/Occurrence/properties/Count",
+                  "type": "integer",
+                  "title": "The Count Schema ",
+                  "default": 0,
+                  "description": [
+                    0
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "DemographicCriteriaList": {
+        "$id": "/properties/AdditionalCriteria/properties/DemographicCriteriaList",
+        "type": "array"
+      }
+    }
+}

@@ -1,0 +1,311 @@
+      "allOf":[{"$ref":"#/definitions/EndStrategy"}],
+      "required":["drugCodesetId","GapDays","Offset"],
+
+
+{
+  "EndStrategy": {
+    "drugCodesetId": "null",
+    "GapDays": 0,
+    "Offset": 0
+  }
+}
+
+        "additionalProperties": false,
+      "oneOf":[
+          {"title":"end of a continuous drug exposure ","type":"object","$ref":"#/definitions/CustomEraStrategy"},
+          {"title":"fixed duration relative to initial event ","$ref":"#/definitions/DateOffsetStrategy"}
+      ]
+      "required":["DateField"],
+      "required":["GapDays"],
+      "options": {
+        "remove_empty_properties": true
+      },
+
+        "expression":{"type":"object","properties":{"items":{"$ref":"#/definitions/RulesType"}}}
+    "ConceptSetsType":{"$ref":"/docs/ConceptSetsType.json"},
+    "ConceptType":{"$ref":"/docs/ConceptType.json"},
+
+
+{
+  "$id": "http://example.com/blah/root.json",
+  "definitions": {
+    "ConceptType": {
+      "type": "object",
+      "$id":"ConceptType",
+      "title":"Concept",
+      "aditionalProperties":"false",
+      "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+      "properties": {
+        "CONCEPT_ID":{"type":"integer"},
+        "CONCEPT_NAME":{"type":"string","maxLength": 255},
+        "STANDARD_CONCEPT_CAPTION":{
+          "type":"string",
+          "default": "Standard",
+          "enum":["Standard","Classification","Non-Standard",""],
+          "options":{
+            "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+          }
+        },
+        "STANDARD_CONCEPT":{
+          "type":"string",
+          "maxLength": 1,
+          "readOnly":true,
+          "watch":{
+            "stdc":"arr_item.concept.STANDARD_CONCEPT_CAPTION"
+          },
+        "options": {
+          "hidden": true
+        },
+          "enumSource": "stdc"
+        },
+        "INVALID_REASON_CAPTION":{
+          "type":"string",
+          "default": "Valid",
+          "enum":["Valid","Deleted","Upgraded",""],
+          "options":{
+            "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+          }
+        },
+        "INVALID_REASON":{
+          "type":"string",
+          "maxLength": 1,
+          "options": {
+            "hidden": true
+          },
+          "readOnly":true,
+          "watch":{
+            "irc":"arr_item.concept.INVALID_REASON_CAPTION"
+          },
+          "enumSource": "irc"
+        },
+        "CONCEPT_CODE":{"type":"string","maxLength": 50},
+        "DOMAIN_ID":{"type":"string","maxLength": 20},
+        "VOCABULARY_ID":{"type":"string","maxLength": 20},
+        "CONCEPT_CLASS_ID":{"type":"string","maxLength": 20}
+      }
+    },
+    "ConceptSetsType": {
+      "$id":"#ConceptSetsType",
+      "type": "array",
+      "items":{
+        "id": "arr_item",
+        "title":"Concept Element",
+        "required":["concept","includeDescendants","includeMapped"],
+        "properties":{
+          "concept":{
+      "$ref": "http://example.com/blah/ConceptType"},
+          "includeDescendants": {"type":"boolean","title":"Include Descendants"},
+          "includeMapped": {"type":"boolean","title":"Include Mapped"}
+        }
+      }
+    }
+  },
+  "items":{
+   "properties":{
+    "name":{"type":"string"},
+    "expression": { "$ref": "#/definitions/ConceptSetsType" }
+  }
+  }
+}  
+    "name": {"$ref":"/docs/generalOptions.json#/properties/dayOptions"},
+    "age": {"$ref":"/docs/generalOptions.json#/properties/dayOptionsInteger"},
+
+    "dayOptions":{
+      "type":"string",
+      "enum":[ "0", "1", "7", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"],
+      "options":{
+        "enum_titles":[ "zero", "um dia", "uma semana", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"]
+      }
+    },
+    "dayOptionsInteger":{"$ref":"#/definitions/dayOptionsIntegerPlus"},
+    "dayOptionsIntegerPlus":{
+      "type":"integer",
+      "enum":[ 0, 1, 7, 14, 21, 30, 60, 90, 120, 180, 365, 548, 730, 1095],
+      "options":{
+        "enum_titles":[ "zero", "um dia", "uma semana", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"]
+      }
+    },
+
+,
+      "StartWindow":{
+            "type": "object",
+            "$ref":"#/definitions/WindowType"
+        },
+      "EndWindow":{
+            "type": "object",
+            "$ref":"#/definitions/WindowType"
+        },
+      "Occurrence":{}
+
+
+
+      "$ref" : "docs/primary/codeset_id_type.json"
+
+
+      "$ref" : "docs/primary/codeset_id_type.json"
+
+      ,
+        "CodesetId":{"$ref":"#/definitions/CodesetIdType"}
+
+        ,
+    "CodesetIdType":{
+        "$ref" : "docs/primary/codeset_id_type.json"      }
+
+        "CodesetId":{"$ref":"#/definitions/CodesetIdType"}
+{
+      "$ref":"http://localhost:8080/atlasTestConceptsRefs.json"
+}
+,
+    "Codesets": {
+      "type":"array",
+      "items":{
+        "properties":{
+        "id":{"type":"integer"},
+        "name":{"type":"string"},
+        "expression":{"type":"object","properties":{"items":{"$ref":"#/definitions/ConceptSetsType"}}}
+        
+        }
+      }
+    }
+
+    "ConceptSetsOld": {"$ref":"#/definitions/Codesets"},
+
+    {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "$id":"ConceptSet",
+      "type": "array",
+      "items":{
+        "id": "arr_item",
+        "title":"Concept Element",
+        "format":"grid-strict",
+        "headerTemplate": "{{ i1 }} - {{ self.concept.CONCEPT_NAME }}: {{ self.concept.DOMAIN_ID }}",
+        "required":["concept","isExcluded","includeDescendants","includeMapped"],
+        "defaultProperties":["concept","isExcluded","includeDescendants","includeMapped"],
+        "type":"object",
+        "additionalProperties":false,
+        "options": {
+          "disable_edit_json":true,
+          "disable_properties":true,
+          "display_required_only":true,
+          "no_additional_properties":true
+        },
+          "properties":{
+                "concept":{"$ref":"primary/concept_core_extended.json"},
+                "isExcluded":{"type":"boolean","format": "checkbox","default":false,"title":"Exclude Concept","options": {"grid_columns": 4}},
+                "includeDescendants": {"type":"boolean","format": "checkbox","title":"Include Descendants","options": {"grid_columns": 4}},
+                "includeMapped": {"type":"boolean","format": "checkbox","title":"Include Mapped","options": {"grid_columns": 4}}
+        }
+      }
+    }
+
+    
+    {
+      "type": "array",
+      "format": "tabs",
+      "description": "Frequent Questions",
+      "items": {
+          "title": "FAQ",
+          "id": "FAQItem",
+          "headerTemplate": "{{i}} - {{self.Category}}",
+          "type": "object",
+              "properties": {
+                "FAQ_ID": {
+                    "type": "string",
+                    "format": "hidden",
+                    "headerTemplate": " ",
+                    "template": "{{myVar}}",
+                    "watch": {
+                        "myVar": "FAQItem.i"
+                    }
+                },
+                "Category": {
+                  "type": "string"
+                },
+                "Text": {
+                    "type": "string",
+                    "format": "textarea"
+                }
+              }
+      }
+}
+
+
+{
+  "type": "array",
+  "format": "tabs",
+  "description": "Frequent Questions",
+  "items": {
+      "title": "FAQ",
+      "id": "FAQItem",
+      "headerTemplate": "{{i}} - {{self.Category}}",
+      "type": "object",
+          "properties": {
+            "FAQ_ID": {
+                "type": "integer",
+                "default":"{{i}}"
+            },
+            "Category": {
+              "type": "string"
+            }
+          }
+  }
+}
+
+//codeset_id_type
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "integer",
+  "watch": {
+    "concepts": "ConceptSets"
+  },
+  "enumSource": [
+    {"source":[null],"title": "Any","value": null},
+    {
+      "source": "concepts",
+      "title": "{{item.name}}",
+      "value": "{{item.id}}"
+    }
+  ]
+}
+
+//Alternating string and number
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "anyOf":[
+    {"type": "string","title": "Any concept","value":""},
+    {
+      "type": "integer","title": "one of:",
+      "watch": {
+        "concepts": "ConceptSets"
+      },
+      "enumSource": [
+        {
+          "source": "concepts",
+          "title": "{{item.name}}",
+          "value": "{{item.id}}"
+        }
+      ]
+    }
+  ]
+}
+
+//Alternating null and number
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "anyOf":[
+    {"type": "null","title": "Any concept"},
+    {
+      "type": "integer","title": "one of:",
+      "watch": {
+        "concepts": "ConceptSets"
+      },
+      "enumSource": [
+        {
+          "source": "concepts",
+          "title": "{{item.name}}",
+          "value": "{{item.id}}"
+        }
+      ]
+    }
+  ]
+}

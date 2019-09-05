@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type":"object",
+    "format":"grid-strict",
+    "required": ["Op","Value"],
+    "options": {
+        "grid_columns":8,
+        "disable_collapse":true,
+        "disable_properties":true,
+        "disable_edit_json":true,
+        "no_additional_properties":true,
+        "remove_empty_properties": true,
+        "keep_oneof_values": false
+    },
+    "patternProperties": {
+        "^Op$": { "type": "string" },
+        "^Value$": { "type": "integer" },
+        "^Extent$": { "type": "integer" }
+      },
+    "additionalProperties": false,
+    "oneOf": [
+                { "title":"Less Than","$ref": "primary/WithoutExtentLessThan.json"},
+                { "title":"Less or Equal To","$ref": "primary/WithoutExtentLessOrEqualTo.json"},
+                { "title":"Equal To","$ref": "primary/WithoutExtentEqualTo.json"},
+                { "title":"Greater Than","$ref": "primary/WithoutExtentGreaterThan.json"},
+                { "title":"Greater or Equal To","$ref": "primary/WithoutExtentGreaterOrEqualTo.json"},
+                { "title":"Between","$ref": "primary/WithExtentBetweenNum.json"},
+                { "title":"Not Between","$ref": "primary/WithExtentNotBetweenNum.json"}
+            ]
+}

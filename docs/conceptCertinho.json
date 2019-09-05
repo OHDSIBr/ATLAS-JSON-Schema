@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://localhost:8080/docs/Codesets.json",
+  "definitions": {
+    "ConceptSetsType": {
+      "$id":"#ConceptSetsType",
+      "type": "array",
+      "items":{
+        "id": "arr_item",
+        "title":"Concept Element",
+        "required":["concept","includeDescendants","includeMapped"],
+        "type":"object",
+        "properties":{
+          "concept":{"$ref":"#/definitions/ConceptType"},
+          "includeDescendants": {"type":"boolean","title":"Include Descendants"},
+          "includeMapped": {"type":"boolean","title":"Include Mapped"}
+        }
+      }
+    },
+    "ConceptType": {
+      "type": "object",
+      "$id":"ConceptType",
+      "title":"Concept",
+      "aditionalProperties":"false",
+      "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+      "properties": {
+        "CONCEPT_ID":{"type":"integer"},
+        "CONCEPT_NAME":{"type":"string","maxLength": 255},
+        "STANDARD_CONCEPT_CAPTION":{
+          "type":"string",
+          "default": "Standard",
+          "enum":["Standard","Classification","Non-Standard",""],
+          "options":{
+            "enum_titles":["Standard","Classification","Non-Standard","Unknown"]
+          }
+        },
+        "STANDARD_CONCEPT":{
+          "type":"string",
+          "maxLength": 1,
+          "readOnly":true,
+          "watch":{
+            "stdc":"arr_item.concept.STANDARD_CONCEPT_CAPTION"
+          },
+        "options": {
+          "hidden": true
+        },
+          "enumSource": "stdc"
+        },
+        "INVALID_REASON_CAPTION":{
+          "type":"string",
+          "default": "Valid",
+          "enum":["Valid","Deleted","Upgraded",""],
+          "options":{
+            "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+          }
+        },
+        "INVALID_REASON":{
+          "type":"string",
+          "maxLength": 1,
+          "options": {
+            "hidden": true
+          },
+          "readOnly":true,
+          "watch":{
+            "irc":"arr_item.concept.INVALID_REASON_CAPTION"
+          },
+          "enumSource": "irc"
+        },
+        "CONCEPT_CODE":{"type":"string","maxLength": 50},
+        "DOMAIN_ID":{"type":"string","maxLength": 20},
+        "VOCABULARY_ID":{"type":"string","maxLength": 20},
+        "CONCEPT_CLASS_ID":{"type":"string","maxLength": 20}
+      }
+    }
+  },
+   "properties":{
+    "name":{"type":"string"},
+    "expression": {"type":"object","properties":{"items":{"$ref": "#/definitions/ConceptSetsType" }}}
+  }
+}

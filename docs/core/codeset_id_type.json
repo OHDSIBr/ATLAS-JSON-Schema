@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "anyOf":[
+    {
+      "type": "null",
+      "title": "Any concept"
+    },
+    {
+      "type": "integer","title": "one of the following:",
+      "watch": {
+        "concepts": "ConceptSets"
+      },
+      "enumSource": [
+        {
+          "source": "concepts",
+          "title": "{{item.name}}",
+          "value": "{{item.id}}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id":"ConceptType",
+  "type": "object",
+  "title":"Concept",
+  "format":"grid-strict",
+  "additionalProperties":false,
+  "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+  "options": {
+    "disable_edit_json":true,
+    "disable_properties":true,
+    "display_required_only":true,
+    "no_additional_properties":true
+  },
+  "properties":{
+    "CONCEPT_CODE":{"title":"Concept Code","type":"string","maxLength": 50,"options": {"grid_columns": 4}},
+    "CONCEPT_NAME":{"title":"Concept Name","type":"string","maxLength": 255,"options": {"grid_columns": 8,"grid_break": true}},
+    "DOMAIN_ID":{"title":"Domain Id","type":"string","maxLength": 20,"options": {"grid_columns": 4}},
+    "CONCEPT_ID":{"title":"Concept Id","type":"integer","options": {"grid_columns": 4}},
+    "VOCABULARY_ID":{"title":"Vocabulary Id","type":"string","maxLength": 20,"options": {"grid_columns": 4,"grid_break": true}},
+    "STANDARD_CONCEPT_CAPTION":{
+    "title":"Standard Concept",
+    "type":"string",
+    "default": "Standard",
+    "enum":["Standard","Classification","Non-standard",""],
+    "options":{
+      "grid_columns": 4,
+      "enum_titles":["Standard","Classification","Non-standard","Unknown"]
+        }
+    },
+    "STANDARD_CONCEPT":{
+      "type":"string",
+      "maxLength": 1,
+      "readOnly":true,
+      "watch":{
+        "stdc":"arr_item.concept.STANDARD_CONCEPT_CAPTION"
+      },
+    "options": {
+      "hidden": true
+    },
+      "enumSource": "stdc"
+    },
+    "INVALID_REASON_CAPTION":{
+      "title":"Invalid Reason",
+      "type":"string",
+      "default": "Valid",
+      "enum":["Valid","Deleted","Upgraded",""],
+      "options":{
+        "grid_columns": 4,
+        "enum_titles":["Valid","Deleted","Upgraded","Unknown"]
+      }
+    },
+    "INVALID_REASON":{
+      "type":"string",
+      "maxLength": 1,
+      "options": {
+        "hidden": true
+      },
+      "readOnly":true,
+      "watch":{
+        "irc":"arr_item.concept.INVALID_REASON_CAPTION"
+      },
+      "enumSource": "irc"
+    },
+    "CONCEPT_CLASS_ID":{
+      "title":"Concept Class",
+      "type":"string",
+      "maxLength": 20,
+      "options":{"grid_columns": 4}
+    }
+  }
+}
