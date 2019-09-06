@@ -21,8 +21,8 @@
     "options":{"disable_edit_json":true,"disable_properties":true},
     "title":"End",
     "properties":{
-      "Days":{"$ref":"primary/windowDayOptions.json"},
-      "Coeff":{"$ref":"primary/windowCoeffOptions.json"},
+      "Days":{"$ref":"core/windowDayOptions.json"},
+      "Coeff":{"$ref":"core/windowCoeffOptions.json"},
       "UseEventEnd":{"format":"checkbox","type":"boolean"}
       }
     }

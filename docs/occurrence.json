@@ -7,7 +7,7 @@
         "type": "boolean",
         "format": "checkbox"
     },
-    "Type":{"$ref":"primary/occurrenceTypeOptions"},
-    "Count":{"$ref":"primary/occurrenceCountOptions"}
+    "Type":{"$ref":"core/occurrenceTypeOptions"},
+    "Count":{"$ref":"core/occurrenceCountOptions"}
   }
 }

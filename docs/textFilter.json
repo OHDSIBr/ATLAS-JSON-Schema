@@ -7,6 +7,6 @@
     "Text":{
         "type": "string"
     },
-    "Op":{"$ref":"primary/textOperationOptions.json"}
+    "Op":{"$ref":"core/textOperationOptions.json"}
   }
 }

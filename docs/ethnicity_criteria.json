@@ -14,7 +14,7 @@
       "additionalProperties": false
     },
     "properties":{
-      "Ethnicity":{"title":"With a ethnicity of: ","$ref":"primary/concept_core.json"}
+      "Ethnicity":{"title":"With a ethnicity of: ","$ref":"core/concept_core.json"}
     }
   }
 }

@@ -4,7 +4,7 @@
     "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":false},
     "defaultProperties":[],
       "properties":{
-        "CodesetId":{"title":"a death occurrence from: ","$ref" : "primary/codeset_id_type.json","description":"...condition."}
+        "CodesetId":{"title":"a death occurrence from: ","$ref" : "core/codeset_id_type.json","description":"...condition."}
     },
     "$ref":"condition_common_properties.json"
 }

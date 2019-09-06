@@ -8,18 +8,18 @@
   "properties":{
     "drugCodesetId": {
       "title":"Concept set containing the drug(s) of interest: ",
-      "$ref" : "primary/codeset_id_type.json"
+      "$ref" : "core/codeset_id_type.json"
     },
     "GapDays":{
       "title":"Persistence window: allow for a maximum of... ",
       "description": " ...days between exposure records when inferring the era of persistence exposure.",
       "default": 0,
-      "$ref":"primary/dayOptionsInteger.json"
+      "$ref":"core/dayOptionsInteger.json"
     },
     "Offset":{
       "title":"Surveillance window: add... ",
       "description":" ...days to the end of the era of persistence exposure as an additional period of surveillance prior to cohort exit.",
-      "$ref":"primary/dayOptionsInteger.json",
+      "$ref":"core/dayOptionsInteger.json",
       "default": 0
     }
   }

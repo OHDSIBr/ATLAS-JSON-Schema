@@ -16,7 +16,7 @@
       "disable_properties":true
     },
     "properties":{
-      "Gender":{"title":"Add gender code: ","aditionalProperties":"false","$ref":"primary/concept_core.json"}
+      "Gender":{"title":"Add gender code: ","aditionalProperties":"false","$ref":"core/concept_core.json"}
     }
   }
 }

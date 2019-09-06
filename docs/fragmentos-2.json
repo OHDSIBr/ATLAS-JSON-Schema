@@ -78,7 +78,7 @@
         },
 
   "allOf":[
-      {"$ref":"primary/concept_core.json"},
+      {"$ref":"core/concept_core.json"},
       {
         "properties":{
           "STANDARD_CONCEPT_CAPTION":{
@@ -136,7 +136,7 @@
     ]
 {
   "type": "object",
-      "$ref":"http://localhost:8080/docs/primary/concept_core.json",
+      "$ref":"http://localhost:8080/docs/core/concept_core.json",
 
         "properties":{
           "STANDARD_CONCEPT_CAPTION":{
@@ -215,7 +215,7 @@
   "additionalProperties":false,
   "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
     "properties":{
-      "Concept":{"$ref":"http://localhost:8080/docs/primary/concept_core.json"},
+      "Concept":{"$ref":"http://localhost:8080/docs/core/concept_core.json"},
       "STANDARD_CONCEPT_CAPTION":{
           "title":"Standard Concept",
           "type":"string",

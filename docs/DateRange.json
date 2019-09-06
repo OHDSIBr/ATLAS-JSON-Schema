@@ -19,12 +19,12 @@
   },
   "additionalProperties": false,
   "oneOf": [
-                { "title":"Before","$ref": "primary/WithoutExtentBefore.json"},
-                { "title":"On or Before","$ref": "primary/WithoutExtentOnOrBefore.json"},
-                { "title":"On","$ref": "primary/WithoutExtentOn.json"},
-                { "title":"After","$ref": "primary/WithoutExtentAfter.json"},
-                { "title":"On or After","$ref": "primary/WithoutExtentOnOrAfter.json"},
-                { "title":"Between","$ref": "primary/WithExtentBetween.json"},
-                { "title":"Not Between","$ref": "primary/WithExtentNotBetween.json"}
+                { "title":"Before","$ref": "core/WithoutExtentBefore.json"},
+                { "title":"On or Before","$ref": "core/WithoutExtentOnOrBefore.json"},
+                { "title":"On","$ref": "core/WithoutExtentOn.json"},
+                { "title":"After","$ref": "core/WithoutExtentAfter.json"},
+                { "title":"On or After","$ref": "core/WithoutExtentOnOrAfter.json"},
+                { "title":"Between","$ref": "core/WithExtentBetween.json"},
+                { "title":"Not Between","$ref": "core/WithExtentNotBetween.json"}
             ]
 }

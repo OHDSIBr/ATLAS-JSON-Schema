@@ -77,7 +77,7 @@
               "Type": {
               "title": "Limit initial events to:",
               "description": " ...per person",
-              "$ref":"docs/primary/resultLimitOptions.json"
+              "$ref":"docs/core/resultLimitOptions.json"
             }
           }
         }
@@ -86,7 +86,7 @@
     "QualifiedLimit": {
       "type": "object",
       "properties":{
-        "Type": {"$ref":"docs/primary/resultLimitOptions.json"}
+        "Type": {"$ref":"docs/core/resultLimitOptions.json"}
       }
     },
     "InclusionRules": {
@@ -101,7 +101,7 @@
         "Type": {
           "title":"Limit qualifying events to: ",
           "description":" ...per person.",
-          "$ref":"docs/primary/resultLimitOptions.json"
+          "$ref":"docs/core/resultLimitOptions.json"
         }
       }
     },
@@ -115,7 +115,7 @@
         "enum":["ERA"],
         "options": {"hidden": true}
         },
-        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"docs/primary/dayOptions.json"}
+        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"docs/core/dayOptions.json"}
       }
     },
     "EndStrategy":{
@@ -136,7 +136,7 @@
       "description":"Add trimming options...",
       "required":true,
       "defaultProperties":["StartDate","EndDate"],
-      "$ref":"docs/primary/CensoringPeriod.json"
+      "$ref":"docs/core/CensoringPeriod.json"
     }
   }
 }

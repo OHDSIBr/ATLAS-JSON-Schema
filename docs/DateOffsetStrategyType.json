@@ -12,7 +12,7 @@
      },
     "Offset":{
       "title":"Number of days offset: ",
-      "$ref":"primary/dayOptionsInteger.json",
+      "$ref":"core/dayOptionsInteger.json",
       "default": 0
     }
   }

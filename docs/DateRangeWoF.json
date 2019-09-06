@@ -14,12 +14,12 @@
   },
   "additionalProperties": false,
   "oneOf": [
-              { "title":"Before","$ref": "primary/WithoutExtentBeforeWoF.json"},
-              { "title":"On or Before","$ref": "primary/WithoutExtentOnOrBeforeWoF.json"},
-              { "title":"On","$ref": "primary/WithoutExtentOnWoF.json"},
-              { "title":"After","$ref": "primary/WithoutExtentAfterWoF.json"},
-              { "title":"On or After","$ref": "primary/WithoutExtentOnOrAfterWoF.json"},
-              { "title":"Between","$ref": "primary/WithExtentBetweenWoF.json"},
-              { "title":"Not Between","$ref": "primary/WithExtentNotBetweenWoF.json"}
+              { "title":"Before","$ref": "core/WithoutExtentBeforeWoF.json"},
+              { "title":"On or Before","$ref": "core/WithoutExtentOnOrBeforeWoF.json"},
+              { "title":"On","$ref": "core/WithoutExtentOnWoF.json"},
+              { "title":"After","$ref": "core/WithoutExtentAfterWoF.json"},
+              { "title":"On or After","$ref": "core/WithoutExtentOnOrAfterWoF.json"},
+              { "title":"Between","$ref": "core/WithExtentBetweenWoF.json"},
+              { "title":"Not Between","$ref": "core/WithExtentNotBetweenWoF.json"}
             ]
 }

@@ -7,7 +7,7 @@
     "required":["concept","includeDescendants","includeMapped"],
     "type":"object",
     "properties":{
-            "concept":{"$ref":"primary/ConceptType.json"},
+            "concept":{"$ref":"core/ConceptType.json"},
             "includeDescendants": {"type":"boolean","title":"Include Descendants"},
             "includeMapped": {"type":"boolean","title":"Include Mapped"}
     }

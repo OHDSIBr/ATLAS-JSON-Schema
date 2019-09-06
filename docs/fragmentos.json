@@ -139,17 +139,17 @@
 
 
 
-      "$ref" : "docs/primary/codeset_id_type.json"
+      "$ref" : "docs/core/codeset_id_type.json"
 
 
-      "$ref" : "docs/primary/codeset_id_type.json"
+      "$ref" : "docs/core/codeset_id_type.json"
 
       ,
         "CodesetId":{"$ref":"#/definitions/CodesetIdType"}
 
         ,
     "CodesetIdType":{
-        "$ref" : "docs/primary/codeset_id_type.json"      }
+        "$ref" : "docs/core/codeset_id_type.json"      }
 
         "CodesetId":{"$ref":"#/definitions/CodesetIdType"}
 {
@@ -190,7 +190,7 @@
           "no_additional_properties":true
         },
           "properties":{
-                "concept":{"$ref":"primary/concept_core_extended.json"},
+                "concept":{"$ref":"core/concept_core_extended.json"},
                 "isExcluded":{"type":"boolean","format": "checkbox","default":false,"title":"Exclude Concept","options": {"grid_columns": 4}},
                 "includeDescendants": {"type":"boolean","format": "checkbox","title":"Include Descendants","options": {"grid_columns": 4}},
                 "includeMapped": {"type":"boolean","format": "checkbox","title":"Include Mapped","options": {"grid_columns": 4}}

@@ -7,7 +7,7 @@
   "additionalProperties":false,
   "required":[ "concept","STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CLASS_ID" ],
     "properties":{
-      "concept":{"$ref":"http://localhost:8080/docs/primary/concept_core.json"},
+      "concept":{"$ref":"http://localhost:8080/docs/core/concept_core.json"},
         "STANDARD_CONCEPT_CAPTION":{
           "title":"Standard Concept",
           "type":"string",

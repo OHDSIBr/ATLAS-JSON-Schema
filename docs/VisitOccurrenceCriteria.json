@@ -9,7 +9,7 @@
   "properties" : {
     "First" : {"type" : "boolean","title":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"With age: ","$ref" : "NumericRange.json"},
-    "CodesetId":{"title":"Visit Type: ","$ref" : "primary/codeset_id_type.json"},
+    "CodesetId":{"title":"Visit Type: ","$ref" : "core/codeset_id_type.json"},
     "Gender" : {
       "title":"With a gender of...",
       "type" : "array",
