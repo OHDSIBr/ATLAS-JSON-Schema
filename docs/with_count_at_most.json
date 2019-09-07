@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"object",
+  "format":"grid",
+  "required":["Type","Count"],
+  "defaultProperties":["Type","Count"],
+  "additionalProperties":false,
+  "options": {
+    "disable_edit_json":true,
+    "disable_properties":false,
+    "display_required_only":true,
+    "no_additional_properties":true
+  },
+  "properties":{
+    "Type":{"readOnly":"true","type": "string", "enum": [ "AT_MOST" ],"options":{"hidden":true,"enum_titles":["At Most"]}},
+    "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria: ","type": "integer"},
+    "CriteriaList":{"title":"Add criteria...","$ref":"criteria_list_type.json"},
+    "DemographicCriteriaList":{"title":"Add demographic...","description":"filter events based on demographic criteria: ","$ref":"criteria_list_type.json"},
+    "Groups":{"title":"Add group...","description":"Add a group to combine criteria using and/or relationships. ","$ref":"criteria_list_type.json"}
+  }
+}

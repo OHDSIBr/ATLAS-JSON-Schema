@@ -15,7 +15,11 @@
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "NumericRange.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "CorrelatedCriteriaRange.json",
-            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}}
+        "CorrelatedCriteria":{
+            "title":"Add Nested Criteria...",
+            "headerTemplate":"Having ",
+            "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true},
+            "$ref" : "correlated_criteria_range.json"
+            }
         }
 }

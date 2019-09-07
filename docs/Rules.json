@@ -15,7 +15,7 @@
     "properties":{
     "name":{"type":"string"},
     "description":{"type":"string"},
-    "expression":{"title":"Having : ","description":" occurrences of  the following criteria: ","$ref" : "CorrelatedCriteriaRange.json"}
+    "expression":{"title":"Having : ","description":" occurrences of  the following criteria: ","$ref" : "correlated_criteria_range.json"}
     }
   }
 }

@@ -1,10 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Condition Era...",
-  "required":["ConditionEra"],
-  "additionalProperties": false,
   "type":"object",
+  "additionalProperties": false,
+  "required":["ConditionEra"],
   "options": {
+    "remove_empty_properties":true,
     "disable_properties":true,
     "disable_edit_json":true
   },

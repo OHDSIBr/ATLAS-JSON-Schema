@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "options":{
+    "no_additional_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":false,
+    "keep_oneof_values":false,
+    "disable_collapse":false
+  },
+  "oneOf": [
+                { "title":" all ","$ref": "without_count_all.json" },
+                { "title":" any ","$ref": "without_count_any.json"},
+                { "title":" at least ","$ref": "with_count_at_least.json"},
+                { "title":" at most ","$ref": "with_count_at_most.json"}
+            ]
+}
