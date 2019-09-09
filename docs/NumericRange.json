@@ -12,6 +12,7 @@
         "remove_empty_properties": true,
         "keep_oneof_values": false
     },
+    "default":{"Op":"gt","Value":0},
     "patternProperties": {
         "^Op$": { "type": "string" },
         "^Value$": { "type": "integer" },

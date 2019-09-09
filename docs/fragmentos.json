@@ -314,3 +314,5 @@
 "title":"of the following criteria:",
 "description":"of the following criteria: ",
 "description":"(Use Properties button to add criterias.)",
+"options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
+"default":{"$ref":"condition_era_criteria.json"},

@@ -7,8 +7,8 @@
         "disable_properties":true,
         "keep_oneof_values": false
         },
-        "additionalProperties": true,
-        "properties":{
-        "Age":{"title":"With age: ","$ref":"NumericRange.json"}
+    "additionalProperties": true,
+    "properties":{
+    "Age":{"title":"With age: ","$ref":"NumericRange.json"}
     }
 }

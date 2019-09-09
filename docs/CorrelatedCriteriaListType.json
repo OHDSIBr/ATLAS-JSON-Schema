@@ -11,15 +11,15 @@
   "type":"object",
   "default":{"$ref":"condition_era_criteria.json"},
   "options":{"remove_empty_properties": true,"disable_edit_json":true,"disable_properties":true},
-        "oneOf":[
-            {"$ref":"condition_era_criteria.json"},
-            {"$ref":"condition_occurrence_criteria.json"},
-            {"$ref":"death_criteria.json"},
-            {"$ref":"DeviceExposureCriteria.json"},
-            {"$ref":"DoseEraCriteria.json"},
-            {"$ref":"drug_era_criteria.json"},
-            {"$ref":"drug_exposure_criteria.json"},
-            {"$ref":"VisitOccurrenceCriteria.json"}
-          ]
+  "oneOf":[
+      {"$ref":"condition_era_criteria.json"},
+      {"$ref":"condition_occurrence_criteria.json"},
+      {"$ref":"death_criteria.json"},
+      {"$ref":"DeviceExposureCriteria.json"},
+      {"$ref":"DoseEraCriteria.json"},
+      {"$ref":"drug_era_criteria.json"},
+      {"$ref":"drug_exposure_criteria.json"},
+      {"$ref":"VisitOccurrenceCriteria.json"}
+    ]
   }
 }
