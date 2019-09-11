@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type":"object",
-  "format":"grid",
-  "description":"...of the following criteria: ",
+  "description":"...of the following criteria. Use Properties to add or exclude criteria to group.",
   "required":["Type"],
   "defaultProperties":["Type"],
   "additionalProperties":false,
   "options": {
     "disable_edit_json":true,
     "disable_properties":false,
+    "remove_empty_properties":true,
     "display_required_only":true,
     "no_additional_properties":true
   },
@@ -16,6 +16,6 @@
     "Type":{"readOnly":"true","type": "string", "enum": [ "ANY" ],"options":{"hidden":true,"enum_titles":["Any"]}},
     "CriteriaList":{"title":"Add criteria...","$ref":"criteria_list_type.json"},
     "DemographicCriteriaList":{"title":"Add demographic...","headerTemplate":"Add a Demographic element and use Properties button to select criterias: ","description":"","$ref":"demographic_criteria_list.json"},
-    "Groups":{"title":"Add group...","description":"Add a group to combine criteria using and/or relationships. ","$ref":"criteria_list_type.json"}
+    "Groups":{"title":"Add group...","headerTemplate":"Add a group to combine criteria using and/or relationships. ","description":"","$ref":"groups_list_or.json"}
   }
 }

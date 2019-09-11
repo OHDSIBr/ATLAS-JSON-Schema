@@ -3,14 +3,19 @@
   "type": "array",
   "title": "Initial event",
   "headerTemplate":"Add Initial Event",
-  "description":"People having any of the following events...",
+  "description":"Events having any of the following criteria: ",
+  "format":"grid-strict",
   "options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
   "items": {
   "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
   "title": "Initial Event: ",
   "type":"object",
   "default":{"$ref":"condition_era_criteria.json"},
-  "options":{"remove_empty_properties": true,"disable_edit_json":true,"disable_properties":true},
+  "options":{
+      "remove_empty_properties": true,
+      "disable_edit_json":true,
+      "disable_properties":true
+    },
   "oneOf":[
       {"$ref":"condition_era_criteria.json"},
       {"$ref":"condition_occurrence_criteria.json"},

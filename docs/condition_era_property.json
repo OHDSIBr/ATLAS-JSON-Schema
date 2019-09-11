@@ -11,7 +11,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"a condition era of: ","$ref" : "core/codeset_id_type.json", "description":"...condition."}
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A condition era of: ","$ref" : "core/codeset_id_type.json", "description":"...condition."}
   },
   "$ref":"condition_common_properties.json"
 }

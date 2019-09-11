@@ -26,7 +26,7 @@
     "ConceptSets": {"$ref":"docs/concept_sets.json"},
     "PrimaryCriteria":{
       "title":"Cohort Entry Events",
-      "description":"Events having any of the following criteria:",
+      "description":"Add initial events, continuous observation and limit initial events.",
       "type": "object",
       "format": "categories",
       "additionalProperties":false,

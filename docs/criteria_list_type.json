@@ -3,6 +3,7 @@
   "type": "array",
   "title": "Initial event",
   "options": {
+    "array_controls_top":true,
     "disable_collapse":true,
     "disable_edit_json":false,
     "disable_properties":true,

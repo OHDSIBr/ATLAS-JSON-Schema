@@ -17,9 +17,13 @@
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "CorrelatedCriteria":{
             "title":"Add Nested Criteria...",
-            "headerTemplate":"Having ",
-            "description": "Use Properties to Add criteria to group...",
-            "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true},
+            "headerTemplate":"Having...",
+            "options": {
+                "disable_collapse":false,
+                "grid_break": true,
+                "disable_properties":false,
+                "disable_edit_json":true
+            },
             "$ref" : "correlated_criteria_range.json"
             }
         }

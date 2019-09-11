@@ -4,7 +4,7 @@
     "no_additional_properties":true,
     "disable_edit_json":true,
     "disable_properties":false,
-    "keep_oneof_values":false,
+    "keep_oneof_values":true,
     "disable_collapse":false
   },
   "oneOf": [
