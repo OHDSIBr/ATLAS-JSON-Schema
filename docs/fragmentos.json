@@ -316,3 +316,9 @@
 "description":"(Use Properties button to add criterias.)",
 "options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
 "default":{"$ref":"condition_era_criteria.json"},
+,"description":"Limit Condition Occurrences to new diagnosis."
+
+"OccurrenceCount" : {"title":"Add Condition Count Criteria","headerTemplate":"with ocurrence count: ","description":"Filter Condition Eras by the Condition Count.","$ref" : "NumericRange.json",
+  "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+"EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "NumericRange.json",
+  "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

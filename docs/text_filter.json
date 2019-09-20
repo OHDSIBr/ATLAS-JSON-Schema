@@ -4,9 +4,10 @@
   "description" : "TextFilter: A text filter",
   "required":["Text","Op"],
   "properties":{
+    "Op":{"title":" ","$ref":"core/textOperationOptions.json"},
     "Text":{
+      "title":" ",
         "type": "string"
-    },
-    "Op":{"$ref":"core/textOperationOptions.json"}
+    }
   }
 }

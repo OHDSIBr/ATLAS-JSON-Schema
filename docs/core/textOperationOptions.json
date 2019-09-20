@@ -4,6 +4,6 @@
   "default": "contains",
   "enum":["startsWith","contains","endsWith","!startsWith","!contains","!endsWith"],
   "options":{
-    "enum_titles":["starting with","containing","ending with","not starting with","not containing","not ending with"]
+    "enum_titles":["Starting with","Containing","Ending with","Not starting with","Not containing","Not ending with"]
   }
 }

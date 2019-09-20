@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Condition Occurrence Criteria",
+  "type":"object",
+  "required":["ConditionOccurrence"],
+  "additionalProperties":false,
+  "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":true},
+  "properties":{
+    "ConditionOccurrence":{"$ref" : "condition_occurrence_property.json"}
+  }
+}

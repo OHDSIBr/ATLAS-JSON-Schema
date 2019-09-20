@@ -42,7 +42,7 @@
       "properties": {
         "CriteriaList":{
           "$id": "/properties/PrimaryCriteria/properties/CriteriaList",
-          "$ref":"docs/CorrelatedCriteriaListType.json",
+          "$ref":"docs/correlated_criteria_list_type.json",
           "additionalProperties":false,
           "options": {
             "disable_collapse":true,
@@ -129,7 +129,7 @@
     "CensoringCriteria": {
       "title":"Cohort Exit - Censoring Events",
       "description":"Exit Cohort based on the following criteria:",
-      "$ref":"docs/CorrelatedCriteriaListType.json"
+      "$ref":"docs/correlated_criteria_list_type.json"
     },
     "CensorWindow": {
       "title":"Cohort Eras: Censoring",

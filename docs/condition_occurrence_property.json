@@ -1,9 +1,16 @@
 {
   "additionalProperties": false,
-  "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":false},
-  "defaultProperties":[],
+  "options": {
+    "required_by_default":false,
+    "remove_empty_properties":true,
+    "no_additional_properties":true,
+    "disable_properties":false,
+    "disable_edit_json":true
+  },
+  "required":["CodesetId"],
+  "defaultProperties":["CodesetId"],
   "properties":{
     "CodesetId":{"title":"a condition occurrence of: ","$ref":"core/codeset_id_type.json","description":"...condition."}
   },
-  "$ref":"condition_occurrence_common_properties.json"
+  "$ref":"condition_occurrence_common_attributes.json"
 }

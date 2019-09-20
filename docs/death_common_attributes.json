@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years ","description":"Filter Deaths by age at death.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Gender"   : {"title":"Add Gender Criteria","description":"with a gender of: ","headerTemplate":"Filter Deaths based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+        "OccurrenceStartDate" : {"title":"Add Death Date Criteria","headerTemplate":"death occurrence is: ","description":"Filter Death by Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DeathTypeExclude" : {"type" : "boolean","title":"Exclude Death Type","format":"checkbox","headerTemplate":"Death type is none of the following: "},
+        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","id": "arr_item","$ref" : "condition_type_criteria.json"},
+        "DeathSourceConcept":{"title":"Add Cause of Death Source Concept Criteria","headerTemplate":"Death Source Concept is: ","description":"Filter Death by the Death Source Concept.","$ref":"core/codeset_id_type.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",
+            "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true}}
+        }
+}
