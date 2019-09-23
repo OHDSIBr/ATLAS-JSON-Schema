@@ -109,13 +109,16 @@
       "title":"Cohort Eras: Gap Size",
       "type": "object",
       "description": "Defines collapse settings",
+      "required":["CollapseType","EraPad"],
+      "defaultProperties":["CollapseType","EraPad"],
+      "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true},
       "properties":{
-        "collapseType": {
+        "CollapseType": {
         "type":"string",
         "enum":["ERA"],
         "options": {"hidden": true}
         },
-        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"docs/core/dayOptions.json"}
+        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"docs/core/dayOptionsInteger.json"}
       }
     },
     "EndStrategy":{
