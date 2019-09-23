@@ -20,7 +20,7 @@
         {"$ref":"condition_era_criteria.json"},
         {"$ref":"condition_occurrence_criteria.json"},
         {"$ref":"death_criteria.json"},
-        {"$ref":"DeviceExposureCriteria.json"},
+        {"$ref":"device_exposure_criteria.json"},
         {"$ref":"DoseEraCriteria.json"},
         {"$ref":"drug_era_criteria.json"},
         {"$ref":"drug_exposure_criteria.json"},

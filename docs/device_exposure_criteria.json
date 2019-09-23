@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Add Device Exposure",
+  "required":["DeviceExposure"],
+  "additionalProperties": false,
+  "type":"object",
+  "properties":{
+    "DeviceExposure":{"title":"Device Exposure:", "$ref" : "device_exposure_property.json"}
+  }
+}

@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title":"Drug Era Criteria...",
-  "required":["DrugEra"],
+  "title":"Add Dose Era",
+  "required":["DoseEra"],
   "additionalProperties": false,
   "type":"object",
   "properties":{
-    "DrugEra":{"title":"Drug Era:", "$ref" : "drug_era_property.json"}
+    "DoseEra":{"title":"Dose Era:", "$ref" : "dose_era_property.json"}
   }
 }

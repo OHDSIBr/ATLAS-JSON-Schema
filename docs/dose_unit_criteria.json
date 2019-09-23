@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "format":"grid-strict",
+  "required":["DoseUnit"],
+  "type":"array",
+  "options": {
+    "disable_array_reorder":true
+  },
+  "items":{
+  "id": "arr_item",
+  "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
+  "options": {
+    "grid_columns":8,
+    "disable_collapse":false,
+    "disable_edit_json":true,
+    "disable_properties":true
+    },
+  "title":"Add Dose Unit code: ","aditionalProperties":"false","$ref":"core/concept_core.json"
+  }
+}

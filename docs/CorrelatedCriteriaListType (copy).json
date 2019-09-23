@@ -18,7 +18,7 @@
             {"$ref":"condition_era_criteria.json"},
             {"$ref":"ConditionOccurrenceCriteria.json"},
             {"$ref":"DeathCriteria.json"},
-            {"$ref":"DeviceExposureCriteria.json"},
+            {"$ref":"device_exposure_criteria.json"},
             {"$ref":"DoseEraCriteria.json"},
             {"$ref":"drug_era_criteria.json"},
             {"$ref":"drug_exposure_criteria.json"},

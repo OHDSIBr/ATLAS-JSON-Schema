@@ -5,7 +5,7 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
         "properties":{
-        "CodesetId":{"title":"a death occurrence from: ","$ref" : "core/codeset_id_type.json","description":"...condition."}
+        "CodesetId":{"title":"a dose era of: ","$ref" : "core/codeset_id_type.json","description":"...dose."}
     },
-    "$ref":"death_common_attributes.json"
+    "$ref":"dose_era_common_attributes.json"
 }

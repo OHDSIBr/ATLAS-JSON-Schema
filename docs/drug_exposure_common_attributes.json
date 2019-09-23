@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "First" : {"type" : "boolean","title":"Add First Exposure Criteria","headerTemplate":" For the first time in the person's history.","format":"checkbox"},
+        "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Drug Exposures by age at occurrence.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Drug Exposures based on gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+        "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Drug Exposures by the Drug Exposure Start Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "OccurrenceEndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Drug Exposures by the Drug Exposure End Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DrugTypeExclude" : {"type" : "boolean","title":"Exclude Drug Type","format":"checkbox","headerTemplate":"Drug Type is not any of the following: "},
+        "DrugType"   : {"title":"Add Drug Type Criteria","description":"with Drug Type of: ","headerTemplate":"Filter Drug Exposures by the Drug Type.","id": "arr_item","$ref" : "drug_type_criteria.json"},
+        "VisitType"   : {"title":"Add Visit Criteria","description":"with a Visit occurrence of: ","headerTemplate":"Filter Drug Exposures based on visit occurrence of drug exposure.","id": "arr_item","$ref" : "visit_type_criteria.json"},
+        "StopReason" : {"title":"Add Stop Reason Criteria","description":"with a Stop Reason: ","headerTemplate":"Filter Drug Exposures by the Stop Reason.","$ref" : "text_filter.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Refills" : {"title":"Add Refills Criteria","headerTemplate":"with Refills: ","description":"Filter Drug Exposures by Refills.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with Quantity: ","description":"Filter Drug Exposures by Quantity.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DaysSupply" : {"title":"Add Days Supply Criteria","headerTemplate":"with Days Supply: ","description":"Filter Drug Exposures by Days Supply.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "RouteConcept"   : {"title":"Add Route Criteria","headerTemplate":"Route Concept is: ","description":"Filter Drug Exposures by Route.","id": "arr_item","$ref" : "route_criteria.json"},
+        "EffectiveDrugDose" : {"title":"Add Effective Dose Criteria","headerTemplate":"with Effective Drug Dose: ","description":"Filter Drug Exposures by Effective Dose.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DoseUnit"   : {"title":"Add Dose Unit Criteria","headerTemplate":"Dose Unit is: ","description":"Filter Drug Exposures by Dose Unit.","id": "arr_item","$ref" : "dose_unit_criteria.json"},
+        "LotNumber" : {"title":"Add Lot Number Criteria","description":"with a Lot Number: ","headerTemplate":"Filter Drug Exposures by Lot Number.","$ref" : "text_filter.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DrugSourceConcept":{"title":"Add Drug Source Concept Criteria","headerTemplate":"Drug Source Concept is: ","description":"Filter Drug Exposures by the Drug Source Concept.","$ref":"core/codeset_id_type.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","description":"with a Provider Specialty of: ","headerTemplate":"Filter Drug Exposures based on provider specialty.","id": "arr_item","$ref" : "provider_speciality_criteria.json"},
+        "CorrelatedCriteria":{
+            "title":"Add Nested Criteria...",
+            "headerTemplate":"Having...",
+            "options": {
+                "disable_collapse":false,
+                "grid_break": true,
+                "disable_properties":false,
+                "disable_edit_json":true
+            },
+            "$ref" : "correlated_criteria_range.json"
+            }
+        }
+}
