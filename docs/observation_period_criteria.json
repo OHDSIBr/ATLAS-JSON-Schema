@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Add Observation Period",
+  "description":"Observation Period: ",
+  "headerTemplate": "A description of observation period criteria",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["ObservationPeriod"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "ObservationPeriod":{"title":"Observation Period", "title":"Use Properties to add or exclude attributes...","$ref" : "observation_period_property.json"}
+  }
+}

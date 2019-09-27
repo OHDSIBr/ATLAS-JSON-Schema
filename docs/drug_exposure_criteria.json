@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title":"Drug Exposure Criteria",
+  "title":"Add Drug Exposure",
   "required":["DrugExposure"],
   "additionalProperties": false,
   "type":"object",

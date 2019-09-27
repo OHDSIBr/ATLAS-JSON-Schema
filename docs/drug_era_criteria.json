@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title":"Drug Era Criteria...",
+  "title":"Add Drug Era",
   "required":["DrugEra"],
   "additionalProperties": false,
   "type":"object",
