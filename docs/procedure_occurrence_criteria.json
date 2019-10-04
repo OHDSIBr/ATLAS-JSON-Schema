@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Add Procedure Occurrence",
+  "description":"Procedure Occurrence: ",
+  "headerTemplate": "A description of Procedure Occurrence criteria",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["ProcedureOccurrence"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "ProcedureOccurrence":{"title":"Procedure Occurrence", "description":"Use Properties to add or exclude attributes...","$ref" : "procedure_occurrence_property.json"}
+  }
+}
