@@ -27,6 +27,7 @@
       {"$ref":"observation_period_criteria.json"},
       {"$ref":"payer_plan_period_criteria.json"},
       {"$ref":"procedure_occurrence_criteria.json"},
+      {"$ref":"specimen_criteria.json"},
       {"$ref":"VisitOccurrenceCriteria.json"}
     ]
   }
