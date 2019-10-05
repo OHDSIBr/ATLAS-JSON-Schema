@@ -24,6 +24,7 @@
       {"$ref":"dose_era_criteria.json"},
       {"$ref":"drug_era_criteria.json"},
       {"$ref":"drug_exposure_criteria.json"},
+      {"$ref":"observation_criteria.json"},
       {"$ref":"observation_period_criteria.json"},
       {"$ref":"payer_plan_period_criteria.json"},
       {"$ref":"procedure_occurrence_criteria.json"},
