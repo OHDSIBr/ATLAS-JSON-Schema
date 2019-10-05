@@ -1,11 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title":"Condition Occurrence Criteria",
+  "title":"Add Measurement",
+  "description":"Measurement: ",
+  "headerTemplate": "A description of Measurement criteria",
   "type":"object",
-  "required":["ConditionOccurrence"],
-  "additionalProperties":false,
-  "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":true},
+  "additionalProperties": false,
+  "required":["Measurement"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
   "properties":{
-    "ConditionOccurrence":{"$ref" : "condition_occurrence_property.json"}
+    "Measurement":{"title":"Measurement", "description":"Use Properties to add or exclude attributes...","$ref" : "measurement_property.json"}
   }
 }
