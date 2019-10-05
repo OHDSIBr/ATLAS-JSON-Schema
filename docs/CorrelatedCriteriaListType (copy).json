@@ -22,7 +22,7 @@
             {"$ref":"DoseEraCriteria.json"},
             {"$ref":"drug_era_criteria.json"},
             {"$ref":"drug_exposure_criteria.json"},
-            {"$ref":"VisitOccurrenceCriteria.json"}
+            {"$ref":"visit_occurrence_criteria.json"}
           ]
       }
     }

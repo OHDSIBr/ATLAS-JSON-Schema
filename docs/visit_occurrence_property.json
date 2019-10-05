@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "options": {
+    "required_by_default":false,
+    "remove_empty_properties":true,
+    "no_additional_properties":true,
+    "disable_properties":false,
+    "disable_edit_json":true
+  },
+  "required":["CodesetId"],
+  "defaultProperties":["CodesetId"],
+  "properties" : {
+    "CodesetId":{"title":"a visit occurrence of: ","$ref":"core/codeset_id_type.json","description":"...visit."},
+    "First" : {"type" : "boolean","title":"Add First Visit Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
+    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Visit Occurrences by age at occurrence.","$ref" : "NumericRange.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Visit Occurrences based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+    "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Visit Occurrences by the Visit Start Date.","$ref" : "DateRange.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "OccurrenceEndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Visit Occurrences by the Visit End Date.","$ref" : "DateRange.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "VisitTypeExclude" : {"type" : "boolean","title":"Exclude Visit Type","headerTemplate":" Visit Type is not any of selected","format":"checkbox"},
+    "VisitType"   : {"title":"Add Visit Type Criteria","headerTemplate":"with Visit Type of: ","description":"Filter Visit Occurrences by the Visit Type.","id": "arr_item","$ref" : "specimen_type_criteria.json"},
+    "VisitLength" : {"title":"Add Visit Length Criteria","headerTemplate":"with visit duration (days): ","description":"Filter Visit Occurrences by duration (days).","$ref" : "NumericRange.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "VisitSourceConcept":{"title":"Add Visit Source Concept Criteria","headerTemplate":"Visit Source Concept is: ","description":"Filter Visit Occurrences by the Visit Source Concept.","$ref":"core/codeset_id_type.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Visit Occurrences based on provider specialty.","id": "arr_item","$ref" : "provider_speciality_criteria.json"},
+    "PlaceOfService" : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Visit Occurrences based on provider specialty.","id": "arr_item","$ref" : "place_of_service_criteria.json"},
+    "PlaceOfServiceLocation":{"title":"with a Place of Service located in: ","$ref":"core/codeset_id_type.json","description":"...location."},
+    "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",
+      "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true}}
+}
+}

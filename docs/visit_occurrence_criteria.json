@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title":"Add Visit ",
+  "description":"Visit Occurrence: ",
+  "headerTemplate": "A description of Visit Occurrence criteria",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["VisitOccurrence"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "VisitOccurrence":{"title":"Visit Occurrence", "description":"Use Properties to add or exclude attributes...","$ref" : "visit_occurrence_property.json"}
+  }
+}
