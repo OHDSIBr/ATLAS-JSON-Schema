@@ -1,11 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Add Condition Occurrence",
+  "description":"Condition Occurrence: ",
   "type":"object",
+  "additionalProperties": false,
   "required":["ConditionOccurrence"],
-  "additionalProperties":false,
-  "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":true},
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
   "properties":{
-    "ConditionOccurrence":{"title":"Condition Occurrence:", "$ref" : "condition_occurrence_property.json"}
+    "ConditionOccurrence":{"title":"Use Properties to add or exclude attributes...", "$ref" : "condition_occurrence_property.json"}
   }
 }

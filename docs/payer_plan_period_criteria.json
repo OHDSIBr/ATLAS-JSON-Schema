@@ -12,6 +12,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "PayerPlanPeriod":{"title":"Payer Plan Period", "description":"Use Properties to add or exclude attributes...","$ref" : "payer_plan_period_property.json"}
+    "PayerPlanPeriod":{"title":"Use Properties to add or exclude attributes...","$ref" : "payer_plan_period_property.json"}
   }
 }

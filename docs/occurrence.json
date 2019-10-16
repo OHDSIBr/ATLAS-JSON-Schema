@@ -1,13 +1,25 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type":"object",
-  "required":["IsDistinct","Type","Count"],
+  "required":["Type","Count","IsDistinct"],
+  "format": "grid",
+  "options": {
+    "no_additional_properties":true,
+    "disable_collapse":true,
+    "remove_empty_properties":true,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
   "properties":{
+    "Type":{"options":{"grid_columns": 3},"title":"with","$ref":"core/occurrence_type_options.json"},
+    "Count":{"options":{"grid_columns": 2},"title": " ","$ref":"core/occurrence_count_options.json"},
     "IsDistinct":{
         "type": "boolean",
-        "format": "checkbox"
-    },
-    "Type":{"$ref":"core/occurrenceTypeOptions"},
-    "Count":{"$ref":"core/occurrenceCountOptions"}
+        "title": " ",
+        "enum": [true,false],
+        "description": " occurrences of criteria: ",
+        "default":false,
+        "options":{"grid_columns": 3,"enum_titles":["using distinct","using all"]}
+    }
   }
 }

@@ -8,9 +8,6 @@
     "disable_properties":false,
     "disable_edit_json":true
   },
-  "title":"Payer Plan Period",
-  "headerTemplate":"payer plan periods with the following criteria: ",
-  "description":"Use Properties button to add Criteria Attributes",
   "defaultProperties":[],
   "properties": {
       "First" : {"type" : "boolean","title":"First Payer Plan Period Criteria","headerTemplate":" limited to the patients first payer plan period","format":"checkbox"},
@@ -46,12 +43,7 @@
       "CorrelatedCriteria":{
           "title":"Add Nested Criteria...",
           "headerTemplate":"Having...",
-          "options": {
-              "disable_collapse":false,
-              "grid_break": true,
-              "disable_properties":false,
-              "disable_edit_json":true
-          },
+          "format":"categories",
           "$ref" : "correlated_criteria_range.json"
         }
       }

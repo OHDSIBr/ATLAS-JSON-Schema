@@ -6,12 +6,14 @@
   "type":"object",
   "additionalProperties": false,
   "required":["Measurement"],
-  "options": {
-    "remove_empty_properties":false,
-    "disable_properties":true,
-    "disable_edit_json":true
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
   },
   "properties":{
-    "Measurement":{"title":"Measurement", "description":"Use Properties to add or exclude attributes...","$ref" : "measurement_property.json"}
+    "Measurement":{"title":"Use Properties to add or exclude attributes...", "$ref" : "measurement_property.json"}
   }
 }

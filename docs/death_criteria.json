@@ -1,11 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title":"Add Death",
+  "description":"Death: ",
   "type":"object",
-  "required":["Death"],
   "additionalProperties": false,
-  "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":true},
+  "required":["Death"],
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
   "properties":{
-      "Death":{"title":"Death:", "$ref" : "death_occurrence_property.json"}
+      "Death":{"title":"Use Properties to add or exclude attributes...", "$ref" : "death_occurrence_property.json"}
   }
 }

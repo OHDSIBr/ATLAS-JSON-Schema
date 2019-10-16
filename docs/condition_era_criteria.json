@@ -2,16 +2,17 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Add Condition Era",
   "description":"Condition Era: ",
-  "headerTemplate": "A description of conditiona era criteria",
   "type":"object",
   "additionalProperties": false,
   "required":["ConditionEra"],
-  "options": {
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
     "remove_empty_properties":true,
     "disable_properties":true,
     "disable_edit_json":true
   },
   "properties":{
-    "ConditionEra":{"title":"Condition Era", "title":"Use Properties to add or exclude criterias...","$ref" : "condition_era_property.json"}
+    "ConditionEra":{"title":"Use Properties to add or exclude attributes...","$ref" : "condition_era_property.json"}
   }
 }

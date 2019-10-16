@@ -322,3 +322,434 @@
   "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
 "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "NumericRange.json",
   "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+
+
+
+  {
+    "ConceptSets": [
+      {
+        "id": 0,
+        "name": "aspirin mono",
+        "expression": {
+          "items": [
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370614",
+                "CONCEPT_ID": 40009842,
+                "CONCEPT_NAME": "Aspirin Chewable Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370942",
+                "CONCEPT_ID": 40009849,
+                "CONCEPT_NAME": "Aspirin Chewing Gum",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "405802",
+                "CONCEPT_ID": 40009855,
+                "CONCEPT_NAME": "Aspirin Delayed Release Oral Capsule",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370939",
+                "CONCEPT_ID": 40009857,
+                "CONCEPT_NAME": "Aspirin Delayed Release Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "379422",
+                "CONCEPT_ID": 40009853,
+                "CONCEPT_NAME": "Aspirin Disintegrating Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "1537020",
+                "CONCEPT_ID": 44818011,
+                "CONCEPT_NAME": "Aspirin Effervescent Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "376394",
+                "CONCEPT_ID": 40009875,
+                "CONCEPT_NAME": "Aspirin Extended Release Oral Capsule",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370612",
+                "CONCEPT_ID": 40009878,
+                "CONCEPT_NAME": "Aspirin Extended Release Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370940",
+                "CONCEPT_ID": 40009890,
+                "CONCEPT_NAME": "Aspirin Oral Capsule",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "437673",
+                "CONCEPT_ID": 40009889,
+                "CONCEPT_NAME": "Aspirin Oral Lozenge",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "379497",
+                "CONCEPT_ID": 40009891,
+                "CONCEPT_NAME": "Aspirin Oral Powder",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "375972",
+                "CONCEPT_ID": 40009892,
+                "CONCEPT_NAME": "Aspirin Oral Solution",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "1535483",
+                "CONCEPT_ID": 44817822,
+                "CONCEPT_NAME": "Aspirin Oral Strip",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370611",
+                "CONCEPT_ID": 40009896,
+                "CONCEPT_NAME": "Aspirin Oral Tablet",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            },
+            {
+              "concept": {
+                "CONCEPT_CLASS_ID": "Clinical Drug Form",
+                "CONCEPT_CODE": "370609",
+                "CONCEPT_ID": 40010213,
+                "CONCEPT_NAME": "Aspirin Rectal Suppository",
+                "DOMAIN_ID": "Drug",
+                "INVALID_REASON": "V",
+                "INVALID_REASON_CAPTION": "Valid",
+                "STANDARD_CONCEPT": "S",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "VOCABULARY_ID": "RxNorm"
+              },
+              "includeDescendants": true,
+              "includeMapped": true
+            }
+          ]
+        }
+      }
+    ],
+    "PrimaryCriteria": {
+      "CriteriaList": [
+        {
+          "ConditionEra": {
+            "CorrelatedCriteria": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "DeviceExposure": {}
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": true,
+                  "IgnoreObservationPeriod": true,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1
+                  }
+                },
+                {
+                  "Criteria": {
+                    "DrugEra": {}
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseEventEnd": false
+                  },
+                  "IgnoreObservationPeriod": true,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [
+                {}
+              ],
+              "Groups": []
+            }
+          }
+        }
+      ],
+      "ObservationWindow": {
+        "PriorDays": 0,
+        "PostDays": 0
+      },
+      "PrimaryCriteriaLimit": {
+        "Type": "First"
+      }
+    },
+    "QualifiedLimit": {
+      "Type": "First"
+    },
+    "ExpressionLimit": {
+      "Type": "First"
+    },
+    "InclusionRules": [
+      {
+        "expression": {
+          "Type": "ALL",
+          "CriteriaList": [
+            {
+              "Criteria": {
+                "LocationRegion": {}
+              },
+              "StartWindow": {
+                "Start": {
+                  "Coeff": -1
+                },
+                "End": {
+                  "Coeff": 1
+                },
+                "UseEventEnd": false
+              },
+              "IgnoreObservationPeriod": true,
+              "Occurrence": {
+                "Type": 2,
+                "Count": 1
+              }
+            },
+            {
+              "Criteria": {
+                "ConditionOccurrence": {}
+              },
+              "StartWindow": {
+                "Start": {
+                  "Coeff": -1
+                },
+                "End": {
+                  "Coeff": 1
+                },
+                "UseEventEnd": false
+              },
+              "Occurrence": {
+                "Type": 2,
+                "Count": 1
+              }
+            }
+          ],
+          "DemographicCriteriaList": [
+            {
+              "Age": {
+                "Op": "gt"
+              }
+            }
+          ],
+          "Groups": []
+        }
+      }
+    ],
+    "CensoringCriteria": [],
+    "CollapseSettings": {
+      "CollapseType": "ERA",
+      "EraPad": 0
+    },
+    "CensorWindow": {}
+  }
+
+
+
+  "CriteriaList": [
+    {
+      "ConditionEra": {
+        "CorrelatedCriteria": {
+          "Type": "ALL",
+          "CriteriaList": [
+            {
+              "Criteria": {
+                "ConditionEra": {
+                  "First": true
+                }
+              },
+              "StartWindow": {
+                "Start": {
+                  "Coeff": -1
+                },
+                "End": {
+                  "Coeff": 1
+                },
+                "UseEventEnd": false
+              },
+              "EndWindow": {
+                "Start": {
+                  "Coeff": -1
+                },
+                "End": {
+                  "Coeff": 1
+                },
+                "UseIndexEnd": true,
+                "UseEventEnd": true
+              },
+              "IgnoreObservationPeriod": true,
+              "Occurrence": {
+                "Type": 2,
+                "Count": 1
+              }
+            }
+          ],
+          "DemographicCriteriaList": [],
+          "Groups": []
+        }
+      }
+    }
+  ],

@@ -17,7 +17,12 @@
         "ConditionSourceConcept":{"title":"Add Condition Source Concept","headerTemplate":"Condition Source Concept is: ","description":"Filter Condition Occurrences by the Condition Source Concept.","$ref":"core/codeset_id_type.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "ProviderSpecialty"   : {"title":"Add Provider Specialty","description":"with a Provider Specialty of: ","headerTemplate":"Filter Condition Occurrences based on provider specialty.","id": "arr_item","$ref" : "condition_type_criteria.json"},
-        "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",
+        "CorrelatedCriteria":{
+            "title":"Add Nested Criteria...",
+            "headerTemplate":"add nested criteria to : ",
+            "description":" occurrences of ",
+            "format":"categories",
+            "$ref" : "correlated_criteria_range.json",
             "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true}}
         }
 }

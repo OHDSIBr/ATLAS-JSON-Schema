@@ -8,9 +8,6 @@
     "disable_properties":false,
     "disable_edit_json":true
   },
-  "title":"Observation Period",
-  "headerTemplate":"Observation periods with the following criteria: ",
-  "description":"Use Properties button to add Criteria Attributes",
   "defaultProperties":[],
   "properties": {
       "First" : {"type" : "boolean","title":"First Observation Period Criteria","headerTemplate":" limited to the patients first observation period","format":"checkbox"},
@@ -30,12 +27,7 @@
       "CorrelatedCriteria":{
           "title":"Add Nested Criteria...",
           "headerTemplate":"Having...",
-          "options": {
-              "disable_collapse":false,
-              "grid_break": true,
-              "disable_properties":false,
-              "disable_edit_json":true
-          },
+          "format":"categories",
           "$ref" : "correlated_criteria_range.json"
         }
       }

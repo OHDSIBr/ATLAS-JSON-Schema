@@ -12,6 +12,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "Specimen":{"title":"Specimen", "description":"Use Properties to add or exclude attributes...","$ref" : "specimen_property.json"}
+    "Specimen":{"title":"Use Properties to add or exclude attributes...","$ref" : "specimen_property.json"}
   }
 }

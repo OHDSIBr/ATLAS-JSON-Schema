@@ -10,7 +10,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"a procedure occurrence of: ","$ref":"core/codeset_id_type.json","description":"...procedure."},
+    "CodesetId":{"title":"A procedure occurrence of: ","$ref":"core/codeset_id_type.json","description":"...procedure."},
     "First" : {"type" : "boolean","title":"Add First Procedure Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Procedure Occurrences by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
@@ -26,7 +26,11 @@
     "ProcedureSourceConcept":{"title":"Add Procedure Source Concept Criteria","headerTemplate":"Procedure Source Concept is: ","description":"Filter Procedure Occurrences by the Procedure Source Concept.","$ref":"core/codeset_id_type.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Procedure Occurrences based on provider specialty.","id": "arr_item","$ref" : "provider_speciality_criteria.json"},
-    "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",
-        "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true}}
+    "CorrelatedCriteria":{
+      "title":"Add Nested Criteria...",
+      "headerTemplate":"Having...",
+      "format":"categories",
+      "$ref" : "correlated_criteria_range.json"
+      }
   }
 }

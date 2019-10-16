@@ -11,7 +11,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"a specimen of: ","$ref":"core/codeset_id_type.json","description":"...specimen."},
+    "CodesetId":{"title":"An specimen of: ","$ref":"core/codeset_id_type.json","description":"...specimen."},
     "First" : {"type" : "boolean","title":"Add First Occurrence Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Specimens by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
@@ -27,7 +27,11 @@
     "DiseaseStatus"   : {"title":"Add Disease Status Criteria","headerTemplate":"with Disease Status: ","description":"Filter Specimens by the Disease Status.","id": "arr_item","$ref" : "disease_status_type_criteria.json"},
     "SourceId" : {"title":"Add Source ID Criteria","description":"with a Source ID: ","headerTemplate":"Filter Specimens by the Source ID.","$ref" : "text_filter.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",
-        "options": {"disable_collapse":false,"disable_properties":false,"disable_edit_json":true}}
+    "CorrelatedCriteria":{
+      "title":"Add Nested Criteria...",
+      "headerTemplate":"Having...",
+      "format":"categories",
+      "$ref" : "correlated_criteria_range.json"
+      }
   }
 }

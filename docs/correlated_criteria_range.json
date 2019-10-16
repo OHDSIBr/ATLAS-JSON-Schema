@@ -1,9 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "options":{
+    "display_required_only":true,
+    "remove_empty_properties":true,
     "no_additional_properties":true,
     "disable_edit_json":true,
-    "disable_properties":false,
+    "disable_properties":true,
     "keep_oneof_values":true,
     "disable_collapse":false
   },

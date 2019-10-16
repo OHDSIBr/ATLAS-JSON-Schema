@@ -1,21 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type":"object",
-  "required":["Type","Count"],
-  "defaultProperties":["Type","Count"],
+  "description":"...'Occurrences' of the following criteria. Use Tabs to add or exclude criteria to group.",
+  "required":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+  "defaultProperties":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+  "basicCategoryTitle": "Occurrences",
   "additionalProperties":false,
-  "options": {
-    "disable_edit_json":true,
-    "disable_properties":false,
-    "display_required_only":true,
-    "remove_empty_properties":true,
-    "no_additional_properties":true
-  },
   "properties":{
-    "Type":{"readOnly":"true","type": "string", "enum": [ "AT_MOST" ],"options":{"hidden":true,"enum_titles":["At Most"]}},
-    "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria. Use Properties to add or exclude criteria to group.","type": "integer"},
-    "CriteriaList":{"title":"Add criteria...","$ref":"criteria_list_type.json"},
-    "DemographicCriteriaList":{"title":"Add demographic...","headerTemplate":"Add a Demographic element and use Properties to select criterias: ","description":"","$ref":"demographic_criteria_list.json"},
-    "Groups":{"title":"Add group...","headerTemplate":"Add a group to combine criteria using and/or relationships. ","description":"","$ref":"groups_list_or.json"}
+    "Type":{
+      "title":"Having...",
+      "description":"occurrences of the following criteria. Add criterias, demographic or groups...",
+      "readOnly":"true",
+      "type": "string",
+      "enum": [ "AT_MOST" ],
+      "options":{"enum_titles":["At Most"]}
+    },
+    "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria. Add criterias, demographic or groups...","type": "integer"},
+    "CriteriaList":{"title":"Add criteria to group","headerTemplate":"Add Criterias:","$ref":"criteria_list_type.json"},
+    "DemographicCriteriaList":{
+      "type":"array",
+      "title":"Add demographic",
+      "headerTemplate":"Add Demographics",
+      "description":"",
+      "$ref":"demographic_criteria_list.json"
+    },
+    "Groups":{"title":"Add group","headerTemplate":"Add groups","description":"","$ref":"groups_list_or.json"}
   }
 }

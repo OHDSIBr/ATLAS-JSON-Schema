@@ -18,6 +18,7 @@
         "CorrelatedCriteria":{
             "title":"Add Nested Criteria...",
             "headerTemplate":"Having...",
+            "format":"categories",
             "options": {
                 "disable_collapse":false,
                 "grid_break": true,

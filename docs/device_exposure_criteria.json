@@ -1,10 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Add Device Exposure",
+  "description":"Device Exposure: ",
   "required":["DeviceExposure"],
   "additionalProperties": false,
   "type":"object",
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
   "properties":{
-    "DeviceExposure":{"title":"Device Exposure:", "$ref" : "device_exposure_property.json"}
+    "DeviceExposure":{"title":"Use Properties to add or exclude attributes...", "$ref" : "device_exposure_property.json"}
   }
 }

@@ -1,10 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Add Drug Exposure",
+  "description":"Drug Exposure: ",
   "required":["DrugExposure"],
   "additionalProperties": false,
   "type":"object",
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
   "properties":{
-    "DrugExposure":{"title":"Drug Exposure:", "$ref" : "drug_exposure_property.json"}
+    "DrugExposure":{"title":"Use Properties to add or exclude attributes...", "$ref" : "drug_exposure_property.json"}
   }
 }

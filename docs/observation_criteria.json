@@ -12,6 +12,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "Observation":{"title":"Observation", "description":"Use Properties to add or exclude attributes...","$ref" : "observation_property.json"}
+    "Observation":{"title":"Use Properties to add or exclude attributes...", "$ref" : "observation_property.json"}
   }
 }

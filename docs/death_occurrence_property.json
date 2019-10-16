@@ -1,11 +1,31 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
     "additionalProperties": false,
-    "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":false},
+    "options":{
+        "required_by_default":false,
+        "remove_empty_properties":true,
+        "no_additional_properties":true,
+        "disable_edit_json":true,
+        "disable_properties":false
+    },
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
-        "properties":{
-        "CodesetId":{"title":"a death occurrence from: ","$ref" : "core/codeset_id_type.json","description":"...condition."}
-    },
-    "$ref":"death_common_attributes.json"
+    "properties":{
+        "CodesetId":{"title":"A death occurrence from: ","$ref" : "core/codeset_id_type.json","description":"...condition."},
+        "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years ","description":"Filter Deaths by age at death.","$ref" : "NumericRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "Gender"   : {"title":"Add Gender Criteria","description":"with a gender of: ","headerTemplate":"Filter Deaths based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
+        "OccurrenceStartDate" : {"title":"Add Death Date Criteria","headerTemplate":"death occurrence is: ","description":"Filter Death by Date.","$ref" : "DateRange.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "DeathTypeExclude" : {"type" : "boolean","title":"Exclude Death Type","format":"checkbox","headerTemplate":"Death type is none of the following: "},
+        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","id": "arr_item","$ref" : "condition_type_criteria.json"},
+        "DeathSourceConcept":{"title":"Add Cause of Death Source Concept Criteria","headerTemplate":"Death Source Concept is: ","description":"Filter Death by the Death Source Concept.","$ref":"core/codeset_id_type.json",
+            "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+        "CorrelatedCriteria":{
+            "title":"Add Nested Criteria...",
+            "headerTemplate":"Having...",
+            "format":"categories",
+            "$ref" : "correlated_criteria_range.json"
+        }
+    }
 }

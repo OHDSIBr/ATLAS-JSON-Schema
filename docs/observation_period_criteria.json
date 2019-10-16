@@ -12,6 +12,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "ObservationPeriod":{"title":"Observation Period", "description":"Use Properties to add or exclude attributes...","$ref" : "observation_period_property.json"}
+    "ObservationPeriod":{"title":"Use Properties to add or exclude attributes...","$ref" : "observation_period_property.json"}
   }
 }

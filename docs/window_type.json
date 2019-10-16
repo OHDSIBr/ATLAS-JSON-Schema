@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "$id": "WindowType",
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "defaultProperties": [
+    "Start",
+    "UseIndexEnd",
+    "UseEventEnd",
+    "End"
+  ],
+  "required": [
+    "Start",
+    "UseIndexEnd",
+    "UseEventEnd",
+    "End"
+  ],
+  "properties":{
+    "Start":{
+    "title":"Start",
+    "$ref":"window_limit.json"
+    },
+    "End":{
+    "type": "object",
+    "options":{"disable_edit_json":true,"disable_properties":false},
+    "format":"grid-strict",
+    "title":"and",
+    "properties": {
+
+      "$ref":"window_limit.json",
+      "UseIndexEnd":{
+        "type":"boolean",
+        "title": "",
+        "options":{
+          "enum_titles":["index end date","index start date"]
+        }
+      }
+      }
+    }
+  }
+}

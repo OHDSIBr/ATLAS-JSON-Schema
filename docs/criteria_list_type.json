@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
   "title": "Initial event",
+  "format":"tabs-top",
   "options": {
     "array_controls_top":true,
     "disable_collapse":true,
@@ -16,15 +17,32 @@
     "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
     "title": "Event: ",
     "type":"object",
+    "required":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+    "defaultProperties":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+    "properties": {
+      "IgnoreObservationPeriod":{"title": " allow events from outside observation period", "type":"boolean","format":"checkbox"},
+      "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"},
+      "Occurrence":{"title":"Occurrences:","$ref":"occurrence.json"},
+      "Criteria":{
     "oneOf":[
         {"$ref":"condition_era_criteria.json"},
         {"$ref":"condition_occurrence_criteria.json"},
         {"$ref":"death_criteria.json"},
         {"$ref":"device_exposure_criteria.json"},
-        {"$ref":"DoseEraCriteria.json"},
+        {"$ref":"dose_era_criteria.json"},
         {"$ref":"drug_era_criteria.json"},
         {"$ref":"drug_exposure_criteria.json"},
+        {"$ref":"measurement_criteria.json"},
+        {"$ref":"observation_criteria.json"},
+        {"$ref":"observation_period_criteria.json"},
+        {"$ref":"payer_plan_period_criteria.json"},
+        {"$ref":"procedure_occurrence_criteria.json"},
+        {"$ref":"specimen_criteria.json"},
         {"$ref":"visit_occurrence_criteria.json"}
       ]
+      },
+      "StartWindow":{"title":"Start window is:","$ref":"window_limit.json"},
+      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"window_limit.json"}
+    }
   }
 }

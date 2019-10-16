@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type":"integer",
+  "required":true,
+  "enum":[-1,1],
+  "options":{
+    "grid_columns": 4,
+    "enum_titles":["Before","After"]
+  }
+}

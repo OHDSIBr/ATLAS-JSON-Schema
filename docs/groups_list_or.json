@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "array",
+  "format":"tabs-top",
   "title": "Add a group to combine criteria using and/or relationships. ",
   "description":"Add attributes using the Properties button...",
   "additionalProperties": false,

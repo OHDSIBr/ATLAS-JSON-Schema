@@ -1,10 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title":"Add Dose Era",
+  "description":"Dose Era: ",
   "required":["DoseEra"],
   "additionalProperties": false,
   "type":"object",
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
   "properties":{
-    "DoseEra":{"title":"Dose Era:", "$ref" : "dose_era_property.json"}
+    "DoseEra":{"title":"Use Properties to add or exclude attributes...", "$ref" : "dose_era_property.json"}
   }
 }
