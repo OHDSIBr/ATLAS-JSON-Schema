@@ -15,7 +15,7 @@
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Procedure Occurrences by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Procedure Occurrences based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
-    "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Procedure Occurrences by the Procedure Start Date.","$ref" : "DateRange.json",
+    "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Procedure Occurrences by the Procedure Start Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ProcedureTypeExclude" : {"type" : "boolean","title":"Exclude Procedure Type","headerTemplate":" Procedure Type is not any of selected","format":"checkbox"},
     "ProcedureType"   : {"title":"Add Procedure Type Criteria","headerTemplate":"with Procedure Type of: ","description":"Filter Procedure Occurrences by the Procedure Type.","id": "arr_item","$ref" : "procedure_type_criteria.json"},

@@ -16,7 +16,7 @@
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Measurements by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Measurements based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
-    "OccurrenceStartDate" : {"title":"Add Measurement Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Measurements by the Date.","$ref" : "DateRange.json",
+    "OccurrenceStartDate" : {"title":"Add Measurement Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Measurements by the Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "MeasurementTypeExclude" : {"type" : "boolean","title":"Exclude Measurement Type","headerTemplate":" Measurement Type is not any of selected","format":"checkbox"},
     "MeasurementType"   : {"title":"Add Measurement Type Criteria","headerTemplate":"with Measurement Type of: ","description":"Filter Measurements by the Measurement Type.","id": "arr_item","$ref" : "measurement_type_criteria.json"},

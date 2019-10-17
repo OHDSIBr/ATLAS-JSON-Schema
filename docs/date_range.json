@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "type":"object",
-  "format":"grid-strict",
+  "format":"grid",
   "required": ["Op","Value"],
   "options": {
     "grid_columns":8,

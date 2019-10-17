@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
 	"options":{"disable_edit_json":true,"disable_properties":true},
 	"anyOf":[
 	  {"title":"end of continuous observation ","additionalProperties": false,"schema": {"type":"object"}},

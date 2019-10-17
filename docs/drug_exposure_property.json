@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "additionalProperties": false,
     "options":{"required_by_default":false,"no_additional_properties":true,"disable_edit_json":true,"disable_properties":false},
     "required":["CodesetId"],
@@ -10,9 +10,9 @@
         "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Drug Exposures by age at occurrence.","$ref" : "NumericRange.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Drug Exposures based on gender.","id": "arr_item","$ref" : "gender_criteria.json"},
-        "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Drug Exposures by the Drug Exposure Start Date.","$ref" : "DateRange.json",
+        "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Drug Exposures by the Drug Exposure Start Date.","$ref" : "date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "OccurrenceEndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Drug Exposures by the Drug Exposure End Date.","$ref" : "DateRange.json",
+        "OccurrenceEndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Drug Exposures by the Drug Exposure End Date.","$ref" : "date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "DrugTypeExclude" : {"type" : "boolean","title":"Exclude Drug Type","format":"checkbox","headerTemplate":"Drug Type is not any of the following: "},
         "DrugType"   : {"title":"Add Drug Type Criteria","description":"with Drug Type of: ","headerTemplate":"Filter Drug Exposures by the Drug Type.","id": "arr_item","$ref" : "drug_type_criteria.json"},

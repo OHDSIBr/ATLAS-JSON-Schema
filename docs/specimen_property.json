@@ -16,7 +16,7 @@
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Specimens by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Specimens based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
-    "OccurrenceStartDate" : {"title":"Add Specimen Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Specimen by the Date.","$ref" : "DateRange.json",
+    "OccurrenceStartDate" : {"title":"Add Specimen Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Specimen by the Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "SpecimenTypeExclude" : {"type" : "boolean","title":"Exclude Specimen Type","headerTemplate":" Specimen Type is not any of selected","format":"checkbox"},
     "SpecimenType"   : {"title":"Add Specimen Type Criteria","headerTemplate":"with Specimen Type of: ","description":"Filter Specimen by the Type.","id": "arr_item","$ref" : "specimen_type_criteria.json"},

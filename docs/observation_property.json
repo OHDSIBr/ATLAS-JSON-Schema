@@ -17,7 +17,7 @@
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Observations by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Observations based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
-    "OccurrenceStartDate" : {"title":"Add Observation Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Observations by the Date.","$ref" : "DateRange.json",
+    "OccurrenceStartDate" : {"title":"Add Observation Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Observations by the Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ObservationTypeExclude" : {"type" : "boolean","title":"Exclude Observation Type","headerTemplate":" Observation Type is not any of selected","format":"checkbox"},
     "ObservationType"   : {"title":"Add Observation Type Criteria","headerTemplate":"with Observation Type of: ","description":"Filter Observations by the Type.","id": "arr_item","$ref" : "observation_type_criteria.json"},

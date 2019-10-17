@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "format":"grid-strict",
     "title":"Add Event End Date Criteria ",
     "options": {
@@ -7,6 +7,6 @@
     },
     "additionalProperties": true,
     "properties":{
-        "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref" : "DateRange.json"}
+        "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref" : "date_range.json"}
     }
 }
