@@ -32,6 +32,7 @@
         {"$ref":"dose_era_criteria.json"},
         {"$ref":"drug_era_criteria.json"},
         {"$ref":"drug_exposure_criteria.json"},
+        {"$ref":"location_region_criteria.json"},
         {"$ref":"measurement_criteria.json"},
         {"$ref":"observation_criteria.json"},
         {"$ref":"observation_period_criteria.json"},
