@@ -6,6 +6,7 @@ The motivation is to enable others tools, beyond OHDSI, to be able to import/exp
 Atlas JSON Schemas are written agstain [JSON Schema draft-04](https://json-schema.org/specification-links.html#draft-4) specification because its large parser support on major languages and with the hope to be easy portable to more recent JSON Schema versions.
 
 There are two kinds of the schemas:
+
 - **multi**: Several small files referenced by "$ref" to each ohter's. You need to enable support to AJAX schema loading to use.
 - **single**: One big file without JSON Editor options and descriptions suitable for just validation.(In development)
 
@@ -16,9 +17,11 @@ Schemas are organized on branches by the version of the Atlas interface. Current
 
 So, to find the files of these release, you need to access:
 
-- https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/atlas_cohort_definition.json
+- https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/atlas_cohort_definition_schema-draft-04.json
 
 Or, if you want to browse the files, go to the 2.7.4 branch of this repository.
 
+### Testing
 
-
+- Load a Cohort Definition in the Atlas UI, go to the Export tab and select the JSON view. Click on the "Copy to Clipboard" button.   
+- Follow this link to use the JSon Editor interactive version, paste the JSON data definition, and go to ...
