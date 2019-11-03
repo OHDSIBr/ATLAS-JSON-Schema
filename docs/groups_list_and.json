@@ -4,7 +4,6 @@
   "type": "array",
   "title": "Add a group to combine criteria using and/or relationships. ",
   "description":"Add attributes using the Properties button...",
-  "additionalProperties": false,
   "options":{
     "array_controls_top":true
   },
@@ -22,7 +21,7 @@
         "remove_empty_properties": true,
         "disable_edit_json":true,
         "disable_collapse":false,
-        "disable_properties":false
+        "disable_properties":true
       },
       "description":"Use Properties to add or exclude criterias...",
       "$ref":"correlated_criteria_range.json"

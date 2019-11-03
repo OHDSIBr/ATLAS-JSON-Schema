@@ -3,25 +3,33 @@
   "type": "array",
   "title": "Initial event",
   "format":"tabs-top",
+  "additionalProperties": false,
   "options": {
     "array_controls_top":true,
     "disable_collapse":true,
-    "disable_edit_json":false,
+    "disable_edit_json":true,
     "disable_properties":true,
     "display_required_only":true,
     "no_additional_properties":true,
-    "remove_empty_properties": false
+    "remove_empty_properties": true
   },
   "description":"People having any of the following events...",
   "items": {
-    "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
     "title": "Event: ",
+    "description": "Use properties to add visit restriction and end window.",
     "type":"object",
+    "additionalProperties": false,
+    "options": {
+      "disable_edit_json":true,
+      "disable_properties":false,
+      "display_required_only":true,
+      "no_additional_properties":true,
+      "remove_empty_properties": true
+    },
     "required":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
     "defaultProperties":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
     "properties": {
       "IgnoreObservationPeriod":{"title": " allow events from outside observation period", "type":"boolean","format":"checkbox"},
-      "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"},
       "Occurrence":{"title":"Occurrences:","$ref":"occurrence.json"},
       "Criteria":{
     "oneOf":[
@@ -43,7 +51,8 @@
       ]
       },
       "StartWindow":{"title":"Start window is:","$ref":"window_limit.json"},
-      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"window_limit.json"}
+      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"window_limit.json"},
+      "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"}
     }
   }
 }

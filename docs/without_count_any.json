@@ -2,8 +2,11 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type":"object",
   "description":"...'Occurrences' of the following criteria. Use Tabs to add or exclude criteria to group.",
+  "options": {
+    "disable_edit_json":true,
+    "disable_properties":true
+    },
   "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
-  "defaultProperties":["Type","CriteriaList","DemographicCriteriaList","Groups"],
   "basicCategoryTitle": "Occurrences",
   "additionalProperties":false,
   "properties":{

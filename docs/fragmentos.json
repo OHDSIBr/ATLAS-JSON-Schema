@@ -753,3 +753,36 @@
       }
     }
   ],
+
+
+  "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+  "defaultProperties":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+  "required":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+  "defaultProperties":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+
+  {
+    "$ref": "http://localhost:8080/docs/correlated_criteria_range.json"
+  }
+
+  "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria. Add criterias, demographic or groups...",
+    "anyOf":[
+      {
+        "type": "null",
+        "title": "0"
+      },
+      {
+        "type": "integer","title": "one of the following:",
+        "watch": {
+          "counter": "CriteriaList"
+        },
+        "enumSource": [
+          {
+            "source": "counter",
+            "headerTemplate": "{{i1}}",
+            "title": "{{i1}}",
+            "value": "{{i1}}"
+          }
+        ]
+      }
+    ]
+      },

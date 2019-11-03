@@ -39,7 +39,7 @@
           "maxLength": 1,
           "readOnly":true,
           "watch":{
-            "stdc":"arr_item.concept.STANDARD_CONCEPT_CAPTION"
+            "stdc":"expression.arr_item.concept.STANDARD_CONCEPT_CAPTION"
           },
         "options": {
           "hidden": true
@@ -75,6 +75,21 @@
   },
    "properties":{
     "name":{"type":"string"},
+    "Test":{
+      "type":"object",
+      "properties":{
+        "AA":{
+      "watch":{
+        "stdc":"expression.items"
+       },
+       "enumSource": [
+        {
+          "source": "stdc",
+          "title": "{{i}}",
+          "value": "{{i}}"
+        }
+      ]
+      }}},
     "expression": {"type":"object","properties":{"items":{"$ref": "#/definitions/ConceptSetsType" }}}
   }
 }

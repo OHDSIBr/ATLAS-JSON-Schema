@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "anyOf":[
+    {
+      "type": "null",
+      "title": "0"
+    },
+    {
+      "type": "integer","title": "one of the following:",
+      "watch": {
+        "counter": "CriteriaList"
+      },
+      "enumSource": [
+        {
+          "source": "counter",
+          "title": "{{item.id}}",
+          "value": "{{item.id}}"
+        }
+      ]
+    }
+  ]
+}

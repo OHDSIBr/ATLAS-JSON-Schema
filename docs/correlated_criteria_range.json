@@ -1,5 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^Type$": { "type": "string" },
+    "^Count$": { "type": "integer" },
+    "^CriteriaList$": { "type": "array" },
+    "^DemographicCriteriaList$": { "type": "array" },
+    "^Groups$": { "type": "array" }
+  },
   "options":{
     "display_required_only":true,
     "remove_empty_properties":true,

@@ -6,7 +6,7 @@
   "options": {
     "no_additional_properties":true,
     "disable_collapse":true,
-    "remove_empty_properties":true,
+    "remove_empty_properties":false,
     "disable_properties":true,
     "disable_edit_json":true
   },
@@ -16,10 +16,9 @@
     "IsDistinct":{
         "type": "boolean",
         "title": " ",
-        "enum": [true,false],
         "description": " occurrences of criteria: ",
         "default":false,
-        "options":{"grid_columns": 3,"enum_titles":["using distinct","using all"]}
+        "options":{"grid_break": true,"grid_columns": 3,"enum_titles":["using distinct","using all"]}
     }
   }
 }
