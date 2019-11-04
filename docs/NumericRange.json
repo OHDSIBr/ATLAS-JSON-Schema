@@ -20,12 +20,12 @@
       },
     "additionalProperties": false,
     "oneOf": [
-                { "title":"Less Than","$ref": "core/WithoutExtentLessThan.json"},
-                { "title":"Less or Equal To","$ref": "core/WithoutExtentLessOrEqualTo.json"},
-                { "title":"Equal To","$ref": "core/WithoutExtentEqualTo.json"},
-                { "title":"Greater Than","$ref": "core/WithoutExtentGreaterThan.json"},
-                { "title":"Greater or Equal To","$ref": "core/WithoutExtentGreaterOrEqualTo.json"},
-                { "title":"Between","$ref": "core/WithExtentBetweenNum.json"},
-                { "title":"Not Between","$ref": "core/WithExtentNotBetweenNum.json"}
+                { "title":"Less Than","$ref": "core/without_extent_less_than.json"},
+                { "title":"Less or Equal To","$ref": "core/without_extent_less_or_equal_to.json"},
+                { "title":"Equal To","$ref": "core/without_extent_equal_to.json"},
+                { "title":"Greater Than","$ref": "core/without_extent_greater_than.json"},
+                { "title":"Greater or Equal To","$ref": "core/without_extent_greater_or_equal_to.json"},
+                { "title":"Between","$ref": "core/with_extent_between_num.json"},
+                { "title":"Not Between","$ref": "core/with_extent_not_between_num.json"}
             ]
 }
