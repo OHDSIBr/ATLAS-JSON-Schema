@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/specimen_property.json",
   "additionalProperties": false,
   "options": {
     "required_by_default":false,
@@ -13,14 +14,14 @@
   "properties":{
     "CodesetId":{"title":"An specimen of: ","$ref":"codeset_id_type.json","description":"...specimen."},
     "First" : {"type" : "boolean","title":"Add First Occurrence Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
-    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Specimens by age at occurrence.","$ref" : "NumericRange.json",
+    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Specimens by age at occurrence.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Specimens based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
     "OccurrenceStartDate" : {"title":"Add Specimen Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Specimen by the Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "SpecimenTypeExclude" : {"type" : "boolean","title":"Exclude Specimen Type","headerTemplate":" Specimen Type is not any of selected","format":"checkbox"},
     "SpecimenType"   : {"title":"Add Specimen Type Criteria","headerTemplate":"with Specimen Type of: ","description":"Filter Specimen by the Type.","id": "arr_item","$ref" : "specimen_type_criteria.json"},
-    "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Specimens by the Quantity.","$ref" : "NumericRange.json",
+    "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Specimens by the Quantity.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Unit"   : {"title":"Add Unit Criteria","description":"with Unit: ","headerTemplate":"Filter Specimens by Unit.","id": "arr_item","$ref" : "unit_type_criteria.json"},
     "AnatomicSite"   : {"title":"Add Anatomic Site Criteria","description":"Anatomic Site is: ","headerTemplate":"Filter Specimens by the Anatomic Site.","id": "arr_item","$ref" : "anatomic_site_type_criteria.json"},

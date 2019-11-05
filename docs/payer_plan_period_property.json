@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/payer_plan_period_property.json",
   "type":"object",
   "additionalProperties": false,
   "options": {
@@ -11,11 +12,11 @@
   "defaultProperties":[],
   "properties": {
       "First" : {"type" : "boolean","title":"First Payer Plan Period Criteria","headerTemplate":" limited to the patients first payer plan period","format":"checkbox"},
-      "AgeAtStart" : {"title":"Add Age at Start Criteria","headerTemplate":"with age in years at period start ","description":"Filter Perioods by Age at Start.","$ref" : "NumericRange.json",
+      "AgeAtStart" : {"title":"Add Age at Start Criteria","headerTemplate":"with age in years at period start ","description":"Filter Perioods by Age at Start.","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-      "AgeAtEnd" : {"title":"Add Age at End Criteria","headerTemplate":"with age in years at period end ","description":"Filter Perioods by Age at End.","$ref" : "NumericRange.json",
+      "AgeAtEnd" : {"title":"Add Age at End Criteria","headerTemplate":"with age in years at period end ","description":"Filter Perioods by Age at End.","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-      "PeriodLength" : {"title":"Add Period Length Criteria","headerTemplate":"with period duration (days): ","description":"Filter Payer Plan Periods by duration (days).","$ref" : "NumericRange.json",
+      "PeriodLength" : {"title":"Add Period Length Criteria","headerTemplate":"with period duration (days): ","description":"Filter Payer Plan Periods by duration (days).","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Condition Eras based on gender.","id": "arr_item","$ref" : "gender_criteria.json"},
       "UserDefinedPeriod" : {"title":"Specify Start and End Dates","description":"using specified period: ","headerTemplate":"Specify start and end date to use for the Payer Plan Period.","$ref" : "date_period.json",

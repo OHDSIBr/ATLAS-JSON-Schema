@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/atlas_cohort_definition.json",
   "title": "Atlas Cohort Definition",
   "type": "object",
   "format": "categories",
@@ -41,7 +42,6 @@
       },
       "properties": {
         "CriteriaList":{
-          "$id": "/properties/PrimaryCriteria/properties/CriteriaList",
           "$ref":"correlated_criteria_list_type.json",
           "additionalProperties":false,
           "options": {
@@ -54,7 +54,6 @@
           }
             },
         "ObservationWindow":{
-          "$id": "/properties/PrimaryCriteria/properties/ObservationWindow",
           "title": "Observation Window",
           "headerTemplate":" ",
           "description":"With continuous observation of at least:",

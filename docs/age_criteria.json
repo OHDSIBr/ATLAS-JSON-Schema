@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/age_criteria.json",
     "format":"grid-strict",
     "required":["Age"],
     "options":{
@@ -9,6 +10,6 @@
         },
     "additionalProperties": true,
     "properties":{
-    "Age":{"title":"With age: ","$ref":"NumericRange.json"}
+    "Age":{"title":"With age: ","$ref":"numeric_range.json"}
     }
 }

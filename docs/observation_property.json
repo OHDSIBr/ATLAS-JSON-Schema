@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/observation_property.json",
   "type":"object",
   "additionalProperties": false,
   "options": {
@@ -14,7 +15,7 @@
   "properties":{
     "CodesetId":{"title":"An observation of: ","$ref":"codeset_id_type.json","description":"...observation."},
     "First" : {"type" : "boolean","title":"Add First Observation Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
-    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Observations by age at occurrence.","$ref" : "NumericRange.json",
+    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Observations by age at occurrence.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Observations based on Gender.","id": "arr_item","$ref" : "gender_criteria.json"},
     "OccurrenceStartDate" : {"title":"Add Observation Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Observations by the Date.","$ref" : "date_range.json",
@@ -22,7 +23,7 @@
     "ObservationTypeExclude" : {"type" : "boolean","title":"Exclude Observation Type","headerTemplate":" Observation Type is not any of selected","format":"checkbox"},
     "ObservationType"   : {"title":"Add Observation Type Criteria","headerTemplate":"with Observation Type of: ","description":"Filter Observations by the Type.","id": "arr_item","$ref" : "observation_type_criteria.json"},
     "VisitType"   : {"title":"Add Visit Criteria","description":"with a Visit occurrence of: ","headerTemplate":"Filter Observations based on visit occurrence of observation.","id": "arr_item","$ref" : "visit_type_criteria.json"},
-    "ValueAsNumber" : {"title":"Add Value As Number Criteria","headerTemplate":"with Value as Number: ","description":"Filter Observations by the Value As Number.","$ref" : "NumericRange.json",
+    "ValueAsNumber" : {"title":"Add Value As Number Criteria","headerTemplate":"with Value as Number: ","description":"Filter Observations by the Value As Number.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ValueAsString" : {"title":"Add Value As String Criteria","description":"with Value As String: ","headerTemplate":"Filter Observations by the Value As String.","$ref" : "text_filter.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

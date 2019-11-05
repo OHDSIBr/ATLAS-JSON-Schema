@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/observation_period_property.json",
   "type":"object",
   "additionalProperties": false,
   "options": {
@@ -11,18 +12,18 @@
   "defaultProperties":[],
   "properties": {
       "First" : {"type" : "boolean","title":"First Observation Period Criteria","headerTemplate":" limited to the patients first observation period","format":"checkbox"},
-      "AgeAtStart" : {"title":"Add Age at Start Criteria","headerTemplate":"with age in years at period start ","description":"Filter Perioods by Age at Start.","$ref" : "NumericRange.json",
+      "AgeAtStart" : {"title":"Add Age at Start Criteria","headerTemplate":"with age in years at period start ","description":"Filter Perioods by Age at Start.","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "UserDefinedPeriod" : {"title":"Specify Start and End Dates","description":"using specified period: ","headerTemplate":"Specify start and end date to use for the Observation Period.","$ref" : "date_period.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-      "AgeAtEnd" : {"title":"Add Age at End Criteria","headerTemplate":"with age in years at period end ","description":"Filter Perioods by Age at End.","$ref" : "NumericRange.json",
+      "AgeAtEnd" : {"title":"Add Age at End Criteria","headerTemplate":"with age in years at period end ","description":"Filter Perioods by Age at End.","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "PeriodStartDate" : {"title":"Add Period Start Date Criteria","headerTemplate":"observation period start is: ","description":"Filter Observation Periods by Start Date.","$ref" : "date_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "PeriodEndDate" : {"title":"Add Period End Date Criteria","headerTemplate":"observation period end is: ","description":"Filter Observation Periods by End Date.","$ref" : "date_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "PeriodType"   : {"title":"Add Period Type Criteria","description":"Period Type is: ","headerTemplate":"Filter Observation Periods by Type.","id": "arr_item","$ref" : "period_type_criteria.json"},
-      "PeriodLength" : {"title":"Add Period Length Criteria","headerTemplate":"with period duration (days): ","description":"Filter Observation Periods by duration (days).","$ref" : "NumericRange.json",
+      "PeriodLength" : {"title":"Add Period Length Criteria","headerTemplate":"with period duration (days): ","description":"Filter Observation Periods by duration (days).","$ref" : "numeric_range.json",
           "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
       "CorrelatedCriteria":{
           "title":"Add Nested Criteria...",

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/demographic_criteria_list.json",
   "type": "array",
   "title": "Filter events based on Demographic criteria:",
   "description":"Add attributes using the Properties button...",
@@ -21,7 +22,7 @@
       },
     "properties":
       {
-        "Age":{"title":"Age Criteria","description":"With age: ","$ref":"NumericRange.json"},
+        "Age":{"title":"Age Criteria","description":"With age: ","$ref":"numeric_range.json"},
         "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"concept_array.json"},
         "OccurrenceStartDate":{"title":"Event Start Date Criteria","description":"Occurence start is: ","$ref":"date_range.json"},
         "OccurrenceEndDate":{"title":"Event End Date Criteria","description":"Occurence end is: ","$ref":"date_range.json"},
