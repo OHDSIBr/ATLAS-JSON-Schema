@@ -76,7 +76,7 @@
               "Type": {
               "title": "Limit initial events to:",
               "description": " ...per person",
-              "$ref":"result_limit_options.json"
+              "$ref":"event_limit_options.json"
             }
           }
         }
@@ -85,7 +85,7 @@
     "QualifiedLimit": {
       "type": "object",
       "properties":{
-        "Type": {"$ref":"result_limit_options.json"}
+        "Type": {"$ref":"event_limit_options.json"}
       }
     },
     "InclusionRules": {
@@ -100,7 +100,7 @@
         "Type": {
           "title":"Limit qualifying events to: ",
           "description":" ...per person.",
-          "$ref":"result_limit_options.json"
+          "$ref":"event_limit_options.json"
         }
       }
     },

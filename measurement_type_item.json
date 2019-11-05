@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/visit_type_criteria.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/measurement_type_item.json",
   "format":"grid-strict",
-  "required":["VisitType"],
+  "required":["MeasurementType"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -16,6 +16,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Visit Type codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Measurement Type codes: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

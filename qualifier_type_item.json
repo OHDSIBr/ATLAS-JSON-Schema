@@ -1,7 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/qualifier_type_item.json",
   "format":"grid-strict",
-  "required":["DrugType"],
+  "required":["Qualifier"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -15,6 +16,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add drug type codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Qualifier code: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }
