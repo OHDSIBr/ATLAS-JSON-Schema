@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/custom_era_strategy.json",
   "title":"fixed duration relative to initial event ",
   "type":"object",
   "required":["CustomEra"],
@@ -7,7 +8,7 @@
     "CustomEra":{
       "title":"Continuous Exposure Persistence:",
       "description":"Specify a concept set that contains one or more drugs. A drug era will be derived from all drug exposure events for any of the drugs within the concept set, using the specified persistence window as a maximum allowable gap in days between successive exposure events and adding a specified surveillance window to the final exposure event. If no exposure event end date is provided, then an exposure event end date is inferred to be event start date + days supply in cases when days supply is available or event start date + 1 day otherwise. This event persistence assures that the cohort end date will be no greater than the drug era end date.",
-      "$ref":"CustomEraStrategyType.json"
+      "$ref":"custom_era_strategy_type.json"
     }
   }
 }

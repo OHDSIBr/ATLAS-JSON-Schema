@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/groups_list_and.json",
   "format":"tabs-top",
   "type": "array",
   "title": "Add a group to combine criteria using and/or relationships. ",
@@ -8,7 +9,6 @@
     "array_controls_top":true
   },
   "items": {
-    "$id": "/properties/PrimaryCriteria/properties/DemographicCriteriaList/items",
     "title": "Group",
     "headerTemplate": "Group {{i1}} - And having... ",
     "type":"object",

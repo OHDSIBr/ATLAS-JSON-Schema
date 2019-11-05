@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/window_limit.json",
   "type":"object",
   "options":{
     "disable_edit_json":true,
