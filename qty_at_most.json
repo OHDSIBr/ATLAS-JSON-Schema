@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/without_count_all.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/qty_at_most.json",
   "type":"object",
   "description":"...'Occurrences' of the following criteria. Use Tabs to add or exclude criteria to group.",
   "options": {
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+  "required":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
   "basicCategoryTitle": "Occurrences",
   "additionalProperties":false,
   "properties":{
@@ -16,9 +16,10 @@
       "description":"occurrences of the following criteria. Add criterias, demographic or groups...",
       "readOnly":"true",
       "type": "string",
-      "enum": [ "ALL" ],
-      "options":{"enum_titles":["All"]}
+      "enum": [ "AT_MOST" ],
+      "options":{"enum_titles":["At Most"]}
     },
+    "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria. Add criterias, demographic or groups...","type": "integer"},
     "CriteriaList":{"title":"Add criteria to group","headerTemplate":"Add Criterias:","$ref":"criteria_list_type.json"},
     "DemographicCriteriaList":{
       "type":"array",
@@ -27,6 +28,6 @@
       "description":"",
       "$ref":"demographic_criteria_list.json"
     },
-    "Groups":{"title":"Add group","headerTemplate":"Add groups","description":"","$ref":"groups_list_and.json"}
+    "Groups":{"title":"Add group","headerTemplate":"Add groups","description":"","$ref":"groups_list_or.json"}
   }
 }

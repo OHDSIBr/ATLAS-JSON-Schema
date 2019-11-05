@@ -20,12 +20,12 @@
   },
   "additionalProperties": false,
   "oneOf": [
-                { "title":"Before","$ref": "without_extent_before.json"},
-                { "title":"On or Before","$ref": "without_extent_on_or_before.json"},
-                { "title":"On","$ref": "without_extent_on.json"},
-                { "title":"After","$ref": "without_extent_after.json"},
-                { "title":"On or After","$ref": "without_extent_on_or_after.json"},
-                { "title":"Between","$ref": "with_extent_between.json"},
-                { "title":"Not Between","$ref": "with_extent_not_between.json"}
+                { "title":"Before","$ref": "ord_before.json"},
+                { "title":"On or Before","$ref": "ord_on_or_before.json"},
+                { "title":"On","$ref": "ord_on.json"},
+                { "title":"After","$ref": "ord_after.json"},
+                { "title":"On or After","$ref": "ord_on_or_after.json"},
+                { "title":"Between","$ref": "ord_between.json"},
+                { "title":"Not Between","$ref": "ord_not_between.json"}
             ]
 }

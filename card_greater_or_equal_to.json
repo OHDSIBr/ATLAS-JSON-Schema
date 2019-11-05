@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/without_extent_greater_than.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/card_greater_or_equal_to.json",
   "required":["Value","Op"],
   "format":"grid-strict",
   "options":{
@@ -8,7 +8,7 @@
     "display_required_only":false
   },
   "properties":{
-    "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gt" ],"options":{"grid_columns":5,"enum_titles":["Greater Than"]}},
+    "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gte" ],"options":{"grid_columns":5,"enum_titles":["Greater Or Equal To"]}},
     "Value":{"title":"value:","type": "integer","default":0,"options":{"grid_columns":4}}
   }
 }

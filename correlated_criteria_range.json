@@ -19,9 +19,9 @@
     "disable_collapse":false
   },
   "oneOf": [
-                { "title":" all ","$ref": "without_count_all.json" },
-                { "title":" any ","$ref": "without_count_any.json"},
-                { "title":" at least ","$ref": "with_count_at_least.json"},
-                { "title":" at most ","$ref": "with_count_at_most.json"}
+                { "title":" all ","$ref": "qty_all.json" },
+                { "title":" any ","$ref": "qty_any.json"},
+                { "title":" at least ","$ref": "qty_at_least.json"},
+                { "title":" at most ","$ref": "qty_at_most.json"}
             ]
 }
