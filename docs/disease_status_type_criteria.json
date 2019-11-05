@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/disease_status_type_criteria.json",
   "format":"grid-strict",
   "required":["DiseaseStatus"],
   "type":"array",
