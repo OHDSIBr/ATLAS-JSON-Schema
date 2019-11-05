@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id":"ConceptType",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/concept_core_extended.json",
   "type": "object",
   "title":"Concept",
   "format":"grid-strict",

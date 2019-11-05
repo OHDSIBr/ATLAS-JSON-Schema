@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/day_options.json",
   "type":"integer",
   "enum":[ 0, 1, 7, 14, 21, 30, 60, 90, 120, 180, 365, 548, 730, 1095],
   "options":{

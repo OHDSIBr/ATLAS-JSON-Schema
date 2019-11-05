@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Procedure Type code: ","aditionalProperties":"false","$ref":"core/concept_core.json"
+  "title":"Add Procedure Type code: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

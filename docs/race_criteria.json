@@ -14,7 +14,7 @@
         "additionalProperties": false
       },
       "properties":{
-        "Race":{"title":"With a race of: ","$ref":"core/concept_core.json"}
+        "Race":{"title":"With a race of: ","$ref":"concept_core.json"}
       }
     }
 }

@@ -11,7 +11,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"A measurement of: ","$ref":"core/codeset_id_type.json","description":"...measurement."},
+    "CodesetId":{"title":"A measurement of: ","$ref":"codeset_id_type.json","description":"...measurement."},
     "First" : {"type" : "boolean","title":"Add First Measure Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Measurements by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
@@ -36,7 +36,7 @@
     "RangeHighRatio" : {"title":"Add High Range Ratio Criteria","headerTemplate":"with Range High Ratio ","description":"Filter Measurements by the Ratio of Value as Number to Range High.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Measurements based on provider specialty.","id": "arr_item","$ref" : "provider_speciality_criteria.json"},
-    "MeasurementSourceConcept":{"title":"Add Measurement Source Concept Criteria","headerTemplate":"Measurement Source Concept is: ","description":"Filter Measurements by the Source Measurement Concept.","$ref":"core/codeset_id_type.json",
+    "MeasurementSourceConcept":{"title":"Add Measurement Source Concept Criteria","headerTemplate":"Measurement Source Concept is: ","description":"Filter Measurements by the Source Measurement Concept.","$ref":"codeset_id_type.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "CorrelatedCriteria":{
         "title":"Add Nested Criteria...",

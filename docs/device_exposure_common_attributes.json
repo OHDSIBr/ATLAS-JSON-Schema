@@ -16,7 +16,7 @@
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Device Exposures by Quantity.","$ref" : "NumericRange.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "DeviceSourceConcept":{"title":"Add Device Source Concept Criteria","headerTemplate":"Device Source Concept is: ","description":"Filter Device Exposures by the Device Source Concept.","$ref":"core/codeset_id_type.json",
+        "DeviceSourceConcept":{"title":"Add Device Source Concept Criteria","headerTemplate":"Device Source Concept is: ","description":"Filter Device Exposures by the Device Source Concept.","$ref":"codeset_id_type.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","description":"with a Provider Specialty of: ","headerTemplate":"Filter Device Exposures based on provider specialty.","id": "arr_item","$ref" : "condition_type_criteria.json"},
         "CorrelatedCriteria":{"title":"Add Nested Criteria...","headerTemplate":"add nested criteria to : ","description":" occurrences of ","$ref" : "correlated_criteria_range.json",

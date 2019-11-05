@@ -28,8 +28,8 @@
         "disable_edit_json":true,
         "disable_properties":true},
       "properties": {
-        "Days":{"title":"between","$ref":"core/window_day_options.json"},
-        "Coeff":{"title":"days","default":-1,"$ref":"core/window_coeff_options.json"}
+        "Days":{"title":"between","$ref":"window_day_options.json"},
+        "Coeff":{"title":"days","default":-1,"$ref":"window_coeff_options.json"}
       }
     },
     "End":{
@@ -42,8 +42,8 @@
         "disable_edit_json":true,
         "disable_properties":true},
       "properties":{
-        "Days":{"title":"and","$ref":"core/window_day_options.json"},
-        "Coeff":{"default":1,"title":"days","$ref":"core/window_coeff_options.json"}
+        "Days":{"title":"and","$ref":"window_day_options.json"},
+        "Coeff":{"default":1,"title":"days","$ref":"window_coeff_options.json"}
       }
     },
     "UseIndextEnd":{

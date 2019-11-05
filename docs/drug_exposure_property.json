@@ -5,7 +5,7 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
         "properties":{
-        "CodesetId":{"title":"A drug exposure of: ","$ref" : "core/codeset_id_type.json","description":"...drugs."},
+        "CodesetId":{"title":"A drug exposure of: ","$ref" : "codeset_id_type.json","description":"...drugs."},
         "First" : {"type" : "boolean","title":"Add First Exposure Criteria","headerTemplate":" For the first time in the person's history.","format":"checkbox"},
         "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Drug Exposures by age at occurrence.","$ref" : "NumericRange.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
@@ -31,7 +31,7 @@
         "DoseUnit"   : {"title":"Add Dose Unit Criteria","headerTemplate":"Dose Unit is: ","description":"Filter Drug Exposures by Dose Unit.","id": "arr_item","$ref" : "dose_unit_criteria.json"},
         "LotNumber" : {"title":"Add Lot Number Criteria","description":"with a Lot Number: ","headerTemplate":"Filter Drug Exposures by Lot Number.","$ref" : "text_filter.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "DrugSourceConcept":{"title":"Add Drug Source Concept Criteria","headerTemplate":"Drug Source Concept is: ","description":"Filter Drug Exposures by the Drug Source Concept.","$ref":"core/codeset_id_type.json",
+        "DrugSourceConcept":{"title":"Add Drug Source Concept Criteria","headerTemplate":"Drug Source Concept is: ","description":"Filter Drug Exposures by the Drug Source Concept.","$ref":"codeset_id_type.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","description":"with a Provider Specialty of: ","headerTemplate":"Filter Drug Exposures based on provider specialty.","id": "arr_item","$ref" : "provider_speciality_criteria.json"},
         "CorrelatedCriteria":{

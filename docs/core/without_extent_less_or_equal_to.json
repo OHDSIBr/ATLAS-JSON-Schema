@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/without_extent_less_or_equal_to.json",
   "required":["Value","Op"],
   "format":"grid-strict",
   "options":{

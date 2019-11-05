@@ -22,11 +22,11 @@
     "properties":
       {
         "Age":{"title":"Age Criteria","description":"With age: ","$ref":"NumericRange.json"},
-        "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"core/concept_array.json"},
+        "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"concept_array.json"},
         "OccurrenceStartDate":{"title":"Event Start Date Criteria","description":"Occurence start is: ","$ref":"date_range.json"},
         "OccurrenceEndDate":{"title":"Event End Date Criteria","description":"Occurence end is: ","$ref":"date_range.json"},
-        "Race":{"title":"Race Criteria","description":"With a race of: ","$ref":"core/concept_array.json"},
-        "Ethnicity":{"title":"Ethnicity Criteria","description":"With a ethnicity of: ","$ref":"core/concept_array.json"}
+        "Race":{"title":"Race Criteria","description":"With a race of: ","$ref":"concept_array.json"},
+        "Ethnicity":{"title":"Ethnicity Criteria","description":"With a ethnicity of: ","$ref":"concept_array.json"}
       }
     }
 }

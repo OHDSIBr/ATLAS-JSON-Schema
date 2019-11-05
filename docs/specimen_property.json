@@ -11,7 +11,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"An specimen of: ","$ref":"core/codeset_id_type.json","description":"...specimen."},
+    "CodesetId":{"title":"An specimen of: ","$ref":"codeset_id_type.json","description":"...specimen."},
     "First" : {"type" : "boolean","title":"Add First Occurrence Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Specimens by age at occurrence.","$ref" : "NumericRange.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
