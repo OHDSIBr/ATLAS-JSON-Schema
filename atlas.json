@@ -23,7 +23,7 @@
     "remove_empty_properties": false
   },
   "properties": {
-    "ConceptSets": {"$ref":"docs/concept_sets.json"},
+    "ConceptSets": {"$ref":"concept_sets.json"},
     "PrimaryCriteria":{
       "title":"Cohort Entry Events",
       "description":"Add initial events, continuous observation and limit initial events.",
@@ -42,7 +42,7 @@
       "properties": {
         "CriteriaList":{
           "$id": "/properties/PrimaryCriteria/properties/CriteriaList",
-          "$ref":"docs/correlated_criteria_list_type.json",
+          "$ref":"correlated_criteria_list_type.json",
           "additionalProperties":false,
           "options": {
             "disable_collapse":true,
@@ -58,7 +58,7 @@
           "title": "Observation Window",
           "headerTemplate":" ",
           "description":"With continuous observation of at least:",
-          "$ref":"docs/observation_window.json"
+          "$ref":"observation_window.json"
         },
         "PrimaryCriteriaLimit":{
           "type": "object",
@@ -92,7 +92,7 @@
     "InclusionRules": {
       "title":"Inclusion Criteria",
       "description":"The qualifying cohort will be defined as all persons who have an initial event, satisfy the initial event inclusion criteria, and fulfill all additional qualifying inclusion criteria. Each qualifying inclusion criteria will be evaluated to determine the impact of the criteria on the attrition of persons from the initial cohort.",
-      "$ref":"docs/Rules.json"
+      "$ref":"rules.json"
     },
     "ExpressionLimit": {
       "type": "object",
@@ -127,19 +127,19 @@
         "type":"object",
         "required":true,
         "options":{"disable_edit_json":false,"disable_properties":false},
-        "$ref":"docs/EndStrategyType.json"
+        "$ref":"end_strategy_type.json"
     },
     "CensoringCriteria": {
       "title":"Cohort Exit - Censoring Events",
       "description":"Exit Cohort based on the following criteria:",
-      "$ref":"docs/correlated_criteria_list_type.json"
+      "$ref":"correlated_criteria_list_type.json"
     },
     "CensorWindow": {
       "title":"Cohort Eras: Censoring",
       "description":"Add trimming options...",
       "required":true,
       "defaultProperties":["StartDate","EndDate"],
-      "$ref":"docs/censoring_period.json"
+      "$ref":"censoring_period.json"
     }
   }
 }

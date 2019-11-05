@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/correlated_criteria_list_type.json",
   "type": "array",
   "title": "Initial event",
   "headerTemplate":"Add Initial Event",
