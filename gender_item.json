@@ -8,7 +8,6 @@
     "disable_array_reorder":true
   },
   "items":{
-  "id": "arr_item",
   "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
   "options": {
     "grid_columns":8,

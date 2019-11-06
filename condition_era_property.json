@@ -19,7 +19,7 @@
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "AgeAtEnd" : {"title":"Add Age at Era End Criteria","headerTemplate":"with age in years at era end","description":"Filter Condition Eras by age at era end.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "Gender"   : {"title":"Add Gender Criteria...","headerTemplate":"with a gender of: ","description":"Filter Condition Eras based on gender.","id": "arr_item","$ref" : "gender_item.json"},
+    "Gender"   : {"title":"Add Gender Criteria...","headerTemplate":"with a gender of: ","description":"Filter Condition Eras based on gender.","$ref" : "gender_item.json"},
     "EraStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"era start is: ","description":"Filter Condition Eras by Era Start Date.","$ref" : "date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "EraEndDate" : {"title":"Add End Date Criteria","headerTemplate":"era end is: ","description":"Filter Condition Eras by Era End Date.","$ref" : "date_range.json",
