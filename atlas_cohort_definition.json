@@ -4,7 +4,8 @@
   "title": "Atlas Cohort Definition",
   "type": "object",
   "format": "categories",
- "required":[
+  "basicCategoryTitle":"CDM Version",
+  "required":[
      "ConceptSets"
     ,"PrimaryCriteria"
     ,"QualifiedLimit"
@@ -18,7 +19,6 @@
   ],
   "additionalProperties":false,
   "options": {
-    "basicCategoryTitle":"CDM Version",
     "disable_properties":true,
     "disable_edit_json":false,
     "display_required_only":true,
@@ -142,6 +142,6 @@
       "defaultProperties":["StartDate","EndDate"],
       "$ref":"censoring_period.json"
     },
-    "cdmVersionRange":{"type":"string","readOnly":true,"default":">=5.0.0"}
+    "cdmVersionRange":{"title":"CDM Version support","type":"string","readOnly":true,"default":">=5.0.0"}
   }
 }
