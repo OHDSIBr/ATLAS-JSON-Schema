@@ -9,7 +9,7 @@
     {
       "type": "integer","title": "one of the following:",
       "watch": {
-        "concepts": "ConceptSets"
+        "concepts": ["https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/atlas_cohort_definition.json","ConceptSets"]
       },
       "enumSource": [
         {

@@ -14,9 +14,11 @@
     ,"CollapseSettings"
     ,"CensorWindow"
     ,"EndStrategy"
+    ,"cdmVersionRange"
   ],
   "additionalProperties":false,
   "options": {
+    "basicCategoryTitle":"CDM Version",
     "disable_properties":true,
     "disable_edit_json":false,
     "display_required_only":true,
@@ -139,6 +141,7 @@
       "required":true,
       "defaultProperties":["StartDate","EndDate"],
       "$ref":"censoring_period.json"
-    }
+    },
+    "cdmVersionRange":{"type":"string","readOnly":true,"default":">=5.0.0"}
   }
 }
