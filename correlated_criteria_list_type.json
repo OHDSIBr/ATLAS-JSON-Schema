@@ -8,7 +8,6 @@
   "format":"grid-strict",
   "options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
   "items": {
-  "$id": "/properties/PrimaryCriteria/properties/CriteriaList/items",
   "title": "Initial Event: ",
   "type":"object",
   "default":{"$ref":"condition_era_criteria.json"},

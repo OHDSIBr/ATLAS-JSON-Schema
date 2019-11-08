@@ -6,7 +6,6 @@
   "description":"Add attributes using the Properties button...",
   "additionalProperties": true,
   "items": {
-    "$id": "/properties/PrimaryCriteria/properties/DemographicCriteriaList/items",
     "title": "Demographic Criteria: ",
     "headerTemplate": "Filter events based on: ",
     "type":"object",
