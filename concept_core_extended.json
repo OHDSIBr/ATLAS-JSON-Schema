@@ -33,7 +33,7 @@
       "maxLength": 1,
       "readOnly":true,
       "watch":{
-        "stdc":"arr_item.concept.STANDARD_CONCEPT_CAPTION"
+        "stdc":"concept_item.concept.STANDARD_CONCEPT_CAPTION"
       },
     "options": {
       "hidden": true
@@ -58,7 +58,7 @@
       },
       "readOnly":true,
       "watch":{
-        "irc":"arr_item.concept.INVALID_REASON_CAPTION"
+        "irc":"concept_item.concept.INVALID_REASON_CAPTION"
       },
       "enumSource": "irc"
     },

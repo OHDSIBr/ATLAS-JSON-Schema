@@ -7,7 +7,6 @@
     "disable_edit_json":false
   },
   "items":{
-    "id": "arr_item",
     "headerTemplate": "{{i}} - {{self.name}}",
     "required":["id","name","expression"],
     "additionalProperties":false,

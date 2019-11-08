@@ -8,7 +8,6 @@
     "disable_edit_json":false
   },
   "items":{
-    "id": "arr_item",
     "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
     "options": {
       "grid_columns":8,

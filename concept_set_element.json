@@ -3,7 +3,7 @@
   "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/concept_set_element.json",
   "type": "array",
   "items":{
-    "id": "arr_item",
+    "id": "concept_item",
     "title":"Concept Element",
     "format":"grid-strict",
     "headerTemplate": "{{ i1 }} - {{ self.concept.CONCEPT_NAME }}: {{ self.concept.DOMAIN_ID }}",
