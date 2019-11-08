@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/condition_era_criteria.json",
+  "title":"Add Condition Era",
+  "description":"Condition Era: ",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["ConditionEra"],
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "ConditionEra":{"title":"Use Properties to add or exclude attributes...","$ref" : "condition_era_property.json"}
+  }
+}

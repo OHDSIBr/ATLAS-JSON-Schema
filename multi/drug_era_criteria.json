@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/drug_era_criteria.json",
+  "title":"Add Drug Era",
+  "description":"Drug Era: ",
+  "required":["DrugEra"],
+  "additionalProperties": false,
+  "type":"object",
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
+  "properties":{
+    "DrugEra":{"title":"Use Properties to add or exclude attributes...", "$ref" : "drug_era_property.json"}
+  }
+}

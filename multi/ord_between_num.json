@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/ord_between_num.json",
+	"required":["Value","Op","Extent"],
+	"format":"grid-strict",
+	"options":{
+		"remove_empty_properties":true,
+		"display_required_only":false},
+	"properties":{
+		"Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "bt" ],"options":{"grid_columns":4,"enum_titles":["Between"]}},
+		"Value":{"title":"value:","type": "integer","default":0,"options":{"grid_columns":4}},
+		"Extent":{"title":"and","type": "integer","default":0,"options":{"grid_columns":4}}
+	}
+}

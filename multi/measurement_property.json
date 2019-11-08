@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/measurement_property.json",
+  "additionalProperties": false,
+  "options": {
+    "required_by_default":false,
+    "remove_empty_properties":true,
+    "no_additional_properties":true,
+    "disable_properties":false,
+    "disable_edit_json":true
+  },
+  "required":["CodesetId"],
+  "defaultProperties":["CodesetId"],
+  "properties":{
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A measurement of: ","$ref":"codeset_id_type.json","description":"...measurement."},
+    "First" : {"type" : "boolean","title":"Add First Measure Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
+    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Measurements by age at occurrence.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Measurements based on Gender.","$ref" : "gender_array.json"},
+    "OccurrenceStartDate" : {"title":"Add Measurement Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Measurements by the Date.","$ref" : "date_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "MeasurementTypeExclude" : {"type" : "boolean","title":"Exclude Measurement Type","headerTemplate":" Measurement Type is not any of selected","format":"checkbox"},
+    "MeasurementType"   : {"title":"Add Measurement Type Criteria","headerTemplate":"with Measurement Type of: ","description":"Filter Measurements by the Measurement Type.","$ref" : "measurement_type_array.json"},
+    "VisitType"   : {"title":"Add Visit Criteria","description":"with a Visit of: ","headerTemplate":"Filter Measurements based on visit occurrence of measurement.","$ref" : "visit_type_array.json"},
+    "Operator"   : {"title":"Add Operator Criteria","description":"Measurement Value Operator is: ","headerTemplate":"Filter Measurements by Operator.","$ref" : "operator_array.json"},
+    "ValueAsNumber" : {"title":"Add Value As Number Criteria","headerTemplate":"with Value as Number: ","description":"Filter Measurements by Value As Number.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ValueAsConcept"   : {"title":"Add Value As Concept Criteria","description":"Value As Concept is: ","headerTemplate":"Filter Measurements by Value As Concept.","$ref" : "value_as_concept_array.json"},
+    "Unit"   : {"title":"Add Unit Criteria","description":"with Unit: ","headerTemplate":"Filter Measurements by Unit.","$ref" : "unit_array.json"},
+    "Abnormal" : {"type" : "boolean","title":"Add Abnormal Result Criteria","headerTemplate":"with an abnormal result","format":"checkbox"},
+    "RangeLow" : {"title":"Add Low Range Criteria","headerTemplate":"with Range Low ","description":"Filter Measurements Low Range.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "RangeHigh" : {"title":"Add High Range Criteria","headerTemplate":"with Range High ","description":"Filter Measurements High Range.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "RangeLowRatio" : {"title":"Add Low Range Ratio Criteria","headerTemplate":"with Range Low Ratio ","description":"Filter Measurements by the Ratio of Value as Number to Range Low.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "RangeHighRatio" : {"title":"Add High Range Ratio Criteria","headerTemplate":"with Range High Ratio ","description":"Filter Measurements by the Ratio of Value as Number to Range High.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Measurements based on provider specialty.","$ref" : "provider_speciality_array.json"},
+    "MeasurementSourceConcept":{"title":"Add Measurement Source Concept Criteria","headerTemplate":"Measurement Source Concept is: ","description":"Filter Measurements by the Source Measurement Concept.","$ref":"codeset_id_type.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "CorrelatedCriteria":{
+        "title":"Add Nested Criteria...",
+        "headerTemplate":"Having...",
+        "format":"categories",
+        "$ref" : "correlated_criteria_range.json"
+    }
+  }
+}

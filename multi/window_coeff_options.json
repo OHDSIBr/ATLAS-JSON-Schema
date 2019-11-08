@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/window_coeff_options.json",
+  "type":"integer",
+  "required":true,
+  "enum":[-1,1],
+  "options":{
+    "grid_columns": 4,
+    "enum_titles":["Before","After"]
+  }
+}

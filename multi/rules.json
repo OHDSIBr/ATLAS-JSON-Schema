@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/rules.json",
+  "type":"array",
+  "items":{
+    "type":"object",
+    "title":"Inclusion Criteria",
+    "headerTemplate": "{{ i1 }} - {{ self.name }}: {{ self.description }}",
+    "required":["name","description","expression"],
+    "options":{
+      "disable_edit_json":true,
+      "enable_array_copy":true,
+      "disable_properties":true,
+      "disable_collapse":true
+    },
+    "properties":{
+    "name":{"type":"string"},
+    "description":{"type":"string"},
+    "expression":{"title":"Having : ","description":" occurrences of  the following criteria: ","$ref" : "correlated_criteria_range.json"}
+    }
+  }
+}

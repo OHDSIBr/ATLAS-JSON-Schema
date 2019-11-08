@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/specimen_type_array.json",
+  "format":"grid-strict",
+  "required":["SpecimenType"],
+  "type":"array",
+  "options": {
+    "disable_array_reorder":true
+  },
+  "items":{
+  "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
+  "options": {
+    "grid_columns":8,
+    "disable_collapse":false,
+    "disable_edit_json":true,
+    "disable_properties":true
+    },
+  "title":"Add Specimen Type code: ","aditionalProperties":"false","$ref":"concept_core.json"
+  }
+}

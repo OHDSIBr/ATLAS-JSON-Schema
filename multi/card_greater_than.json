@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/card_greater_than.json",
+  "required":["Value","Op"],
+  "format":"grid-strict",
+  "options":{
+    "remove_empty_properties":true,
+    "display_required_only":false
+  },
+  "properties":{
+    "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gt" ],"options":{"grid_columns":5,"enum_titles":["Greater Than"]}},
+    "Value":{"title":"value:","type": "integer","default":0,"options":{"grid_columns":4}}
+  }
+}
