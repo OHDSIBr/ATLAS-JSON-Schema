@@ -22,7 +22,7 @@
     "ProcedureTypeExclude" : {"type" : "boolean","title":"Exclude Procedure Type","headerTemplate":" Procedure Type is not any of selected","format":"checkbox"},
     "ProcedureType"   : {"title":"Add Procedure Type Criteria","headerTemplate":"with Procedure Type of: ","description":"Filter Procedure Occurrences by the Procedure Type.","$ref" : "procedure_type_item.json"},
     "VisitType"   : {"title":"Add Visit Criteria","description":"with a Visit occurrence of: ","headerTemplate":"Filter Procedure Occurrences based on visit occurrence of procedure.","$ref" : "visit_type_item.json"},
-    "Modifier"   : {"title":"Add Modifier Criteria","description":"Modifier is: ","headerTemplate":"Filter Procedure Occurrences by the Modifier.","$ref" : "modifier_type_item.json"},
+    "Modifier"   : {"title":"Add Modifier Criteria","description":"Modifier is: ","headerTemplate":"Filter Procedure Occurrences by the Modifier.","$ref" : "modifier_item.json"},
     "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Procedure Occurrences by Quantity.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "ProcedureSourceConcept":{"title":"Add Procedure Source Concept Criteria","headerTemplate":"Procedure Source Concept is: ","description":"Filter Procedure Occurrences by the Procedure Source Concept.","$ref":"codeset_id_type.json",

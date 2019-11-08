@@ -19,7 +19,7 @@
         "OccurrenceStartDate" : {"title":"Add Death Date Criteria","headerTemplate":"death occurrence is: ","description":"Filter Death by Date.","$ref" : "date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "DeathTypeExclude" : {"type" : "boolean","title":"Exclude Death Type","format":"checkbox","headerTemplate":"Death type is none of the following: "},
-        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","$ref" : "condition_type_item.json"},
+        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","$ref" : "death_type_item.json"},
         "DeathSourceConcept":{"title":"Add Cause of Death Source Concept Criteria","headerTemplate":"Death Source Concept is: ","description":"Filter Death by the Death Source Concept.","$ref":"codeset_id_type.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "CorrelatedCriteria":{

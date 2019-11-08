@@ -23,9 +23,9 @@
     "SpecimenType"   : {"title":"Add Specimen Type Criteria","headerTemplate":"with Specimen Type of: ","description":"Filter Specimen by the Type.","$ref" : "specimen_type_item.json"},
     "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Specimens by the Quantity.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "Unit"   : {"title":"Add Unit Criteria","description":"with Unit: ","headerTemplate":"Filter Specimens by Unit.","$ref" : "unit_type_item.json"},
+    "Unit"   : {"title":"Add Unit Criteria","description":"with Unit: ","headerTemplate":"Filter Specimens by Unit.","$ref" : "unit_item.json"},
     "AnatomicSite"   : {"title":"Add Anatomic Site Criteria","description":"Anatomic Site is: ","headerTemplate":"Filter Specimens by the Anatomic Site.","$ref" : "anatomic_site_item.json"},
-    "DiseaseStatus"   : {"title":"Add Disease Status Criteria","headerTemplate":"with Disease Status: ","description":"Filter Specimens by the Disease Status.","$ref" : "disease_status_type_item.json"},
+    "DiseaseStatus"   : {"title":"Add Disease Status Criteria","headerTemplate":"with Disease Status: ","description":"Filter Specimens by the Disease Status.","$ref" : "disease_status_item.json"},
     "SourceId" : {"title":"Add Source ID Criteria","description":"with a Source ID: ","headerTemplate":"Filter Specimens by the Source ID.","$ref" : "text_filter.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "CorrelatedCriteria":{

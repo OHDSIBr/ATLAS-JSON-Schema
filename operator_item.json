@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/disease_status_type_item.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/operator_item.json",
   "format":"grid-strict",
-  "required":["DiseaseStatus"],
+  "required":["Operator"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Disease Status codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Operator codes: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

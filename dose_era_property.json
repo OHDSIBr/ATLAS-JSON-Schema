@@ -17,7 +17,7 @@
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "EraEndDate" : {"title":"Add End Date Criteria","headerTemplate":"era end is: ","description":"Filter Dose Eras by Era End Date.","$ref" : "date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "Unit"   : {"title":"Add Dose Unit Criteria","headerTemplate":"with Unit: ","description":"Filter Dose Eras by the Unit.","$ref" : "unit_type_item.json"},
+        "Unit"   : {"title":"Add Dose Unit Criteria","headerTemplate":"with Unit: ","description":"Filter Dose Eras by the Unit.","$ref" : "unit_item.json"},
         "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Dose Eras by Era duration.","$ref" : "numeric_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "DoseValue" : {"title":"Add Dose Value Criteria","headerTemplate":"with dose value: ","description":"Filter Dose Eras by the Dose Value.","$ref" : "numeric_range.json",
