@@ -12,7 +12,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties" : {
-    "CodesetId":{"title":"A visit occurrence of: ","$ref":"codeset_id_type.json","description":"...visit."},
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A visit occurrence of: ","$ref":"codeset_id_type.json","description":"...visit."},
     "First" : {"type" : "boolean","title":"Add First Visit Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Visit Occurrences by age at occurrence.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

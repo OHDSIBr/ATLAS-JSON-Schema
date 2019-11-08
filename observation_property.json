@@ -13,7 +13,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"An observation of: ","$ref":"codeset_id_type.json","description":"...observation."},
+    "CodesetId":{"title":"CodesetId","headerTemplate":"An observation of: ","$ref":"codeset_id_type.json","description":"...observation."},
     "First" : {"type" : "boolean","title":"Add First Observation Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Observations by age at occurrence.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

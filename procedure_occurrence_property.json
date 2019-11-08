@@ -12,7 +12,7 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"A procedure occurrence of: ","$ref":"codeset_id_type.json","description":"...procedure."},
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A procedure occurrence of: ","$ref":"codeset_id_type.json","description":"...procedure."},
     "First" : {"type" : "boolean","title":"Add First Procedure Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
     "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Procedure Occurrences by age at occurrence.","$ref" : "numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

@@ -6,7 +6,7 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
         "properties":{
-        "CodesetId":{"title":"A drug era of: ","$ref" : "codeset_id_type.json","description":"...drugs."},
+        "CodesetId":{"title":"CodesetId","headerTemplate":"A drug era of: ","$ref" : "codeset_id_type.json","description":"...drugs."},
         "First" : {"type" : "boolean","title":"Add First Exposure Criteria","headerTemplate":" For the first time in the person's history.","format":"checkbox"},
         "AgeAtStart" : {"title":"Add Age at Era Start Criteria","headerTemplate":"with age in years at era start","description":"Filter Drug Eras by age at era start.","$ref" : "numeric_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},

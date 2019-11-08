@@ -12,7 +12,7 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
     "properties":{
-        "CodesetId":{"title":"A death occurrence from: ","$ref" : "codeset_id_type.json","description":"...condition."},
+        "CodesetId":{"title":"CodesetId","headerTemplate":"A death occurrence from: ","$ref" : "codeset_id_type.json","description":"...condition."},
         "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years ","description":"Filter Deaths by age at death.","$ref" : "numeric_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "Gender"   : {"title":"Add Gender Criteria","description":"with a gender of: ","headerTemplate":"Filter Deaths based on Gender.","$ref" : "gender_item.json"},
