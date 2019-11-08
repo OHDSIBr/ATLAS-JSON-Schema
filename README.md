@@ -19,6 +19,14 @@ So, to find the files of these release, you need to access:
 
 - https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/atlas_cohort_definition.json
 
+To access from a Schema tool, use as schema:
+
+    {
+     "$ref": "https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/atlas_cohort_definition.json"
+    }
+
+and eable Ajax loading of schemas.
+
 Or, if you want to browse the files, go to the 2.7.4 branch of this repository.
 
 ### Testing
