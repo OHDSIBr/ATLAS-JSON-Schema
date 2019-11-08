@@ -7,7 +7,7 @@
   "options": {
     "no_additional_properties":true,
     "disable_collapse":true,
-    "remove_empty_properties":false,
+    "remove_empty_properties":true,
     "disable_properties":true,
     "disable_edit_json":true
   },
