@@ -142,6 +142,6 @@
       "defaultProperties":["StartDate","EndDate"],
       "$ref":"censoring_period.json"
     },
-    "cdmVersionRange":{"title":"CDM Version support","type":"string","readOnly":true,"default":">=5.0.0"}
+    "cdmVersionRange":{"title":"CDM Version required","type":"string","readOnly":true,"default":">=5.0.0"}
   }
 }
