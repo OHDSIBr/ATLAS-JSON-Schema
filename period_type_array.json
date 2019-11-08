@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/drug_type_item.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/period_type_array.json",
   "format":"grid-strict",
-  "required":["DrugType"],
+  "required":["PeriodType"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add drug type codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Period Type code: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

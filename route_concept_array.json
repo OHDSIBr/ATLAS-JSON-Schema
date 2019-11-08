@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/value_as_concept_item.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/route_concept_array.json",
   "format":"grid-strict",
-  "required":["ValueAsConcept"],
+  "required":["RouteConcept"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Value As Concept codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Route Concept code: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

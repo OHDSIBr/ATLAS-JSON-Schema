@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/dose_unit_item.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/place_of_service_array.json",
   "format":"grid-strict",
-  "required":["DoseUnit"],
+  "required":["PlaceOfService"],
   "type":"array",
   "options": {
     "disable_array_reorder":true
@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Dose Unit code: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Place of Service code: ","aditionalProperties":"false","$ref":"concept_core.json"
   }
 }

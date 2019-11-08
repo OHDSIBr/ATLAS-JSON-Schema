@@ -12,7 +12,7 @@
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "AgeAtEnd" : {"title":"Add Age at Era End Criteria","headerTemplate":"with age in years at era end","description":"Filter Drug Eras by age at era end.","$ref" : "numeric_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Drug Eras based on Gender.","$ref" : "gender_item.json"},
+        "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Drug Eras based on Gender.","$ref" : "gender_array.json"},
         "EraStartDate" : {"title":"Add Era Start Date Criteria","headerTemplate":"era start is: ","description":"Filter Drug Eras by Era Start Date.","$ref" : "date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "EraEndDate" : {"title":"Add Era End Date Criteria","headerTemplate":"era end is: ","description":"Filter Drug Eras by Era End Date.","$ref" : "date_range.json",
