@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/demographic_criteria_list.json",
+  "id":"demographic_criteria_list.json",
   "type": "array",
   "title": "Filter events based on Demographic criteria:",
   "description":"Add attributes using the Properties button...",

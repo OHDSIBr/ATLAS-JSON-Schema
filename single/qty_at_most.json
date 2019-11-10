@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/qty_at_most.json",
+  "id":"qty_at_most.json",
   "type":"object",
   "description":"...'Occurrences' of the following criteria. Use Tabs to add or exclude criteria to group.",
   "options": {

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/dose_era_criteria.json",
+  "id":"dose_era_criteria.json",
   "title":"Add Dose Era",
   "description":"Dose Era: ",
   "required":["DoseEra"],

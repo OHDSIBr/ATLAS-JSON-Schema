@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/measurement_criteria.json",
+  "id":"measurement_criteria.json",
   "title":"Add Measurement",
   "description":"Measurement: ",
   "headerTemplate": "A description of Measurement criteria",

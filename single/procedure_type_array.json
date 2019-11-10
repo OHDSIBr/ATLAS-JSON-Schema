@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/procedure_type_array.json",
+  "id":"procedure_type_array.json",
   "format":"grid-strict",
   "required":["ProcedureType"],
   "type":"array",

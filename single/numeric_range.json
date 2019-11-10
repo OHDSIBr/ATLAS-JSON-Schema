@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/numeric_range.json",
+    "id":"numeric_range.json",
     "type":"object",
     "format":"grid-strict",
     "required": ["Op","Value"],
