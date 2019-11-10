@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+	"id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/text_operation_options.json",
+  "type":"string",
+  "default": "contains",
+  "enum":["startsWith","contains","endsWith","!startsWith","!contains","!endsWith"],
+  "options":{
+    "enum_titles":["Starting with","Containing","Ending with","Not starting with","Not containing","Not ending with"]
+  }
+}

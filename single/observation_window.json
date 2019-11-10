@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/observation_window.json",
+  "type": "object",
+  "required":["PriorDays","PostDays"],
+  "additionalProperties":false,
+  "options": {
+    "disable_collapse":true,
+    "disable_edit_json":true,
+    "disable_properties":true,
+    "display_required_only":true,
+    "no_additional_properties":true,
+    "remove_empty_properties": false
+  },
+  "properties": {
+    "PriorDays": {
+      "type": "integer",
+      "title": "PriorDays",
+      "default": 0,
+      "description": "... days before and ..."
+    },
+    "PostDays": {
+      "type": "integer",
+      "title": "PostDays",
+      "default": 0,
+      "description": " ... days after event index date."
+    }
+  }
+}

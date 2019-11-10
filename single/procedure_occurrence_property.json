@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/procedure_occurrence_property.json",
+  "additionalProperties": false,
+  "options": {
+    "required_by_default":false,
+    "remove_empty_properties":true,
+    "no_additional_properties":true,
+    "disable_properties":false,
+    "disable_edit_json":true
+  },
+  "required":["CodesetId"],
+  "defaultProperties":["CodesetId"],
+  "properties":{
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A procedure occurrence of: ","$ref":"codeset_id_type.json","description":"...procedure."},
+    "First" : {"type" : "boolean","title":"Add First Procedure Criteria","headerTemplate":"For the first time in the person's history.","format":"checkbox"},
+    "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years at occurrence ","description":"Filter Procedure Occurrences by age at occurrence.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "Gender"   : {"title":"Add Gender Criteria","headerTemplate":"with a gender of: ","description":"Filter Procedure Occurrences based on Gender.","$ref" : "gender_array.json"},
+    "OccurrenceStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Procedure Occurrences by the Procedure Start Date.","$ref" : "date_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ProcedureTypeExclude" : {"type" : "boolean","title":"Exclude Procedure Type","headerTemplate":" Procedure Type is not any of selected","format":"checkbox"},
+    "ProcedureType"   : {"title":"Add Procedure Type Criteria","headerTemplate":"with Procedure Type of: ","description":"Filter Procedure Occurrences by the Procedure Type.","$ref" : "procedure_type_array.json"},
+    "VisitType"   : {"title":"Add Visit Criteria","description":"with a Visit occurrence of: ","headerTemplate":"Filter Procedure Occurrences based on visit occurrence of procedure.","$ref" : "visit_type_array.json"},
+    "Modifier"   : {"title":"Add Modifier Criteria","description":"Modifier is: ","headerTemplate":"Filter Procedure Occurrences by the Modifier.","$ref" : "modifier_array.json"},
+    "Quantity" : {"title":"Add Quantity Criteria","headerTemplate":"with quantity: ","description":"Filter Procedure Occurrences by Quantity.","$ref" : "numeric_range.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ProcedureSourceConcept":{"title":"Add Procedure Source Concept Criteria","headerTemplate":"Procedure Source Concept is: ","description":"Filter Procedure Occurrences by the Procedure Source Concept.","$ref":"codeset_id_type.json",
+        "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
+    "ProviderSpecialty"   : {"title":"Add Provider Specialty Criteria","headerTemplate":"with a Provider Specialty of: ","description":"Filter Procedure Occurrences based on provider specialty.","$ref" : "provider_speciality_array.json"},
+    "CorrelatedCriteria":{
+      "title":"Add Nested Criteria...",
+      "headerTemplate":"Having...",
+      "format":"categories",
+      "$ref" : "correlated_criteria_range.json"
+      }
+  }
+}

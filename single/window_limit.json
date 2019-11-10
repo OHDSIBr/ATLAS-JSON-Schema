@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/window_limit.json",
+  "type":"object",
+  "options":{
+    "disable_edit_json":true,
+    "disable_properties":true},
+  "required":["UseEventEnd","Start","UseIndextEnd","End"],
+  "format":"grid",
+  "properties":{
+    "UseEventEnd":{
+      "type":"boolean",
+      "title": "where",
+      "enum":[false,true],
+      "options":{
+        "grid_columns":"4",
+        "grid_break": true,
+        "enum_titles":["event starts","event ends"]
+      }
+    },
+    "Start":{
+      "type":"object",
+      "title": " ",
+      "format":"grid-strict",
+      "required":["Days","Coeff"],
+      "options":{
+        "grid_break": true,
+        "disable_collapse":true,
+        "disable_edit_json":true,
+        "disable_properties":true},
+      "properties": {
+        "Days":{"title":"between","$ref":"window_day_options.json"},
+        "Coeff":{"title":"days","default":-1,"$ref":"window_coeff_options.json"}
+      }
+    },
+    "End":{
+      "required":["Days","Coeff"],
+      "title": " ",
+      "format":"grid-strict",
+      "options":{
+        "grid_break": true,
+        "disable_collapse":true,
+        "disable_edit_json":true,
+        "disable_properties":true},
+      "properties":{
+        "Days":{"title":"and","$ref":"window_day_options.json"},
+        "Coeff":{"default":1,"title":"days","$ref":"window_coeff_options.json"}
+      }
+    },
+    "UseIndextEnd":{
+      "type":"boolean",
+      "title": " ",
+      "enum":[true,false],
+      "format":"grid-strict",
+      "options":{
+        "grid_break": true,
+        "grid_columns": 4,
+        "enum_titles":["index start date","index end date"]
+      }
+    }
+  }
+}

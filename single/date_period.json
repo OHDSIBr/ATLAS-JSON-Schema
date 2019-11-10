@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/date_period.json",
+  "type":"object",
+  "required":["StartDate","EndDate"],
+  "defaultProperties":["StartDate","EndDate"],
+  "options": {"remove_empty_properties": true},
+  "properties":{
+    "StartDate":{
+        "title":"Starting ",
+        "type": "string",
+        "format": "date"
+    },
+    "EndDate":{
+        "title":" and ending ",
+        "type": "string",
+        "format": "date"
+    }
+  }
+}

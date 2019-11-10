@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/observation_criteria.json",
+  "title":"Add Observation",
+  "description":"Observation: ",
+  "headerTemplate": "A description of observation criteria",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["Observation"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "Observation":{"title":"Use Properties to add or exclude attributes...", "$ref" : "observation_property.json"}
+  }
+}

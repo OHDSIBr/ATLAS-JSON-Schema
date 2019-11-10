@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/groups_list_and.json",
+  "format":"tabs-top",
+  "type": "array",
+  "title": "Add a group to combine criteria using and/or relationships. ",
+  "description":"Add attributes using the Properties button...",
+  "options":{
+    "array_controls_top":true
+  },
+  "items": {
+    "title": "Group",
+    "headerTemplate": "Group {{i1}} - And having... ",
+    "type":"object",
+    "additionalProperties": false,
+    "options":{
+        "array_controls_top":true,
+        "no_additional_properties": true,
+        "display_required_only":true,
+        "required_by_default":false,
+        "remove_empty_properties": true,
+        "disable_edit_json":true,
+        "disable_collapse":false,
+        "disable_properties":true
+      },
+      "description":"Use Properties to add or exclude criterias...",
+      "$ref":"correlated_criteria_range.json"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/specimen_criteria.json",
+  "title":"Add Specimen",
+  "description":"Specimen: ",
+  "headerTemplate": "A description of Specimen criteria",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["Specimen"],
+  "options": {
+    "remove_empty_properties":false,
+    "disable_properties":true,
+    "disable_edit_json":true
+  },
+  "properties":{
+    "Specimen":{"title":"Use Properties to add or exclude attributes...","$ref" : "specimen_property.json"}
+  }
+}

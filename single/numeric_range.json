@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/numeric_range.json",
+    "type":"object",
+    "format":"grid-strict",
+    "required": ["Op","Value"],
+    "options": {
+        "grid_columns":8,
+        "disable_collapse":true,
+        "disable_properties":true,
+        "disable_edit_json":true,
+        "no_additional_properties":true,
+        "remove_empty_properties": true,
+        "keep_oneof_values": false
+    },
+    "default":{"Op":"gt","Value":0},
+    "patternProperties": {
+        "^Op$": { "type": "string" },
+        "^Value$": { "type": "integer" },
+        "^Extent$": { "type": "integer" }
+      },
+    "additionalProperties": false,
+    "oneOf": [
+                { "title":"Less Than","$ref": "card_less_than.json"},
+                { "title":"Less or Equal To","$ref": "card_less_or_equal_to.json"},
+                { "title":"Equal To","$ref": "card_equal_to.json"},
+                { "title":"Greater Than","$ref": "card_greater_than.json"},
+                { "title":"Greater or Equal To","$ref": "card_greater_or_equal_to.json"},
+                { "title":"Between","$ref": "ord_between_num.json"},
+                { "title":"Not Between","$ref": "ord_not_between_num.json"}
+            ]
+}

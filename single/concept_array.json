@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/concept_array.json",
+  "format":"tabs-top",
+  "type":"array",
+  "options": {
+    "disable_properties":true,
+    "disable_edit_json":false
+  },
+  "items":{
+    "headerTemplate": "{{ self.CONCEPT_CODE }} - {{ self.CONCEPT_NAME }}",
+    "options": {
+      "grid_columns":8,
+      "disable_collapse":false,
+      "disable_edit_json":true,
+      "disable_properties":true
+    },
+    "$ref":"concept_core.json"
+  }
+}

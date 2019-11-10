@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/correlated_criteria_range.json",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^Type$": { "type": "string" },
+    "^Count$": { "type": "integer" },
+    "^CriteriaList$": { "type": "array" },
+    "^DemographicCriteriaList$": { "type": "array" },
+    "^Groups$": { "type": "array" }
+  },
+  "options":{
+    "display_required_only":true,
+    "remove_empty_properties":true,
+    "no_additional_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true,
+    "keep_oneof_values":true,
+    "disable_collapse":false
+  },
+  "oneOf": [
+                { "title":" all ","$ref": "qty_all.json" },
+                { "title":" any ","$ref": "qty_any.json"},
+                { "title":" at least ","$ref": "qty_at_least.json"},
+                { "title":" at most ","$ref": "qty_at_most.json"}
+            ]
+}

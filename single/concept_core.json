@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/concept_core.json",
+    "type": "object",
+    "title":"Concept",
+    "format":"grid-strict",
+    "options": {
+        "display_required_only":true,
+        "disable_properties":true,
+        "no_additional_properties":true
+    },
+    "additionalProperties":false,
+    "required":["CONCEPT_CODE", "CONCEPT_ID", "CONCEPT_NAME", "DOMAIN_ID", "VOCABULARY_ID"],
+    "properties":{
+        "CONCEPT_CODE":{"title":"Concept Code","type":"string","maxLength": 50,"options": {"grid_columns": 4}},
+        "CONCEPT_NAME":{"title":"Concept Name","type":"string","maxLength": 255,"options": {"grid_columns": 8,"grid_break": true}},
+        "DOMAIN_ID":{"title":"Domain Id","type":"string","maxLength": 20,"options": {"grid_columns": 4}},
+        "CONCEPT_ID":{"title":"Concept Id","type":"integer","options": {"grid_columns": 4}},
+        "VOCABULARY_ID":{"title":"Vocabulary Id","type":"string","maxLength": 20,"options": {"grid_columns": 4,"grid_break": true}}
+    }
+}

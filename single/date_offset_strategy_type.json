@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/date_offset_strategy_type.json",
+  "description": "OK - The date offset strategy",
+  "required":["DateField","Offset"],
+  "options":{"disable_edit_json":true,"disable_properties":true},
+  "properties":{
+    "DateField":{
+      "title":"Event date to offset from: ",
+      "type": "string",
+      "default": "StartDate",
+      "enum":["StartDate","EndDate"]
+     },
+    "Offset":{
+      "title":"Number of days offset: ",
+      "$ref":"day_options.json",
+      "default": 0
+    }
+  }
+}

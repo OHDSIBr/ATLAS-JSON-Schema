@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/death_criteria.json",
+  "title":"Add Death",
+  "description":"Death: ",
+  "type":"object",
+  "additionalProperties": false,
+  "required":["Death"],
+  "options":{
+    "required_by_default":false,
+    "no_additional_properties":true,
+    "remove_empty_properties":true,
+    "disable_edit_json":true,
+    "disable_properties":true
+  },
+  "properties":{
+      "Death":{"title":"Use Properties to add or exclude attributes...", "$ref" : "death_occurrence_property.json"}
+  }
+}

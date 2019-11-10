@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/correlated_criteria_list_type.json",
+  "type": "array",
+  "title": "Initial event",
+  "headerTemplate":"Add Initial Event",
+  "description":"Events having any of the following criteria: ",
+  "format":"grid-strict",
+  "options":{"array_controls_top":true,"disable_edit_json":true,"disable_properties":true},
+  "items": {
+  "title": "Initial Event: ",
+  "type":"object",
+  "default":{"$ref":"condition_era_criteria.json"},
+  "options":{
+      "remove_empty_properties": true,
+      "disable_edit_json":true,
+      "disable_properties":true
+    },
+  "oneOf":[
+      {"$ref":"condition_era_criteria.json"},
+      {"$ref":"condition_occurrence_criteria.json"},
+      {"$ref":"death_criteria.json"},
+      {"$ref":"device_exposure_criteria.json"},
+      {"$ref":"dose_era_criteria.json"},
+      {"$ref":"drug_era_criteria.json"},
+      {"$ref":"drug_exposure_criteria.json"},
+      {"$ref":"measurement_criteria.json"},
+      {"$ref":"observation_criteria.json"},
+      {"$ref":"observation_period_criteria.json"},
+      {"$ref":"payer_plan_period_criteria.json"},
+      {"$ref":"procedure_occurrence_criteria.json"},
+      {"$ref":"specimen_criteria.json"},
+      {"$ref":"visit_occurrence_criteria.json"}
+    ]
+  }
+}

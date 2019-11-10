@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/data_range.json",
+  "type":"object",
+  "format":"grid",
+  "required": ["Op","Value"],
+  "options": {
+    "grid_columns":8,
+    "disable_collapse":true,
+    "disable_properties":true,
+    "disable_edit_json":true,
+    "no_additional_properties":true,
+    "remove_empty_properties": true,
+    "keep_oneof_values": false
+  },
+  "patternProperties": {
+    "^Op$": { "type": "string" },
+    "^Value$": { "type": "string" },
+    "^Extent$": { "type": "string" }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+                { "title":"Before","$ref": "ord_before.json"},
+                { "title":"On or Before","$ref": "ord_on_or_before.json"},
+                { "title":"On","$ref": "ord_on.json"},
+                { "title":"After","$ref": "ord_after.json"},
+                { "title":"On or After","$ref": "ord_on_or_after.json"},
+                { "title":"Between","$ref": "ord_between.json"},
+                { "title":"Not Between","$ref": "ord_not_between.json"}
+            ]
+}

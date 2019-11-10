@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/criteria_list_type.json",
+  "type": "array",
+  "title": "Initial event",
+  "format":"tabs-top",
+  "additionalProperties": false,
+  "options": {
+    "array_controls_top":true,
+    "disable_collapse":true,
+    "disable_edit_json":true,
+    "disable_properties":true,
+    "display_required_only":true,
+    "no_additional_properties":true,
+    "remove_empty_properties": true
+  },
+  "description":"People having any of the following events...",
+  "items": {
+    "title": "Event: ",
+    "description": "Use properties to add visit restriction and end window.",
+    "type":"object",
+    "additionalProperties": false,
+    "options": {
+      "disable_edit_json":true,
+      "disable_properties":false,
+      "display_required_only":true,
+      "no_additional_properties":true,
+      "remove_empty_properties": true
+    },
+    "required":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+    "defaultProperties":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+    "properties": {
+      "IgnoreObservationPeriod":{"title": " allow events from outside observation period", "type":"boolean","format":"checkbox"},
+      "Occurrence":{"title":"Occurrences:","$ref":"occurrence.json"},
+      "Criteria":{
+    "oneOf":[
+        {"$ref":"condition_era_criteria.json"},
+        {"$ref":"condition_occurrence_criteria.json"},
+        {"$ref":"death_criteria.json"},
+        {"$ref":"device_exposure_criteria.json"},
+        {"$ref":"dose_era_criteria.json"},
+        {"$ref":"drug_era_criteria.json"},
+        {"$ref":"drug_exposure_criteria.json"},
+        {"$ref":"location_region_criteria.json"},
+        {"$ref":"measurement_criteria.json"},
+        {"$ref":"observation_criteria.json"},
+        {"$ref":"observation_period_criteria.json"},
+        {"$ref":"payer_plan_period_criteria.json"},
+        {"$ref":"procedure_occurrence_criteria.json"},
+        {"$ref":"specimen_criteria.json"},
+        {"$ref":"visit_occurrence_criteria.json"}
+      ]
+      },
+      "StartWindow":{"title":"Start window is:","$ref":"window_limit.json"},
+      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"window_limit.json"},
+      "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"}
+    }
+  }
+}

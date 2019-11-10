@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/concept_sets.json",
+  "type":"array",
+  "options": {
+    "disable_properties":true,
+    "disable_edit_json":false
+  },
+  "items":{
+    "headerTemplate": "{{i}} - {{self.name}}",
+    "required":["id","name","expression"],
+    "additionalProperties":false,
+    "options": {
+        "disable_edit_json":false,
+        "disable_properties":true,
+      "display_required_only":true,
+      "no_additional_properties":true
+    },
+    "properties":{
+      "id":{"type":"integer","default":"{{i}}"  },
+      "name":{"type":"string"},
+      "expression":{
+          "type":"object",
+          "required":["items"],
+          "additionalProperties":false,
+          "options": {
+              "disable_edit_json":true,
+              "disable_properties":true,
+              "display_required_only":true,
+              "no_additional_properties":true
+          },
+          "properties":{
+              "items":{"$ref":"concept_set_element.json"}
+          }
+      }    
+    }
+  }
+}

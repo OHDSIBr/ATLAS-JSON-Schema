@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/occurrence_end_date_criteria.json",
+    "format":"grid-strict",
+    "title":"Add Event End Date Criteria ",
+    "options": {
+        "keep_oneof_values": false
+    },
+    "additionalProperties": true,
+    "properties":{
+        "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref" : "date_range.json"}
+    }
+}
