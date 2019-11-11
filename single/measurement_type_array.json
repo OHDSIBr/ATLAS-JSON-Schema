@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Measurement Type codes: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Measurement Type codes: ","aditionalProperties":"false","$ref":"#/definitions/concept_core.json"
   }
 }

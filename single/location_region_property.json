@@ -13,16 +13,16 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
         "properties":{
-        "CodesetId":{"title":"CodesetId","headerTemplate":"A location region of: ","$ref" : "codeset_id_type.json","description":"...location."},
-        "StartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Locations by date when person started living there.","$ref" : "date_range.json",
+        "CodesetId":{"title":"CodesetId","headerTemplate":"A location region of: ","$ref":"#/definitions/codeset_id_type.json","description":"...location."},
+        "StartDate" : {"title":"Add Start Date Criteria","headerTemplate":"occurrence start is: ","description":"Filter Locations by date when person started living there.","$ref":"#/definitions/date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "EndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Locations by date when person finished living there.","$ref" : "date_range.json",
+        "EndDate" : {"title":"Add End Date Criteria","headerTemplate":"occurrence end is: ","description":"Filter Locations by date when person finished living there.","$ref":"#/definitions/date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "CorrelatedCriteria":{
             "title":"Add Nested Criteria...",
             "headerTemplate":"Having...",
             "format":"categories",
-            "$ref" : "correlated_criteria_range.json"
+            "$ref":"#/definitions/correlated_criteria_range.json"
        }
     }
 }

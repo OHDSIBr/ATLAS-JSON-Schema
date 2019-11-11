@@ -10,27 +10,27 @@
   "items": {
   "title": "Initial Event: ",
   "type":"object",
-  "default":{"$ref":"condition_era_criteria.json"},
+  "default":{"$ref":"#/definitions/condition_era_criteria.json"},
   "options":{
       "remove_empty_properties": true,
       "disable_edit_json":true,
       "disable_properties":true
     },
   "oneOf":[
-      {"$ref":"condition_era_criteria.json"},
-      {"$ref":"condition_occurrence_criteria.json"},
-      {"$ref":"death_criteria.json"},
-      {"$ref":"device_exposure_criteria.json"},
-      {"$ref":"dose_era_criteria.json"},
-      {"$ref":"drug_era_criteria.json"},
-      {"$ref":"drug_exposure_criteria.json"},
-      {"$ref":"measurement_criteria.json"},
-      {"$ref":"observation_criteria.json"},
-      {"$ref":"observation_period_criteria.json"},
-      {"$ref":"payer_plan_period_criteria.json"},
-      {"$ref":"procedure_occurrence_criteria.json"},
-      {"$ref":"specimen_criteria.json"},
-      {"$ref":"visit_occurrence_criteria.json"}
+      {"$ref":"#/definitions/condition_era_criteria.json"},
+      {"$ref":"#/definitions/condition_occurrence_criteria.json"},
+      {"$ref":"#/definitions/death_criteria.json"},
+      {"$ref":"#/definitions/device_exposure_criteria.json"},
+      {"$ref":"#/definitions/dose_era_criteria.json"},
+      {"$ref":"#/definitions/drug_era_criteria.json"},
+      {"$ref":"#/definitions/drug_exposure_criteria.json"},
+      {"$ref":"#/definitions/measurement_criteria.json"},
+      {"$ref":"#/definitions/observation_criteria.json"},
+      {"$ref":"#/definitions/observation_period_criteria.json"},
+      {"$ref":"#/definitions/payer_plan_period_criteria.json"},
+      {"$ref":"#/definitions/procedure_occurrence_criteria.json"},
+      {"$ref":"#/definitions/specimen_criteria.json"},
+      {"$ref":"#/definitions/visit_occurrence_criteria.json"}
     ]
   }
 }

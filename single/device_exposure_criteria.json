@@ -14,6 +14,6 @@
     "disable_properties":true
   },
   "properties":{
-    "DeviceExposure":{"title":"Use Properties to add or exclude attributes...", "$ref" : "device_exposure_property.json"}
+    "DeviceExposure":{"title":"Use Properties to add or exclude attributes...", "$ref":"#/definitions/device_exposure_property.json"}
   }
 }

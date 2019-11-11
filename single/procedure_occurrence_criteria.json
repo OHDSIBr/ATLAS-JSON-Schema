@@ -13,6 +13,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "ProcedureOccurrence":{"title":"Use Properties to add or exclude attributes...","$ref" : "procedure_occurrence_property.json"}
+    "ProcedureOccurrence":{"title":"Use Properties to add or exclude attributes...","$ref":"#/definitions/procedure_occurrence_property.json"}
   }
 }

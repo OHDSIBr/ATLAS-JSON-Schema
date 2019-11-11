@@ -8,6 +8,6 @@
     },
     "additionalProperties": true,
     "properties":{
-        "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref" : "date_range.json"}
+        "OccurrenceEndDate" : {"title":"Occurence end is: ","$ref":"#/definitions/date_range.json"}
     }
 }

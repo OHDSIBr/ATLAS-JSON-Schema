@@ -4,7 +4,7 @@
 	"options":{"disable_edit_json":true,"disable_properties":true},
 	"anyOf":[
 	  {"title":"end of continuous observation ","additionalProperties": false,"schema": {"type":"object"}},
-	  {"title":"a fixed duration relative to initial event ","additionalProperties": false,"$ref":"date_offset_strategy.json"},
-	  {"title":"end of a continuous drug exposure ","additionalProperties": false,"$ref":"custom_era_strategy.json"}
+	  {"title":"a fixed duration relative to initial event ","additionalProperties": false,"$ref":"#/definitions/date_offset_strategy.json"},
+	  {"title":"end of a continuous drug exposure ","additionalProperties": false,"$ref":"#/definitions/custom_era_strategy.json"}
 	]
 }

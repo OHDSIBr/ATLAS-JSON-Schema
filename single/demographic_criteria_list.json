@@ -21,12 +21,12 @@
       },
     "properties":
       {
-        "Age":{"title":"Age Criteria","description":"With age: ","$ref":"numeric_range.json"},
-        "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"concept_array.json"},
-        "OccurrenceStartDate":{"title":"Event Start Date Criteria","description":"Occurence start is: ","$ref":"date_range.json"},
-        "OccurrenceEndDate":{"title":"Event End Date Criteria","description":"Occurence end is: ","$ref":"date_range.json"},
-        "Race":{"title":"Race Criteria","description":"With a race of: ","$ref":"concept_array.json"},
-        "Ethnicity":{"title":"Ethnicity Criteria","description":"With a ethnicity of: ","$ref":"concept_array.json"}
+        "Age":{"title":"Age Criteria","description":"With age: ","$ref":"#/definitions/numeric_range.json"},
+        "Gender":{"title":"Gender Criteria","description":"With a gender of: ","$ref":"#/definitions/concept_array.json"},
+        "OccurrenceStartDate":{"title":"Event Start Date Criteria","description":"Occurence start is: ","$ref":"#/definitions/date_range.json"},
+        "OccurrenceEndDate":{"title":"Event End Date Criteria","description":"Occurence end is: ","$ref":"#/definitions/date_range.json"},
+        "Race":{"title":"Race Criteria","description":"With a race of: ","$ref":"#/definitions/concept_array.json"},
+        "Ethnicity":{"title":"Ethnicity Criteria","description":"With a ethnicity of: ","$ref":"#/definitions/concept_array.json"}
       }
     }
 }

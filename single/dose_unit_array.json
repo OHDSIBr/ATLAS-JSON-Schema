@@ -15,6 +15,6 @@
     "disable_edit_json":true,
     "disable_properties":true
     },
-  "title":"Add Dose Unit code: ","aditionalProperties":"false","$ref":"concept_core.json"
+  "title":"Add Dose Unit code: ","aditionalProperties":"false","$ref":"#/definitions/concept_core.json"
   }
 }

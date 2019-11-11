@@ -24,6 +24,6 @@
         "disable_properties":true
       },
       "description":"Use Properties to add or exclude criterias...",
-      "$ref":"correlated_criteria_range.json"
+      "$ref":"#/definitions/correlated_criteria_range.json"
     }
 }

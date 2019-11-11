@@ -13,26 +13,26 @@
   "required":["CodesetId"],
   "defaultProperties":["CodesetId"],
   "properties":{
-    "CodesetId":{"title":"CodesetId","headerTemplate":"A condition era of: ","$ref" : "codeset_id_type.json", "description":"...condition."},
+    "CodesetId":{"title":"CodesetId","headerTemplate":"A condition era of: ","$ref":"#/definitions/codeset_id_type.json", "description":"...condition."},
     "First" : {"type" : "boolean","title":"Add First Diagnosis Criteria","headerTemplate":" For the first time in the person's history.","format":"checkbox"},
-    "AgeAtStart" : {"title":"Add Age at Era Start Criteria","headerTemplate":"with age in years at era start","description":"Filter Condition Eras by age at era start.","$ref" : "numeric_range.json",
+    "AgeAtStart" : {"title":"Add Age at Era Start Criteria","headerTemplate":"with age in years at era start","description":"Filter Condition Eras by age at era start.","$ref":"#/definitions/numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "AgeAtEnd" : {"title":"Add Age at Era End Criteria","headerTemplate":"with age in years at era end","description":"Filter Condition Eras by age at era end.","$ref" : "numeric_range.json",
+    "AgeAtEnd" : {"title":"Add Age at Era End Criteria","headerTemplate":"with age in years at era end","description":"Filter Condition Eras by age at era end.","$ref":"#/definitions/numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "Gender"   : {"title":"Add Gender Criteria...","headerTemplate":"with a gender of: ","description":"Filter Condition Eras based on gender.","$ref" : "gender_array.json"},
-    "EraStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"era start is: ","description":"Filter Condition Eras by Era Start Date.","$ref" : "date_range.json",
+    "Gender"   : {"title":"Add Gender Criteria...","headerTemplate":"with a gender of: ","description":"Filter Condition Eras based on gender.","$ref":"#/definitions/gender_array.json"},
+    "EraStartDate" : {"title":"Add Start Date Criteria","headerTemplate":"era start is: ","description":"Filter Condition Eras by Era Start Date.","$ref":"#/definitions/date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "EraEndDate" : {"title":"Add End Date Criteria","headerTemplate":"era end is: ","description":"Filter Condition Eras by Era End Date.","$ref" : "date_range.json",
+    "EraEndDate" : {"title":"Add End Date Criteria","headerTemplate":"era end is: ","description":"Filter Condition Eras by Era End Date.","$ref":"#/definitions/date_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "OccurrenceCount" : {"title":"Add Era Condition Count Criteria","headerTemplate":"with ocurrence count: ","description":"Filter Condition Eras by the Condition Count.","$ref" : "numeric_range.json",
+    "OccurrenceCount" : {"title":"Add Era Condition Count Criteria","headerTemplate":"with ocurrence count: ","description":"Filter Condition Eras by the Condition Count.","$ref":"#/definitions/numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-    "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref" : "numeric_range.json",
+    "EraLength" : {"title":"Add Era Length Criteria","headerTemplate":"with era length: ","description":"Filter Condition Eras by Era duration.","$ref":"#/definitions/numeric_range.json",
         "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
     "CorrelatedCriteria":{
         "title":"Add Nested Criteria...",
         "headerTemplate":"Having...",
         "format":"categories",
-        "$ref" : "correlated_criteria_range.json"
+        "$ref":"#/definitions/correlated_criteria_range.json"
     }
   }
 }

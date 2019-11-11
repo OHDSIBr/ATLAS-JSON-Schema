@@ -15,6 +15,6 @@
     "disable_properties":true
   },
   "properties":{
-    "Measurement":{"title":"Use Properties to add or exclude attributes...", "$ref" : "measurement_property.json"}
+    "Measurement":{"title":"Use Properties to add or exclude attributes...", "$ref":"#/definitions/measurement_property.json"}
   }
 }

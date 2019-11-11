@@ -15,6 +15,6 @@
       "disable_edit_json":true,
       "disable_properties":true
     },
-    "$ref":"concept_core.json"
+    "$ref":"#/definitions/concept_core.json"
   }
 }

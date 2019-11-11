@@ -8,6 +8,6 @@
     },
     "additionalProperties": true,
     "properties":{
-        "OccurrenceStartDate" : {"title":"Occurence start is: ","$ref" : "date_range.json"}
+        "OccurrenceStartDate" : {"title":"Occurence start is: ","$ref":"#/definitions/date_range.json"}
     }
 }

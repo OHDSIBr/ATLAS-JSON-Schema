@@ -14,6 +14,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "ConditionEra":{"title":"Use Properties to add or exclude attributes...","$ref" : "condition_era_property.json"}
+    "ConditionEra":{"title":"Use Properties to add or exclude attributes...","$ref":"#/definitions/condition_era_property.json"}
   }
 }

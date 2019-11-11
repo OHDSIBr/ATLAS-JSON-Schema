@@ -13,6 +13,6 @@
     "disable_edit_json":true
   },
   "properties":{
-    "VisitOccurrence":{"title":"Use Properties to add or exclude attributes...","$ref" : "visit_occurrence_property.json"}
+    "VisitOccurrence":{"title":"Use Properties to add or exclude attributes...","$ref":"#/definitions/visit_occurrence_property.json"}
   }
 }

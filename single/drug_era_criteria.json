@@ -14,6 +14,6 @@
     "disable_properties":true
   },
   "properties":{
-    "DrugEra":{"title":"Use Properties to add or exclude attributes...", "$ref" : "drug_era_property.json"}
+    "DrugEra":{"title":"Use Properties to add or exclude attributes...", "$ref":"#/definitions/drug_era_property.json"}
   }
 }

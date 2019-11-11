@@ -12,8 +12,8 @@
     "disable_edit_json":true
   },
   "properties":{
-    "Type":{"options":{"grid_columns": 3},"title":"with","$ref":"occurrence_type_options.json"},
-    "Count":{"options":{"grid_columns": 2},"title": " ","$ref":"occurrence_count_options.json"},
+    "Type":{"options":{"grid_columns": 3},"title":"with","$ref":"#/definitions/occurrence_type_options.json"},
+    "Count":{"options":{"grid_columns": 2},"title": " ","$ref":"#/definitions/occurrence_count_options.json"},
     "IsDistinct":{
         "type": "boolean",
         "title": " ",

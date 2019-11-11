@@ -31,28 +31,28 @@
     "defaultProperties":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
     "properties": {
       "IgnoreObservationPeriod":{"title": " allow events from outside observation period", "type":"boolean","format":"checkbox"},
-      "Occurrence":{"title":"Occurrences:","$ref":"occurrence.json"},
+      "Occurrence":{"title":"Occurrences:","$ref":"#/definitions/occurrence.json"},
       "Criteria":{
     "oneOf":[
-        {"$ref":"condition_era_criteria.json"},
-        {"$ref":"condition_occurrence_criteria.json"},
-        {"$ref":"death_criteria.json"},
-        {"$ref":"device_exposure_criteria.json"},
-        {"$ref":"dose_era_criteria.json"},
-        {"$ref":"drug_era_criteria.json"},
-        {"$ref":"drug_exposure_criteria.json"},
-        {"$ref":"location_region_criteria.json"},
-        {"$ref":"measurement_criteria.json"},
-        {"$ref":"observation_criteria.json"},
-        {"$ref":"observation_period_criteria.json"},
-        {"$ref":"payer_plan_period_criteria.json"},
-        {"$ref":"procedure_occurrence_criteria.json"},
-        {"$ref":"specimen_criteria.json"},
-        {"$ref":"visit_occurrence_criteria.json"}
+        {"$ref":"#/definitions/condition_era_criteria.json"},
+        {"$ref":"#/definitions/condition_occurrence_criteria.json"},
+        {"$ref":"#/definitions/death_criteria.json"},
+        {"$ref":"#/definitions/device_exposure_criteria.json"},
+        {"$ref":"#/definitions/dose_era_criteria.json"},
+        {"$ref":"#/definitions/drug_era_criteria.json"},
+        {"$ref":"#/definitions/drug_exposure_criteria.json"},
+        {"$ref":"#/definitions/location_region_criteria.json"},
+        {"$ref":"#/definitions/measurement_criteria.json"},
+        {"$ref":"#/definitions/observation_criteria.json"},
+        {"$ref":"#/definitions/observation_period_criteria.json"},
+        {"$ref":"#/definitions/payer_plan_period_criteria.json"},
+        {"$ref":"#/definitions/procedure_occurrence_criteria.json"},
+        {"$ref":"#/definitions/specimen_criteria.json"},
+        {"$ref":"#/definitions/visit_occurrence_criteria.json"}
       ]
       },
-      "StartWindow":{"title":"Start window is:","$ref":"window_limit.json"},
-      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"window_limit.json"},
+      "StartWindow":{"title":"Start window is:","$ref":"#/definitions/window_limit.json"},
+      "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"#/definitions/window_limit.json"},
       "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"}
     }
   }

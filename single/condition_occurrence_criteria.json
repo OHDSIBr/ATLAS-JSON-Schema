@@ -14,6 +14,6 @@
     "disable_properties":true
   },
   "properties":{
-    "ConditionOccurrence":{"title":"Use Properties to add or exclude attributes...", "$ref" : "condition_occurrence_property.json"}
+    "ConditionOccurrence":{"title":"Use Properties to add or exclude attributes...", "$ref":"#/definitions/condition_occurrence_property.json"}
   }
 }

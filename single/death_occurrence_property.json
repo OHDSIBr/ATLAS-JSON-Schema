@@ -12,21 +12,21 @@
     "required":["CodesetId"],
     "defaultProperties":["CodesetId"],
     "properties":{
-        "CodesetId":{"title":"CodesetId","headerTemplate":"A death occurrence from: ","$ref" : "codeset_id_type.json","description":"...condition."},
-        "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years ","description":"Filter Deaths by age at death.","$ref" : "numeric_range.json",
+        "CodesetId":{"title":"CodesetId","headerTemplate":"A death occurrence from: ","$ref":"#/definitions/codeset_id_type.json","description":"...condition."},
+        "Age" : {"title":"Add Age at Occurrence Criteria","headerTemplate":"with age in years ","description":"Filter Deaths by age at death.","$ref":"#/definitions/numeric_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
-        "Gender"   : {"title":"Add Gender Criteria","description":"with a gender of: ","headerTemplate":"Filter Deaths based on Gender.","$ref" : "gender_array.json"},
-        "OccurrenceStartDate" : {"title":"Add Death Date Criteria","headerTemplate":"death occurrence is: ","description":"Filter Death by Date.","$ref" : "date_range.json",
+        "Gender"   : {"title":"Add Gender Criteria","description":"with a gender of: ","headerTemplate":"Filter Deaths based on Gender.","$ref":"#/definitions/gender_array.json"},
+        "OccurrenceStartDate" : {"title":"Add Death Date Criteria","headerTemplate":"death occurrence is: ","description":"Filter Death by Date.","$ref":"#/definitions/date_range.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "DeathTypeExclude" : {"type" : "boolean","title":"Exclude Death Type","format":"checkbox","headerTemplate":"Death type is none of the following: "},
-        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","$ref" : "death_type_array.json"},
-        "DeathSourceConcept":{"title":"Add Cause of Death Source Concept Criteria","headerTemplate":"Death Source Concept is: ","description":"Filter Death by the Death Source Concept.","$ref":"codeset_id_type.json",
+        "DeathType"   : {"title":"Add Death Type Criteria","description":"Death Type of: ","headerTemplate":"Filter Deaths by the Death Type.","$ref":"#/definitions/death_type_array.json"},
+        "DeathSourceConcept":{"title":"Add Cause of Death Source Concept Criteria","headerTemplate":"Death Source Concept is: ","description":"Filter Death by the Death Source Concept.","$ref":"#/definitions/codeset_id_type.json",
             "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true}},
         "CorrelatedCriteria":{
             "title":"Add Nested Criteria...",
             "headerTemplate":"Having...",
             "format":"categories",
-            "$ref" : "correlated_criteria_range.json"
+            "$ref":"#/definitions/correlated_criteria_range.json"
         }
     }
 }

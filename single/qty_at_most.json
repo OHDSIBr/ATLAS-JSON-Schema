@@ -20,14 +20,14 @@
       "options":{"enum_titles":["At Most"]}
     },
     "Count":{"title":"Count","headerTemplate":"... n ocurrences: ","description":"of the following criteria. Add criterias, demographic or groups...","type": "integer"},
-    "CriteriaList":{"title":"Add criteria to group","headerTemplate":"Add Criterias:","$ref":"criteria_list_type.json"},
+    "CriteriaList":{"title":"Add criteria to group","headerTemplate":"Add Criterias:","$ref":"#/definitions/criteria_list_type.json"},
     "DemographicCriteriaList":{
       "type":"array",
       "title":"Add demographic",
       "headerTemplate":"Add Demographics",
       "description":"",
-      "$ref":"demographic_criteria_list.json"
+      "$ref":"#/definitions/demographic_criteria_list.json"
     },
-    "Groups":{"title":"Add group","headerTemplate":"Add groups","description":"","$ref":"groups_list_or.json"}
+    "Groups":{"title":"Add group","headerTemplate":"Add groups","description":"","$ref":"#/definitions/groups_list_or.json"}
   }
 }

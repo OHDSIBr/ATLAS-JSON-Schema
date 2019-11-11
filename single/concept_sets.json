@@ -30,7 +30,7 @@
               "no_additional_properties":true
           },
           "properties":{
-              "items":{"$ref":"concept_set_element.json"}
+              "items":{"$ref":"#/definitions/concept_set_element.json"}
           }
       }    
     }

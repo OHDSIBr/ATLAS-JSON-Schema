@@ -14,6 +14,6 @@
       "disable_properties":true
     },
     "properties":{
-        "LocationRegion":{"title":"Use Properties to add or exclude attributes...", "$ref" : "location_region_property.json"}
+        "LocationRegion":{"title":"Use Properties to add or exclude attributes...", "$ref":"#/definitions/location_region_property.json"}
     }
   }
