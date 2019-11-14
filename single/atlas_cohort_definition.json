@@ -280,7 +280,7 @@
       "id":"concept_set_element",
       "type": "array",
       "items":{
-        "id": "concept_item",
+        "id":"concept_item",
         "required":["concept","isExcluded","includeDescendants","includeMapped"],
         "defaultProperties":["concept","isExcluded","includeDescendants","includeMapped"],
         "type":"object",
@@ -1008,7 +1008,7 @@
       "properties": {
         "PriorDays": {
           "type": "integer",
-          "default": 0,
+          "default": 0
         },
         "PostDays": {
           "type": "integer",
@@ -1443,7 +1443,7 @@
         "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
         "First" : {"type" : "boolean"},
         "Age" : {"$ref":"#/definitions/numeric_range"},
-        "Gender"   : {,"$ref":"#/definitions/gender_array"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
         "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
         "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"},
         "VisitTypeExclude" : {"type" : "boolean"},
@@ -1470,7 +1470,7 @@
       "id":"window_coeff_options",
       "type":"integer",
       "required":true,
-      "enum":[-1,1],
+      "enum":[-1,1]
     },
     "window_day_options":{
       "id":"window_day_options",
