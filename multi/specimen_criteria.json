@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/specimen_criteria.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/specimen_criteria.json",
   "title":"Add Specimen",
   "description":"Specimen: ",
   "headerTemplate": "A description of Specimen criteria",

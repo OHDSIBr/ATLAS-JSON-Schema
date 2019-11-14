@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/device_exposure_criteria.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/device_exposure_criteria.json",
   "title":"Add Device Exposure",
   "description":"Device Exposure: ",
   "required":["DeviceExposure"],

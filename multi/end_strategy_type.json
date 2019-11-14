@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-	"id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/end_strategy_type.json",
+	"id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/end_strategy_type.json",
 	"options":{"disable_edit_json":true,"disable_properties":true},
 	"anyOf":[
 	  {"title":"end of continuous observation ","additionalProperties": false,"schema": {"type":"object"}},
