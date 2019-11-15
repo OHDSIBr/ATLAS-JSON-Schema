@@ -85,6 +85,7 @@
       }
     },
     "QualifiedLimit": {
+      "title":"Qualified Limit",
       "type": "object",
       "properties":{
         "Type": {"$ref":"event_limit_options.json"}
@@ -116,6 +117,7 @@
       "properties":{
         "CollapseType": {
         "type":"string",
+        "readOnly":true,
         "enum":["ERA"],
         "options": {"hidden": true}
         },

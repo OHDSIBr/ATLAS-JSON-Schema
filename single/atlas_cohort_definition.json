@@ -18,66 +18,30 @@
     ,"cdmVersionRange"
   ],
   "additionalProperties":false,
-  "options": {
-    "disable_properties":true,
-    "disable_edit_json":false,
-    "display_required_only":true,
-    "no_additional_properties":true,
-    "remove_empty_properties": false
-  },
   "properties": {
     "ConceptSets": {"$ref":"#/definitions/concept_sets"},
     "PrimaryCriteria":{
       "title":"Cohort Entry Events",
-      "description":"Add initial events, continuous observation and limit initial events.",
       "type": "object",
       "format": "categories",
       "additionalProperties":false,
       "required":["CriteriaList","ObservationWindow","PrimaryCriteriaLimit"],
-      "options": {
-        "disable_collapse":true,
-        "disable_edit_json":false,
-        "disable_properties":true,
-        "display_required_only":true,
-        "no_additional_properties":true,
-        "remove_empty_properties": false
-      },
       "properties": {
         "CriteriaList":{
           "$ref":"#/definitions/correlated_criteria_list_type",
-          "additionalProperties":false,
-          "options": {
-            "disable_collapse":true,
-            "disable_edit_json":false,
-            "disable_properties":true,
-            "display_required_only":true,
-            "no_additional_properties":true,
-            "remove_empty_properties": false
-          }
+          "additionalProperties":false
             },
         "ObservationWindow":{
           "title": "Observation Window",
-          "headerTemplate":" ",
-          "description":"With continuous observation of at least:",
           "$ref":"#/definitions/observation_window"
         },
         "PrimaryCriteriaLimit":{
           "type": "object",
           "title": "Result Limit Options",
-          "headerTemplate":" ",
           "required":["Type"],
-          "options": {
-            "disable_collapse":true,
-            "disable_edit_json":true,
-            "disable_properties":true,
-            "display_required_only":true,
-            "no_additional_properties":true,
-            "remove_empty_properties": false
-          },
           "properties":{
               "Type": {
               "title": "Limit initial events to:",
-              "description": " ...per person",
               "$ref":"#/definitions/event_limit_options"
             }
           }
@@ -85,6 +49,7 @@
       }
     },
     "QualifiedLimit": {
+      "title":"Qualified Limit",
       "type": "object",
       "properties":{
         "Type": {"$ref":"#/definitions/event_limit_options"}
@@ -92,7 +57,6 @@
     },
     "InclusionRules": {
       "title":"Inclusion Criteria",
-      "description":"The qualifying cohort will be defined as all persons who have an initial event, satisfy the initial event inclusion criteria, and fulfill all additional qualifying inclusion criteria. Each qualifying inclusion criteria will be evaluated to determine the impact of the criteria on the attrition of persons from the initial cohort.",
       "$ref":"#/definitions/rules"
     },
     "ExpressionLimit": {
@@ -100,8 +64,6 @@
       "title":"Inclusion Criteria - Limit",
       "properties":{
         "Type": {
-          "title":"Limit qualifying events to: ",
-          "description":" ...per person.",
           "$ref":"#/definitions/event_limit_options"
         }
       }
@@ -109,35 +71,29 @@
     "CollapseSettings": {
       "title":"Cohort Eras: Gap Size",
       "type": "object",
-      "description": "Defines collapse settings",
       "required":["CollapseType","EraPad"],
       "defaultProperties":["CollapseType","EraPad"],
-      "options": {"disable_collapse":false,"disable_properties":true,"disable_edit_json":true},
       "properties":{
         "CollapseType": {
         "type":"string",
         "enum":["ERA"],
-        "options": {"hidden": true}
+        "readOnly":true
         },
-        "EraPad":{"title":"Specify era collapse gap size:","description": " days.","$ref":"#/definitions/day_options"}
+        "EraPad":{"$ref":"#/definitions/day_options"}
       }
     },
     "EndStrategy":{
-        "headerTemplate":"Event will persist until: ",
         "title":"Cohort Exit - Event Persistence",
         "type":"object",
         "required":true,
-        "options":{"disable_edit_json":false,"disable_properties":false},
         "$ref":"#/definitions/end_strategy_type"
     },
     "CensoringCriteria": {
       "title":"Cohort Exit - Censoring Events",
-      "description":"Exit Cohort based on the following criteria:",
       "$ref":"#/definitions/correlated_criteria_list_type"
     },
     "CensorWindow": {
       "title":"Cohort Eras: Censoring",
-      "description":"Add trimming options...",
       "required":true,
       "defaultProperties":["StartDate","EndDate"],
       "$ref":"#/definitions/censoring_period"
@@ -150,6 +106,15 @@
       "id":"anatomic_site_array",
       "items":{  
       "title":"Add Anatomic Site code: ","aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "card_between_num":{
+      "id":"card_between_num",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
+        "Value":{"type": "integer","default":0},
+        "Extent":{"type": "integer","default":0}
       }
     },
     "card_equal_to":{
@@ -192,6 +157,15 @@
         "Value":{"title":"value:","type": "integer"}
       }
     },
+    "card_not_between_num":{
+      "id":"card_not_between_num",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
+        "Value":{"type": "integer","default":0},
+        "Extent":{"type": "integer","default":0}
+      }
+    },
     "censoring_period":{
       "id":"censoring_period",
       "type":"object",
@@ -215,7 +189,8 @@
           "title": "Any concept"
         },
         {
-          "type": "integer"
+          "type": "integer",
+          "title": "ConceptSet Index"
         }
       ]
     },
@@ -315,6 +290,7 @@
     },
     "condition_era_criteria":{
       "id":"condition_era_criteria",
+      "title":"Add Condition Era",
       "type":"object",
       "additionalProperties": false,
       "required":["ConditionEra"],
@@ -345,6 +321,7 @@
     },
     "condition_occurrence_criteria":{
       "id":"condition_occurrence_criteria",
+      "title":"Add Condition Occurrence",
       "type":"object",
       "additionalProperties": false,
       "required":["ConditionOccurrence"],
@@ -419,10 +396,10 @@
         "^Groups$": { "type": "array" }
       },
       "oneOf": [
-                    { "title":" all ","$ref": "qty_all" },
-                    { "title":" any ","$ref": "qty_any"},
-                    { "title":" at least ","$ref": "qty_at_least"},
-                    { "title":" at most ","$ref": "qty_at_most"}
+                    {"title":" all ","$ref": "#/definitions/qty_all" },
+                    {"title":" any ","$ref": "#/definitions/qty_any"},
+                    {"title":" at least ","$ref": "#/definitions/qty_at_least"},
+                    {"title":" at most ","$ref": "#/definitions/qty_at_most"}
                 ]
     },
     "criteria_list_type":{
@@ -551,13 +528,13 @@
       },
       "additionalProperties": false,
       "oneOf": [
-                    { "title":"Before","$ref": "ord_before"},
-                    { "title":"On or Before","$ref": "ord_on_or_before"},
-                    { "title":"On","$ref": "ord_on"},
-                    { "title":"After","$ref": "ord_after"},
-                    { "title":"On or After","$ref": "ord_on_or_after"},
-                    { "title":"Between","$ref": "ord_between"},
-                    { "title":"Not Between","$ref": "ord_not_between"}
+                    { "title":"Before","$ref": "#/definitions/ord_before"},
+                    { "title":"On or Before","$ref": "#/definitions/ord_on_or_before"},
+                    { "title":"On","$ref": "#/definitions/ord_on"},
+                    { "title":"After","$ref": "#/definitions/ord_after"},
+                    { "title":"On or After","$ref": "#/definitions/ord_on_or_after"},
+                    { "title":"Between","$ref": "#/definitions/ord_between"},
+                    { "title":"Not Between","$ref": "#/definitions/ord_not_between"}
                 ]
     },
     "day_options":{
@@ -571,6 +548,7 @@
     },
     "death_criteria":{
       "id":"death_criteria",
+      "title":"Add Death",
       "type":"object",
       "additionalProperties": false,
       "required":["Death"],
@@ -624,6 +602,7 @@
     },
     "device_exposure_criteria":{
       "id":"device_exposure_criteria",
+      "title":"Add Device Exposure",
       "required":["DeviceExposure"],
       "additionalProperties": false,
       "type":"object",
@@ -674,6 +653,7 @@
     },
     "dose_era_criteria":{
       "id":"dose_era_criteria",
+      "title":"Add Dose Era",
       "required":["DoseEra"],
       "additionalProperties": false,
       "type":"object",
@@ -712,6 +692,7 @@
     },
     "drug_era_criteria":{
       "id":"drug_era_criteria",
+      "title":"Add Drug Era",
       "required":["DrugEra"],
       "additionalProperties": false,
       "type":"object",
@@ -741,6 +722,7 @@
     },
     "drug_exposure_criteria":{
       "id":"drug_exposure_criteria",
+      "title":"Add Drug Exposure",
       "required":["DrugExposure"],
       "additionalProperties": false,
       "type":"object",
@@ -830,6 +812,7 @@
     },
     "location_region_criteria":{
       "id":"location_region_criteria",
+      "title":"Add Location Region",
       "type":"object",
       "additionalProperties": false,
       "required":["LocationRegion"],
@@ -854,6 +837,7 @@
     },
     "measurement_criteria":{
       "id":"measurement_criteria",
+      "title":"Add Measurement",
       "type":"object",
       "additionalProperties": false,
       "required":["Measurement"],
@@ -919,17 +903,18 @@
         },
       "additionalProperties": false,
       "oneOf": [
-                  { "title":"Less Than","$ref": "card_less_than"},
-                  { "title":"Less or Equal To","$ref": "card_less_or_equal_to"},
-                  { "title":"Equal To","$ref": "card_equal_to"},
-                  { "title":"Greater Than","$ref": "card_greater_than"},
-                  { "title":"Greater or Equal To","$ref": "card_greater_or_equal_to"},
-                  { "title":"Between","$ref": "ord_between_num"},
-                  { "title":"Not Between","$ref": "ord_not_between_num"}
+                  { "title":"Less Than","$ref": "#/definitions/card_less_than"},
+                  { "title":"Less or Equal To","$ref": "#/definitions/card_less_or_equal_to"},
+                  { "title":"Equal To","$ref": "#/definitions/card_equal_to"},
+                  { "title":"Greater Than","$ref": "#/definitions/card_greater_than"},
+                  { "title":"Greater or Equal To","$ref": "#/definitions/card_greater_or_equal_to"},
+                  { "title":"Between","$ref": "#/definitions/card_between_num"},
+                  { "title":"Not Between","$ref": "#/definitions/card_not_between_num"}
               ]
     },
     "observation_criteria":{
       "id":"observation_criteria",
+      "title":"Add Observation",
       "type":"object",
       "additionalProperties": false,
       "required":["Observation"],
@@ -939,6 +924,7 @@
     },
     "observation_period_criteria":{
       "id":"observation_period_criteria",
+      "title":"Add Observation Period",
       "type":"object",
       "additionalProperties": false,
       "required":["ObservationPeriod"],
@@ -1024,21 +1010,6 @@
       "minimum":0,
       "maximum":10
     },
-    "occurrence_end_date_criteria":{
-      "id":"occurrence_end_date_criteria",
-      "additionalProperties": true,
-      "properties":{
-          "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"}
-      }
-    },
-    "occurrence_start_date_criteria":{
-      "id":"occurrence_start_date_criteria",
-      "required":["OccurrenceStartDate"],
-      "additionalProperties": true,
-      "properties":{
-          "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"}
-      }
-    },
     "occurrence_type_options":{
       "id":"occurrence_type_options",
       "type":"integer",
@@ -1085,15 +1056,6 @@
         "Value":{"format":"date","type": "string"}
       }
     },
-    "ord_between_num":{
-      "id":"ord_between_num",
-      "required":["Value","Op","Extent"],
-      "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
-        "Value":{"type": "integer","default":0},
-        "Extent":{"type": "integer","default":0}
-      }
-    },
     "ord_between":{
       "id":"ord_between",
       "required":["Value","Op","Extent"],
@@ -1101,15 +1063,6 @@
         "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
         "Value":{"format":"date","type": "string"},
         "Extent":{"format":"date","type": "string"}
-      }
-    },
-    "ord_not_between_num":{
-      "id":"ord_not_between_num",
-      "required":["Value","Op","Extent"],
-      "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
-        "Value":{"type": "integer","default":0},
-        "Extent":{"type": "integer","default":0}
       }
     },
     "ord_not_between":{
@@ -1147,6 +1100,7 @@
     },
     "payer_plan_period_criteria":{
       "id":"payer_plan_period_criteria",
+      "title":"Add Payer Plan Period",
       "type":"object",
       "additionalProperties": false,
       "required":["PayerPlanPeriod"],
@@ -1199,6 +1153,7 @@
     },
     "procedure_occurrence_criteria":{
       "id":"procedure_occurrence_criteria",
+      "title":"Add Procedure Occurrence",
       "type":"object",
       "additionalProperties": false,
       "required":["ProcedureOccurrence"],
@@ -1354,6 +1309,7 @@
     },
     "specimen_criteria":{
       "id":"specimen_criteria",
+      "title":"Add Specimen",
       "type":"object",
       "additionalProperties": false,
       "required":["Specimen"],
@@ -1427,6 +1383,7 @@
     },
     "visit_occurrence_criteria":{
       "id":"visit_occurrence_criteria",
+      "title":"Add Visit ",
       "type":"object",
       "additionalProperties": false,
       "required":["VisitOccurrence"],
