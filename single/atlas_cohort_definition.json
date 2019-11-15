@@ -1,0 +1,1469 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/single/atlas_cohort_definition.json",
+  "title": "Atlas Cohort Definition",
+  "type": "object",
+  "format": "categories",
+  "basicCategoryTitle":"CDM Version",
+  "required":[
+     "ConceptSets"
+    ,"PrimaryCriteria"
+    ,"QualifiedLimit"
+    ,"ExpressionLimit"
+    ,"InclusionRules"
+    ,"CensoringCriteria"
+    ,"CollapseSettings"
+    ,"CensorWindow"
+    ,"EndStrategy"
+    ,"cdmVersionRange"
+  ],
+  "additionalProperties":false,
+  "properties": {
+    "ConceptSets": {"$ref":"#/definitions/concept_sets"},
+    "PrimaryCriteria":{
+      "title":"Cohort Entry Events",
+      "type": "object",
+      "format": "categories",
+      "additionalProperties":false,
+      "required":["CriteriaList","ObservationWindow","PrimaryCriteriaLimit"],
+      "properties": {
+        "CriteriaList":{
+          "$ref":"#/definitions/correlated_criteria_list_type",
+          "additionalProperties":false
+            },
+        "ObservationWindow":{
+          "title": "Observation Window",
+          "$ref":"#/definitions/observation_window"
+        },
+        "PrimaryCriteriaLimit":{
+          "type": "object",
+          "title": "Result Limit Options",
+          "required":["Type"],
+          "properties":{
+              "Type": {
+              "title": "Limit initial events to:",
+              "$ref":"#/definitions/event_limit_options"
+            }
+          }
+        }
+      }
+    },
+    "QualifiedLimit": {
+      "title":"Qualified Limit",
+      "type": "object",
+      "properties":{
+        "Type": {"$ref":"#/definitions/event_limit_options"}
+      }
+    },
+    "InclusionRules": {
+      "title":"Inclusion Criteria",
+      "$ref":"#/definitions/rules"
+    },
+    "ExpressionLimit": {
+      "type": "object",
+      "title":"Inclusion Criteria - Limit",
+      "properties":{
+        "Type": {
+          "$ref":"#/definitions/event_limit_options"
+        }
+      }
+    },
+    "CollapseSettings": {
+      "title":"Cohort Eras: Gap Size",
+      "type": "object",
+      "required":["CollapseType","EraPad"],
+      "defaultProperties":["CollapseType","EraPad"],
+      "properties":{
+        "CollapseType": {
+        "type":"string",
+        "enum":["ERA"],
+        "readOnly":true
+        },
+        "EraPad":{"$ref":"#/definitions/day_options"}
+      }
+    },
+    "EndStrategy":{
+        "title":"Cohort Exit - Event Persistence",
+        "type":"object",
+        "required":true,
+        "$ref":"#/definitions/end_strategy_type"
+    },
+    "CensoringCriteria": {
+      "title":"Cohort Exit - Censoring Events",
+      "$ref":"#/definitions/correlated_criteria_list_type"
+    },
+    "CensorWindow": {
+      "title":"Cohort Eras: Censoring",
+      "required":true,
+      "defaultProperties":["StartDate","EndDate"],
+      "$ref":"#/definitions/censoring_period"
+    },
+    "cdmVersionRange":{"title":"CDM Version required","type":"string","readOnly":true,"default":">=5.0.0"}
+  },
+  "definitions":{
+    "anatomic_site_array":{
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "id":"anatomic_site_array",
+      "items":{  
+      "title":"Add Anatomic Site code: ","aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "card_between_num":{
+      "id":"card_between_num",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
+        "Value":{"type": "integer","default":0},
+        "Extent":{"type": "integer","default":0}
+      }
+    },
+    "card_equal_to":{
+      "id":"card_equal_to",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "eq" ]},
+        "Value":{"title":"value:","type": "integer","default":0}
+      }
+    },
+    "card_greater_or_equal_to":{
+      "id":"card_greater_or_equal_to",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gte" ]},
+        "Value":{"title":"value:","type": "integer","default":0}
+      }
+    },
+    "card_greater_than":{
+      "id":"card_greater_than",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gt" ]},
+        "Value":{"title":"value:","type": "integer","default":0}
+      }
+    },
+    "card_less_or_equal_to":{
+      "id":"card_less_or_equal_to",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "lte" ]},
+        "Value":{"title":"value:","type": "integer","default":0}
+      }
+    },
+    "card_less_than":{
+      "id":"card_less_than",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "lt" ]},
+        "Value":{"title":"value:","type": "integer"}
+      }
+    },
+    "card_not_between_num":{
+      "id":"card_not_between_num",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
+        "Value":{"type": "integer","default":0},
+        "Extent":{"type": "integer","default":0}
+      }
+    },
+    "censoring_period":{
+      "id":"censoring_period",
+      "type":"object",
+      "defaultProperties":["StartDate","EndDate"],
+      "properties":{
+        "StartDate":{
+            "type": "string",
+            "format": "date"
+        },
+        "EndDate":{
+            "type": "string",
+            "format": "date"
+        }
+      }
+    },
+    "codeset_id_type":{
+      "id":"codeset_id_type",
+      "anyOf":[
+        {
+          "type": "null",
+          "title": "Any concept"
+        },
+        {
+          "type": "integer",
+          "title": "ConceptSet Index"
+        }
+      ]
+    },
+    "concept_array":{
+      "id":"concept_array",
+      "type":"array",
+      "items":{
+        "$ref":"#/definitions/concept_core"
+      }
+    },
+    "concept_core_extended":{
+      "id":"concept_core_extended",
+      "type": "object",
+      "additionalProperties":false,
+      "required":["CONCEPT_ID", "CONCEPT_NAME", "STANDARD_CONCEPT_CAPTION", "INVALID_REASON_CAPTION", "STANDARD_CONCEPT", "INVALID_REASON", "CONCEPT_CODE", "DOMAIN_ID", "VOCABULARY_ID", "CONCEPT_CLASS_ID" ],
+      "properties":{
+        "CONCEPT_CODE":{"type":"string","maxLength": 50},
+        "CONCEPT_NAME":{"type":"string","maxLength": 255},
+        "DOMAIN_ID":{"type":"string","maxLength": 20},
+        "CONCEPT_ID":{"type":"integer"},
+        "VOCABULARY_ID":{"type":"string","maxLength": 20},
+        "STANDARD_CONCEPT_CAPTION":{
+        "type":"string",
+        "default": "Standard",
+        "enum":["Standard","Classification","Non-standard",""]
+        },
+        "STANDARD_CONCEPT":{
+          "type":"string",
+          "maxLength": 1,
+          "readOnly":true
+        },
+        "INVALID_REASON_CAPTION":{
+          "type":"string",
+          "default": "Valid",
+          "enum":["Valid","Deleted","Upgraded",""]
+        },
+        "INVALID_REASON":{
+          "type":"string",
+          "maxLength": 1,
+          "readOnly":true
+        },
+        "CONCEPT_CLASS_ID":{
+          "type":"string",
+          "maxLength": 20
+        }
+      }
+    },
+    "concept_core":{
+      "id":"concept_core",
+      "type": "object",
+      "additionalProperties":false,
+      "required":["CONCEPT_CODE", "CONCEPT_ID", "CONCEPT_NAME", "DOMAIN_ID", "VOCABULARY_ID"],
+      "properties":{
+          "CONCEPT_CODE":{"type":"string","maxLength": 50},
+          "CONCEPT_NAME":{"type":"string","maxLength": 255},
+          "DOMAIN_ID":{"type":"string","maxLength": 20},
+          "CONCEPT_ID":{"type":"integer"},
+          "VOCABULARY_ID":{"type":"string","maxLength": 20}
+      }
+    },
+    "concept_set_element":{
+      "id":"concept_set_element",
+      "type": "array",
+      "items":{
+        "id":"concept_item",
+        "required":["concept","isExcluded","includeDescendants","includeMapped"],
+        "defaultProperties":["concept","isExcluded","includeDescendants","includeMapped"],
+        "type":"object",
+        "additionalProperties":false,
+        "properties":{
+              "concept":{"$ref":"#/definitions/concept_core_extended"},
+              "isExcluded":{"type":"boolean","default":false},
+              "includeDescendants": {"type":"boolean"},
+              "includeMapped": {"type":"boolean"}
+        }
+      }
+    },
+    "concept_sets":{
+      "id":"concept_sets",
+      "type":"array",
+      "items":{
+        "required":["id","name","expression"],
+        "additionalProperties":false,
+        "properties":{
+          "id":{"type":"integer"},
+          "name":{"type":"string"},
+          "expression":{
+            "type":"object",
+            "required":["items"],
+            "additionalProperties":false,
+            "properties":{
+                "items":{"$ref":"#/definitions/concept_set_element"}
+            }
+          }
+        }
+      }
+    },
+    "condition_era_criteria":{
+      "id":"condition_era_criteria",
+      "title":"Add Condition Era",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["ConditionEra"],
+      "properties":{
+        "ConditionEra":{"$ref":"#/definitions/condition_era_property"}
+      }
+    },
+    "condition_era_property":{
+      "id":"condition_era_property",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "AgeAtStart" : {"$ref":"#/definitions/numeric_range"},
+        "AgeAtEnd" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "EraStartDate" : {"$ref":"#/definitions/date_range"},
+        "EraEndDate" : {"$ref":"#/definitions/date_range"},
+        "OccurrenceCount" : {"$ref":"#/definitions/numeric_range"},
+        "EraLength" : {"$ref":"#/definitions/numeric_range"},
+        "CorrelatedCriteria":{
+            "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "condition_occurrence_criteria":{
+      "id":"condition_occurrence_criteria",
+      "title":"Add Condition Occurrence",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["ConditionOccurrence"],
+      "properties":{
+        "ConditionOccurrence":{"$ref":"#/definitions/condition_occurrence_property"}
+      }
+    },
+    "condition_occurrence_property":{
+      "id":"condition_occurrence_property",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"},
+        "ConditionTypeExclude" : {"type" : "boolean"},
+        "ConditionType"   : {"$ref":"#/definitions/condition_type_array"},
+        "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+        "StopReason" : {"$ref":"#/definitions/text_filter"},
+        "ConditionSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+        "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+        "CorrelatedCriteria":{
+            "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "condition_type_array":{
+      "id":"condition_type_array",
+      "required":["ConditionType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "correlated_criteria_list_type":{
+      "id":"correlated_criteria_list_type",
+      "type": "array",
+      "items": {
+      "type":"object",
+      "default":{"$ref":"#/definitions/condition_era_criteria"},
+      "oneOf":[
+          {"$ref":"#/definitions/condition_era_criteria"},
+          {"$ref":"#/definitions/condition_occurrence_criteria"},
+          {"$ref":"#/definitions/death_criteria"},
+          {"$ref":"#/definitions/device_exposure_criteria"},
+          {"$ref":"#/definitions/dose_era_criteria"},
+          {"$ref":"#/definitions/drug_era_criteria"},
+          {"$ref":"#/definitions/drug_exposure_criteria"},
+          {"$ref":"#/definitions/measurement_criteria"},
+          {"$ref":"#/definitions/observation_criteria"},
+          {"$ref":"#/definitions/observation_period_criteria"},
+          {"$ref":"#/definitions/payer_plan_period_criteria"},
+          {"$ref":"#/definitions/procedure_occurrence_criteria"},
+          {"$ref":"#/definitions/specimen_criteria"},
+          {"$ref":"#/definitions/visit_occurrence_criteria"}
+        ]
+      }
+    },
+    "correlated_criteria_range":{
+      "id":"correlated_criteria_range",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^Type$": { "type": "string" },
+        "^Count$": { "type": "integer" },
+        "^CriteriaList$": { "type": "array" },
+        "^DemographicCriteriaList$": { "type": "array" },
+        "^Groups$": { "type": "array" }
+      },
+      "oneOf": [
+                    {"title":" all ","$ref": "#/definitions/qty_all" },
+                    {"title":" any ","$ref": "#/definitions/qty_any"},
+                    {"title":" at least ","$ref": "#/definitions/qty_at_least"},
+                    {"title":" at most ","$ref": "#/definitions/qty_at_most"}
+                ]
+    },
+    "criteria_list_type":{
+      "id":"criteria_list_type",
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type":"object",
+        "additionalProperties": false,
+        "required":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+        "defaultProperties":["IgnoreObservationPeriod","Occurrence","Criteria","StartWindow"],
+        "properties": {
+          "IgnoreObservationPeriod":{"type":"boolean"},
+          "Occurrence":{"title":"Occurrences:","$ref":"#/definitions/occurrence"},
+          "Criteria":{
+        "oneOf":[
+            {"$ref":"#/definitions/condition_era_criteria"},
+            {"$ref":"#/definitions/condition_occurrence_criteria"},
+            {"$ref":"#/definitions/death_criteria"},
+            {"$ref":"#/definitions/device_exposure_criteria"},
+            {"$ref":"#/definitions/dose_era_criteria"},
+            {"$ref":"#/definitions/drug_era_criteria"},
+            {"$ref":"#/definitions/drug_exposure_criteria"},
+            {"$ref":"#/definitions/location_region_criteria"},
+            {"$ref":"#/definitions/measurement_criteria"},
+            {"$ref":"#/definitions/observation_criteria"},
+            {"$ref":"#/definitions/observation_period_criteria"},
+            {"$ref":"#/definitions/payer_plan_period_criteria"},
+            {"$ref":"#/definitions/procedure_occurrence_criteria"},
+            {"$ref":"#/definitions/specimen_criteria"},
+            {"$ref":"#/definitions/visit_occurrence_criteria"}
+          ]
+          },
+          "StartWindow":{"title":"Start window is:","$ref":"#/definitions/window_limit"},
+          "EndWindow":{"default":{"UseEventEnd":true},"title":"and end window is:","$ref":"#/definitions/window_limit"},
+          "RestrictVisit":{"type":"boolean","title": " restrict to the same visit occurrence","format":"checkbox"}
+        }
+      }
+    },
+    "custom_era_strategy_type":{
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "id":"custom_era_strategy_type",
+      "title":"Custom Era",
+      "description": "OK - The drug custom era strategy",
+      "type":"object",
+      "options":{"disable_edit_json":true,"disable_properties":true},
+      "required":["drugCodesetId","GapDays","Offset"],
+      "properties":{
+        "drugCodesetId": {
+          "title":"Concept set containing the drug(s) of interest: ",
+          "$ref":"#/definitions/codeset_id_type"
+        },
+        "GapDays":{
+          "title":"Persistence window: allow for a maximum of... ",
+          "description": " ...days between exposure records when inferring the era of persistence exposure.",
+          "default": 0,
+          "$ref":"#/definitions/day_options"
+        },
+        "Offset":{
+          "title":"Surveillance window: add... ",
+          "description":" ...days to the end of the era of persistence exposure as an additional period of surveillance prior to cohort exit.",
+          "$ref":"#/definitions/day_options",
+          "default": 0
+        }
+      }
+    },
+    "custom_era_strategy":{
+      "id":"custom_era_strategy",
+      "type":"object",
+      "required":["CustomEra"],
+      "properties":{
+        "CustomEra":{
+          "$ref":"#/definitions/custom_era_strategy_type"
+        }
+      }
+    },
+    "date_offset_strategy_type":{
+      "id":"date_offset_strategy_type",
+      "required":["DateField","Offset"],
+      "properties":{
+        "DateField":{
+         "type": "string",
+          "default": "StartDate",
+          "enum":["StartDate","EndDate"]
+         },
+        "Offset":{
+          "$ref":"#/definitions/day_options",
+          "default": 0
+        }
+      }
+    },
+    "date_offset_strategy":{
+      "id":"date_offset_strategy",
+      "type":"object",
+      "required":["DateOffset"],
+      "properties":{
+        "DateOffset":{
+          "$ref":"#/definitions/date_offset_strategy_type"
+        }
+      }
+    },
+    "date_period":{
+      "id":"date_period",
+      "type":"object",
+      "required":["StartDate","EndDate"],
+      "defaultProperties":["StartDate","EndDate"],
+      "properties":{
+        "StartDate":{
+            "type": "string",
+            "format": "date"
+        },
+        "EndDate":{
+            "type": "string",
+            "format": "date"
+        }
+      }
+    },
+    "data_range":{
+      "id":"data_range",
+      "type":"object",
+      "required": ["Op","Value"],
+      "patternProperties": {
+        "^Op$": { "type": "string" },
+        "^Value$": { "type": "string" },
+        "^Extent$": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "oneOf": [
+                    { "title":"Before","$ref": "#/definitions/ord_before"},
+                    { "title":"On or Before","$ref": "#/definitions/ord_on_or_before"},
+                    { "title":"On","$ref": "#/definitions/ord_on"},
+                    { "title":"After","$ref": "#/definitions/ord_after"},
+                    { "title":"On or After","$ref": "#/definitions/ord_on_or_after"},
+                    { "title":"Between","$ref": "#/definitions/ord_between"},
+                    { "title":"Not Between","$ref": "#/definitions/ord_not_between"}
+                ]
+    },
+    "day_options":{
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "id":"day_options",
+      "type":"integer",
+      "enum":[ 0, 1, 7, 14, 21, 30, 60, 90, 120, 180, 365, 548, 730, 1095],
+      "options":{
+        "enum_titles":[ "0", "1", "7", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"]
+      }
+    },
+    "death_criteria":{
+      "id":"death_criteria",
+      "title":"Add Death",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["Death"],
+      "properties":{
+          "Death":{"$ref":"#/definitions/death_occurrence_property"}
+      }
+    },
+    "death_occurrence_property":{
+      "id":"death_occurrence_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "Age" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+          "DeathTypeExclude" : {"type" : "boolean"},
+          "DeathType"   : {"$ref":"#/definitions/death_type_array"},
+          "DeathSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "death_type_array":{
+      "id":"death_type_array",
+      "required":["DeathType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },    
+    "demographic_criteria_list":{
+      "id":"demographic_criteria_list",
+      "type": "array",
+      "additionalProperties": true,
+      "items": {
+        "type":"object",
+        "additionalProperties": false,
+        "properties":
+          {
+            "Age":{"$ref":"#/definitions/numeric_range"},
+            "Gender":{"$ref":"#/definitions/concept_array"},
+            "OccurrenceStartDate":{"$ref":"#/definitions/date_range"},
+            "OccurrenceEndDate":{"$ref":"#/definitions/date_range"},
+            "Race":{"$ref":"#/definitions/concept_array"},
+            "Ethnicity":{"$ref":"#/definitions/concept_array"}
+          }
+      }
+    },
+    "device_exposure_criteria":{
+      "id":"device_exposure_criteria",
+      "title":"Add Device Exposure",
+      "required":["DeviceExposure"],
+      "additionalProperties": false,
+      "type":"object",
+      "properties":{
+        "DeviceExposure":{"$ref":"#/definitions/device_exposure_property"}
+      }
+    },
+    "device_exposure_property":{
+      "id":"device_exposure_property",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+          "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "First" : {"type" : "boolean"},
+          "Age" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+          "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"},
+          "DeviceTypeExclude" : {"type" : "boolean"},
+          "DeviceType"   : {"$ref":"#/definitions/device_type_array"},
+          "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+          "UniqueDeviceId" : {"$ref":"#/definitions/text_filter"},
+          "Quantity" : {"$ref":"#/definitions/numeric_range"},
+          "DeviceSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+         }
+      }
+    },
+    "device_type_array":{
+      "id":"device_type_array",
+      "required":["DeviceType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "disease_status_array":{
+      "id":"disease_status_array",
+      "required":["DiseaseStatus"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "dose_era_criteria":{
+      "id":"dose_era_criteria",
+      "title":"Add Dose Era",
+      "required":["DoseEra"],
+      "additionalProperties": false,
+      "type":"object",
+      "properties":{
+        "DoseEra":{"$ref":"#/definitions/dose_era_property"}
+      }
+    },
+    "dose_era_property":{
+      "id":"dose_era_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+          "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "First" : {"type" : "boolean"},
+          "AgeAtStart" : {"$ref":"#/definitions/numeric_range"},
+          "AgeAtEnd" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "EraStartDate" : {"$ref":"#/definitions/date_range"},
+          "EraEndDate" : {"$ref":"#/definitions/date_range"},
+          "Unit"   : {"$ref":"#/definitions/unit_array"},
+          "EraLength" : {"$ref":"#/definitions/numeric_range"},
+          "DoseValue" : {"$ref":"#/definitions/numeric_range"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "dose_unit_array":{
+      "id":"dose_unit_array",
+      "required":["DoseUnit"],
+      "type":"array",
+      "items":{
+        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "drug_era_criteria":{
+      "id":"drug_era_criteria",
+      "title":"Add Drug Era",
+      "required":["DrugEra"],
+      "additionalProperties": false,
+      "type":"object",
+      "properties":{
+        "DrugEra":{"$ref":"#/definitions/drug_era_property"}
+      }
+    },
+    "drug_era_property":{
+      "id":"drug_era_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+          "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "First" : {"type" : "boolean"},
+          "AgeAtStart" : {"$ref":"#/definitions/numeric_range"},
+          "AgeAtEnd" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "EraStartDate" : {"$ref":"#/definitions/date_range"},
+          "EraEndDate" : {"$ref":"#/definitions/date_range"},
+          "EraLength" : {"$ref":"#/definitions/numeric_range"},
+          "OccurrenceCount" : {"$ref":"#/definitions/numeric_range"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "drug_exposure_criteria":{
+      "id":"drug_exposure_criteria",
+      "title":"Add Drug Exposure",
+      "required":["DrugExposure"],
+      "additionalProperties": false,
+      "type":"object",
+      "properties":{
+        "DrugExposure":{"$ref":"#/definitions/drug_exposure_property"}
+      }
+    },
+    "drug_exposure_property":{
+      "id":"drug_exposure_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+          "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "First" : {"type" : "boolean"},
+          "Age" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+          "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"},
+          "DrugTypeExclude" : {"type" : "boolean"},
+          "DrugType"   : {"$ref":"#/definitions/drug_type_array"},
+          "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+          "StopReason" : {"$ref":"#/definitions/text_filter"},
+          "Refills" : {"$ref":"#/definitions/numeric_range"},
+          "Quantity" : {"$ref":"#/definitions/numeric_range"},
+          "DaysSupply" : {"$ref":"#/definitions/numeric_range"},
+          "RouteConcept"   : {"$ref":"#/definitions/route_concept_array"},
+          "EffectiveDrugDose" : {"$ref":"#/definitions/numeric_range"},
+          "DoseUnit"   : {"$ref":"#/definitions/dose_unit_array"},
+          "LotNumber" : {"$ref":"#/definitions/text_filter"},
+          "DrugSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "drug_type_array":{
+      "id":"drug_type_array",
+      "required":["DrugType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "end_strategy_type":{
+      "id":"end_strategy_type",
+      "anyOf":[
+        {"title":"end of continuous observation ","additionalProperties": false,"schema": {"type":"object"}},
+        {"title":"a fixed duration relative to initial event ","additionalProperties": false,"$ref":"#/definitions/date_offset_strategy"},
+        {"title":"end of a continuous drug exposure ","additionalProperties": false,"$ref":"#/definitions/custom_era_strategy"}
+      ]
+    },
+    "event_limit_options":{
+      "id":"event_limit_options",
+      "type":"string",
+      "required":true,
+      "default":"First",
+      "enum":["All","First","Last"]
+    },
+    "gender_array":{
+      "id":"gender_array",
+      "required":["Gender"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "groups_list_and":{
+      "id":"groups_list_and",
+      "type": "array",
+      "items": {
+        "type":"object",
+        "additionalProperties": false,
+          "$ref":"#/definitions/correlated_criteria_range"
+        }
+    },
+    "groups_list_or":{
+      "id":"groups_list_or",
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type":"object",
+        "additionalProperties": false,
+          "$ref":"#/definitions/correlated_criteria_range"
+        }
+    },
+    "location_region_criteria":{
+      "id":"location_region_criteria",
+      "title":"Add Location Region",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["LocationRegion"],
+      "properties":{
+          "LocationRegion":{"$ref":"#/definitions/location_region_property"}
+      }
+    },
+    "location_region_property":{
+      "id":"location_region_property",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+          "properties":{
+          "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+          "StartDate" : {"$ref":"#/definitions/date_range"},
+          "EndDate" : {"$ref":"#/definitions/date_range"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+         }
+      }
+    },
+    "measurement_criteria":{
+      "id":"measurement_criteria",
+      "title":"Add Measurement",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["Measurement"],
+      "properties":{
+        "Measurement":{"$ref":"#/definitions/measurement_property"}
+      }
+    },
+    "measurement_property":{
+      "id":"measurement_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "MeasurementTypeExclude" : {"type" : "boolean"},
+        "MeasurementType"   : {"$ref":"#/definitions/measurement_type_array"},
+        "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+        "Operator"   : {"$ref":"#/definitions/operator_array"},
+        "ValueAsNumber" : {"$ref":"#/definitions/numeric_range"},
+        "ValueAsConcept"   : {"$ref":"#/definitions/value_as_concept_array"},
+        "Unit"   : {"$ref":"#/definitions/unit_array"},
+        "Abnormal" : {"type" : "boolean"},
+        "RangeLow" : {"$ref":"#/definitions/numeric_range"},
+        "RangeHigh" : {"$ref":"#/definitions/numeric_range"},
+        "RangeLowRatio" : {"$ref":"#/definitions/numeric_range"},
+        "RangeHighRatio" : {"$ref":"#/definitions/numeric_range"},
+        "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+        "MeasurementSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+        "CorrelatedCriteria":{
+            "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "measurement_type_array":{
+      "id":"measurement_type_array",
+      "required":["MeasurementType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "modifier_array":{
+      "id":"modifier_array",
+      "required":["Modifier"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "numeric_range":{
+      "id":"numeric_range",
+      "type":"object",
+      "required": ["Op","Value"],
+      "default":{"Op":"gt","Value":0},
+      "patternProperties": {
+          "^Op$": { "type": "string" },
+          "^Value$": { "type": "integer" },
+          "^Extent$": { "type": "integer" }
+        },
+      "additionalProperties": false,
+      "oneOf": [
+                  { "title":"Less Than","$ref": "#/definitions/card_less_than"},
+                  { "title":"Less or Equal To","$ref": "#/definitions/card_less_or_equal_to"},
+                  { "title":"Equal To","$ref": "#/definitions/card_equal_to"},
+                  { "title":"Greater Than","$ref": "#/definitions/card_greater_than"},
+                  { "title":"Greater or Equal To","$ref": "#/definitions/card_greater_or_equal_to"},
+                  { "title":"Between","$ref": "#/definitions/card_between_num"},
+                  { "title":"Not Between","$ref": "#/definitions/card_not_between_num"}
+              ]
+    },
+    "observation_criteria":{
+      "id":"observation_criteria",
+      "title":"Add Observation",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["Observation"],
+      "properties":{
+        "Observation":{"$ref":"#/definitions/observation_property"}
+      }
+    },
+    "observation_period_criteria":{
+      "id":"observation_period_criteria",
+      "title":"Add Observation Period",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["ObservationPeriod"],
+      "properties":{
+        "ObservationPeriod":{"$ref":"#/definitions/observation_period_property"}
+      }
+    },
+    "observation_period_property":{
+      "id":"observation_period_property",
+      "type":"object",
+      "additionalProperties": false,
+      "defaultProperties":[],
+      "properties": {
+        "First" : {"type" : "boolean"},
+        "AgeAtStart" : {"$ref":"#/definitions/numeric_range"},
+        "UserDefinedPeriod" : {"$ref":"#/definitions/date_period"},
+        "AgeAtEnd" : {"$ref":"#/definitions/numeric_range"},
+        "PeriodStartDate" : {"$ref":"#/definitions/date_range"},
+        "PeriodEndDate" : {"$ref":"#/definitions/date_range"},
+        "PeriodType"   : {"$ref":"#/definitions/period_type_array"},
+        "PeriodLength" : {"$ref":"#/definitions/numeric_range"},
+        "CorrelatedCriteria":{
+            "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "observation_property":{
+      "id":"observation_property",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "ObservationTypeExclude" : {"type" : "boolean"},
+        "ObservationType"   : {"$ref":"#/definitions/observation_type_array"},
+        "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+        "ValueAsNumber" : {"$ref":"#/definitions/numeric_range"},
+        "ValueAsString" : {"$ref":"#/definitions/text_filter"},
+        "ValueAsConcept"   : {"$ref":"#/definitions/value_as_concept_array"},
+        "Qualifier"   : {"$ref":"#/definitions/qualifier_array"},
+        "Unit"   : {"$ref":"#/definitions/unit_array"},
+        "ObservationSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+        "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+        "CorrelatedCriteria":{
+            "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "observation_type_array":{
+      "id":"observation_type_array",
+      "required":["ObservationType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "observation_window":{
+      "id":"observation_window",
+      "type": "object",
+      "required":["PriorDays","PostDays"],
+      "additionalProperties":false,
+      "properties": {
+        "PriorDays": {
+          "type": "integer",
+          "default": 0
+        },
+        "PostDays": {
+          "type": "integer",
+          "default": 0
+        }
+      }
+    },
+    "occurrence_count_options":{
+      "id":"occurrence_count_options",
+      "type":"number",
+      "enum": [0,1,2,3,4,5,6,7,8,9,10],
+      "default":1,
+      "minimum":0,
+      "maximum":10
+    },
+    "occurrence_type_options":{
+      "id":"occurrence_type_options",
+      "type":"integer",
+      "enum":[0,1,2],
+      "default":"2",
+      "options":{
+        "enum_titles":["exactly","at most","at least"]
+      }
+    },
+    "occurrence":{
+      "id":"occurrence",
+      "type":"object",
+      "required":["Type","Count","IsDistinct"],
+      "properties":{
+        "Type":{"$ref":"#/definitions/occurrence_type_options"},
+        "Count":{"$ref":"#/definitions/occurrence_count_options"},
+        "IsDistinct":{
+            "type": "boolean",
+            "default":false
+        }
+      }
+    },
+    "operator_array":{
+      "id":"operator_array",
+      "required":["Operator"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "ord_after":{
+      "id":"ord_after",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"type": "string", "enum": [ "gt" ]},
+        "Value":{"format":"date","type": "string"}
+      }
+    },
+    "whitout_extent_before":{
+      "id":"whitout_extent_before",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "lt" ]},
+        "Value":{"format":"date","type": "string"}
+      }
+    },
+    "ord_between":{
+      "id":"ord_between",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
+        "Value":{"format":"date","type": "string"},
+        "Extent":{"format":"date","type": "string"}
+      }
+    },
+    "ord_not_between":{
+      "id":"ord_not_between",
+      "required":["Value","Op","Extent"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
+        "Value":{"format":"date","type": "string"},
+        "Extent":{"format":"date","type": "string"}
+      }
+    },
+    "ord_on_or_after":{
+      "id":"ord_on_or_after",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "gte" ]},
+        "Value":{"format":"date","type": "string"}
+      }
+    },
+    "ord_on_or_before":{
+      "id":"ord_on_or_before",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "lte" ]},
+        "Value":{"format":"date","type": "string"}
+      }
+    },
+    "ord_on":{
+      "id":"ord_on",
+      "required":["Value","Op"],
+      "properties":{
+        "Op":{"readOnly":"true","type": "string", "enum": [ "eq" ]},
+        "Value":{"format":"date","type": "string"}
+      }
+    },
+    "payer_plan_period_criteria":{
+      "id":"payer_plan_period_criteria",
+      "title":"Add Payer Plan Period",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["PayerPlanPeriod"],
+      "properties":{
+        "PayerPlanPeriod":{"$ref":"#/definitions/payer_plan_period_property"}
+      }
+    },
+    "payer_plan_period_property":{
+      "id":"payer_plan_period_property",
+      "type":"object",
+      "additionalProperties": false,
+      "defaultProperties":[],
+      "properties": {
+          "First" : {"type" : "boolean"},
+          "AgeAtStart" : {"$ref":"#/definitions/numeric_range"},
+          "AgeAtEnd" : {"$ref":"#/definitions/numeric_range"},
+          "PeriodLength" : {"$ref":"#/definitions/numeric_range"},
+          "Gender"   : {"$ref":"#/definitions/gender_array"},
+          "UserDefinedPeriod" : {"$ref":"#/definitions/date_period"},
+          "PeriodStartDate" : {"$ref":"#/definitions/date_range"},
+          "PeriodEndDate" : {"$ref":"#/definitions/date_range"},
+          "PayerConcept"   : {"$ref":"#/definitions/codeset_id_type"},
+          "PlanConcept"   : {"$ref":"#/definitions/codeset_id_type"},
+          "SponsorConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "StopReasonConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "PayerSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "PlanSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "SponsorSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "StopReasonSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+          "CorrelatedCriteria":{
+              "$ref":"#/definitions/correlated_criteria_range"
+            }
+          }
+    },
+    "period_type_array":{
+      "id":"period_type_array",
+      "required":["PeriodType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "place_of_service_array":{
+      "id":"place_of_service_array",
+      "required":["PlaceOfService"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "procedure_occurrence_criteria":{
+      "id":"procedure_occurrence_criteria",
+      "title":"Add Procedure Occurrence",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["ProcedureOccurrence"],
+      "properties":{
+        "ProcedureOccurrence":{"$ref":"#/definitions/procedure_occurrence_property"}
+      }
+    },
+    "procedure_occurrence_property":{
+      "id":"procedure_occurrence_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "ProcedureTypeExclude" : {"type" : "boolean"},
+        "ProcedureType"   : {"$ref":"#/definitions/procedure_type_array"},
+        "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+        "Modifier"   : {"$ref":"#/definitions/modifier_array"},
+        "Quantity" : {"$ref":"#/definitions/numeric_range"},
+        "ProcedureSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+        "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+        "CorrelatedCriteria":{
+         "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "procedure_type_array":{
+      "id":"procedure_type_array",
+      "required":["ProcedureType"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "provider_speciality_array":{
+      "id":"provider_speciality_array",
+      "required":["ProviderSpeciality"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "qty_all":{
+      "id":"qty_all",
+      "type":"object",
+      "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+      "additionalProperties":false,
+      "properties":{
+        "Type":{
+          "readOnly":"true",
+          "type": "string",
+          "enum": [ "ALL" ]
+        },
+        "CriteriaList":{"$ref":"#/definitions/criteria_list_type"},
+        "DemographicCriteriaList":{
+          "type":"array",
+          "$ref":"#/definitions/demographic_criteria_list"
+        },
+        "Groups":{"$ref":"#/definitions/groups_list_and"}
+      }
+    },
+    "qty_any":{
+      "id":"qty_any",
+      "type":"object",
+      "required":["Type","CriteriaList","DemographicCriteriaList","Groups"],
+      "additionalProperties":false,
+      "properties":{
+        "Type":{
+          "readOnly":"true",
+          "type": "string",
+          "enum": [ "ANY" ]
+        },
+        "CriteriaList":{"$ref":"#/definitions/criteria_list_type"},
+        "DemographicCriteriaList":{
+          "type":"array",
+          "$ref":"#/definitions/demographic_criteria_list"
+        },
+        "Groups":{"$ref":"#/definitions/groups_list_or"}
+      }
+    },
+    "qty_at_least":{
+      "id":"qty_at_least",
+      "type":"object",
+      "required":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+      "additionalProperties":false,
+      "properties":{
+        "Type":{
+          "readOnly":"true",
+          "type": "string",
+          "enum": [ "AT_LEAST" ]
+        },
+        "Count":{"type": "integer"},
+        "CriteriaList":{"$ref":"#/definitions/criteria_list_type"},
+        "DemographicCriteriaList":{
+          "type":"array",
+          "$ref":"#/definitions/demographic_criteria_list"
+        },
+        "Groups":{"$ref":"#/definitions/groups_list_or"}
+      }
+    },
+    "qty_at_most":{
+      "id":"qty_at_most",
+      "type":"object",
+      "required":["Type","Count","CriteriaList","DemographicCriteriaList","Groups"],
+      "additionalProperties":false,
+      "properties":{
+        "Type":{
+          "readOnly":"true",
+          "type": "string",
+          "enum": [ "AT_MOST" ]
+        },
+        "Count":{"type": "integer"},
+        "CriteriaList":{"$ref":"#/definitions/criteria_list_type"},
+        "DemographicCriteriaList":{
+          "type":"array",
+          "$ref":"#/definitions/demographic_criteria_list"
+        },
+        "Groups":{"$ref":"#/definitions/groups_list_or"}
+      }
+    },
+    "qualifier_array":{
+      "id":"qualifier_array",
+      "required":["Qualifier"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "route_concept_array":{
+      "id":"route_concept_array",
+      "required":["RouteConcept"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "rules":{
+      "id":"rules",
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["name","description","expression"],
+        "properties":{
+        "name":{"type":"string"},
+        "description":{"type":"string"},
+        "expression":{"$ref":"#/definitions/correlated_criteria_range"}
+        }
+      }
+    },
+    "specimen_criteria":{
+      "id":"specimen_criteria",
+      "title":"Add Specimen",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["Specimen"],
+      "properties":{
+        "Specimen":{"$ref":"#/definitions/specimen_property"}
+      }
+    },
+    "specimen_property":{
+      "id":"specimen_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties":{
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "SpecimenTypeExclude" : {"type" : "boolean"},
+        "SpecimenType"   : {"$ref":"#/definitions/specimen_type_array"},
+        "Quantity" : {"$ref":"#/definitions/numeric_range"},
+        "Unit"   : {"$ref":"#/definitions/unit_array"},
+        "AnatomicSite"   : {"$ref":"#/definitions/anatomic_site_array"},
+        "DiseaseStatus"   : {"$ref":"#/definitions/disease_status_array"},
+        "SourceId" : {"$ref":"#/definitions/text_filter"},
+        "CorrelatedCriteria":{
+          "$ref":"#/definitions/correlated_criteria_range"
+          }
+      }
+    },
+    "specimen_type_array":{
+      "id":"specimen_type_array",
+      "required":["SpecimenType"],
+      "type":"array",
+      "items":{
+        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "text_filter":{
+      "id":"text_filter",
+      "type":"object",
+      "required":["Text","Op"],
+      "properties":{
+        "Op":{"$ref":"#/definitions/text_operation_options"},
+        "Text":{
+            "type": "string"
+        }
+      }
+    },
+    "text_operation_options":{
+      "id":"text_operation_options",
+      "type":"string",
+      "default": "contains",
+      "enum":["startsWith","contains","endsWith","!startsWith","!contains","!endsWith"]
+    },
+    "unit_array":{
+      "id":"unit_array",
+      "required":["Unit"],
+      "type":"array",
+      "items":{
+      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "value_as_concept_array":{
+      "id":"value_as_concept_array",
+      "required":["ValueAsConcept"],
+      "type":"array",
+      "items":{
+        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "visit_occurrence_criteria":{
+      "id":"visit_occurrence_criteria",
+      "title":"Add Visit ",
+      "type":"object",
+      "additionalProperties": false,
+      "required":["VisitOccurrence"],
+      "properties":{
+        "VisitOccurrence":{"$ref":"#/definitions/visit_occurrence_property"}
+      }
+    },
+    "visit_occurrence_property":{
+      "id":"visit_occurrence_property",
+      "additionalProperties": false,
+      "required":["CodesetId"],
+      "defaultProperties":["CodesetId"],
+      "properties" : {
+        "CodesetId":{"$ref":"#/definitions/codeset_id_type"},
+        "First" : {"type" : "boolean"},
+        "Age" : {"$ref":"#/definitions/numeric_range"},
+        "Gender"   : {"$ref":"#/definitions/gender_array"},
+        "OccurrenceStartDate" : {"$ref":"#/definitions/date_range"},
+        "OccurrenceEndDate" : {"$ref":"#/definitions/date_range"},
+        "VisitTypeExclude" : {"type" : "boolean"},
+        "VisitType"   : {"$ref":"#/definitions/visit_type_array"},
+        "VisitLength" : {"$ref":"#/definitions/numeric_range"},
+        "VisitSourceConcept":{"$ref":"#/definitions/codeset_id_type"},
+        "ProviderSpecialty"   : {"$ref":"#/definitions/provider_speciality_array"},
+        "PlaceOfService" : {"$ref":"#/definitions/place_of_service_array"},
+        "PlaceOfServiceLocation":{"$ref":"#/definitions/codeset_id_type"},
+        "CorrelatedCriteria":{
+          "$ref":"#/definitions/correlated_criteria_range"
+        }
+      }
+    },
+    "visit_type_array":{
+      "id":"visit_type_array",
+      "required":["VisitType"],
+      "type":"array",
+      "items":{
+        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      }
+    },
+    "window_coeff_options":{
+      "id":"window_coeff_options",
+      "type":"integer",
+      "required":true,
+      "enum":[-1,1]
+    },
+    "window_day_options":{
+      "id":"window_day_options",
+      "type":"string",
+      "required":true,
+      "enum":["", "0", "1", "7", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"]
+    },
+    "window_limit":{
+      "id":"window_limit",
+      "type":"object",
+      "required":["UseEventEnd","Start","UseIndextEnd","End"],
+      "properties":{
+        "UseEventEnd":{
+          "type":"boolean",
+          "enum":[false,true]
+        },
+        "Start":{
+          "type":"object",
+          "required":["Days","Coeff"],
+          "properties": {
+            "Days":{"$ref":"#/definitions/window_day_options"},
+            "Coeff":{"default":-1,"$ref":"#/definitions/window_coeff_options"}
+          }
+        },
+        "End":{
+          "required":["Days","Coeff"],
+          "properties":{
+            "Days":{"$ref":"#/definitions/window_day_options"},
+            "Coeff":{"default":1,"$ref":"#/definitions/window_coeff_options"}
+          }
+        },
+        "UseIndextEnd":{
+          "type":"boolean",
+          "enum":[true,false]
+        }
+      }
+    }
+  }
+}
