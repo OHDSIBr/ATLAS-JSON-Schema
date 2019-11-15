@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/atlas_cohort_definition.json",
+  "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/atlas_cohort_definition.json",
   "title": "Atlas Cohort Definition",
   "type": "object",
   "format": "categories",
@@ -85,6 +85,7 @@
       }
     },
     "QualifiedLimit": {
+      "title":"Qualified Limit",
       "type": "object",
       "properties":{
         "Type": {"$ref":"event_limit_options.json"}
@@ -116,6 +117,7 @@
       "properties":{
         "CollapseType": {
         "type":"string",
+        "readOnly":true,
         "enum":["ERA"],
         "options": {"hidden": true}
         },

@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/numeric_range.json",
+    "id":"https://raw.githubusercontent.com/OHDSIBr/ATLAS-JSON-Schema/2.7.4/multi/numeric_range.json",
     "type":"object",
     "format":"grid-strict",
     "required": ["Op","Value"],
@@ -26,7 +26,7 @@
                 { "title":"Equal To","$ref": "card_equal_to.json"},
                 { "title":"Greater Than","$ref": "card_greater_than.json"},
                 { "title":"Greater or Equal To","$ref": "card_greater_or_equal_to.json"},
-                { "title":"Between","$ref": "ord_between_num.json"},
-                { "title":"Not Between","$ref": "ord_not_between_num.json"}
+                { "title":"Between","$ref": "card_between_num.json"},
+                { "title":"Not Between","$ref": "card_not_between_num.json"}
             ]
 }
