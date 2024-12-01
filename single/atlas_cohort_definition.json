@@ -85,7 +85,7 @@
     "EndStrategy":{
         "title":"Cohort Exit - Event Persistence",
         "type":"object",
-        "required":true,
+        "options": {"required": true},
         "$ref":"#/definitions/end_strategy_type"
     },
     "CensoringCriteria": {
@@ -94,7 +94,7 @@
     },
     "CensorWindow": {
       "title":"Cohort Eras: Censoring",
-      "required":true,
+      "options": {"required": true},
       "defaultProperties":["StartDate","EndDate"],
       "$ref":"#/definitions/censoring_period"
     },
@@ -105,14 +105,14 @@
       "$schema": "http://json-schema.org/draft-04/schema#",
       "id":"anatomic_site_array",
       "items":{  
-      "title":"Add Anatomic Site code: ","aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "title":"Add Anatomic Site code: ","additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "card_between_num":{
       "id":"card_between_num",
       "required":["Value","Op","Extent"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "bt" ]},
         "Value":{"type": "integer","default":0},
         "Extent":{"type": "integer","default":0}
       }
@@ -121,7 +121,7 @@
       "id":"card_equal_to",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "eq" ]},
+        "Op":{"title":" ","readOnly":true,"type": "string", "enum": [ "eq" ]},
         "Value":{"title":"value:","type": "integer","default":0}
       }
     },
@@ -129,7 +129,7 @@
       "id":"card_greater_or_equal_to",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gte" ]},
+        "Op":{"title":" ","readOnly":true,"type": "string", "enum": [ "gte" ]},
         "Value":{"title":"value:","type": "integer","default":0}
       }
     },
@@ -137,7 +137,7 @@
       "id":"card_greater_than",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "gt" ]},
+        "Op":{"title":" ","readOnly":true,"type": "string", "enum": [ "gt" ]},
         "Value":{"title":"value:","type": "integer","default":0}
       }
     },
@@ -145,7 +145,7 @@
       "id":"card_less_or_equal_to",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "lte" ]},
+        "Op":{"title":" ","readOnly":true,"type": "string", "enum": [ "lte" ]},
         "Value":{"title":"value:","type": "integer","default":0}
       }
     },
@@ -153,7 +153,7 @@
       "id":"card_less_than",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"title":" ","readOnly":"true","type": "string", "enum": [ "lt" ]},
+        "Op":{"title":" ","readOnly":true,"type": "string", "enum": [ "lt" ]},
         "Value":{"title":"value:","type": "integer"}
       }
     },
@@ -161,7 +161,7 @@
       "id":"card_not_between_num",
       "required":["Value","Op","Extent"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "!bt" ]},
         "Value":{"type": "integer","default":0},
         "Extent":{"type": "integer","default":0}
       }
@@ -358,7 +358,7 @@
       "required":["ConditionType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "correlated_criteria_list_type":{
@@ -517,8 +517,8 @@
         }
       }
     },
-    "data_range":{
-      "id":"data_range",
+    "date_range":{
+      "id":"date_range",
       "type":"object",
       "required": ["Op","Value"],
       "patternProperties": {
@@ -579,7 +579,7 @@
       "required":["DeathType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },    
     "demographic_criteria_list":{
@@ -640,7 +640,7 @@
       "required":["DeviceType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "disease_status_array":{
@@ -648,7 +648,7 @@
       "required":["DiseaseStatus"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "dose_era_criteria":{
@@ -687,7 +687,7 @@
       "required":["DoseUnit"],
       "type":"array",
       "items":{
-        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+        "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "drug_era_criteria":{
@@ -765,7 +765,7 @@
       "required":["DrugType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "end_strategy_type":{
@@ -779,7 +779,7 @@
     "event_limit_options":{
       "id":"event_limit_options",
       "type":"string",
-      "required":true,
+      "options":{"required":true},
       "default":"First",
       "enum":["All","First","Last"]
     },
@@ -788,7 +788,7 @@
       "required":["Gender"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "groups_list_and":{
@@ -880,7 +880,7 @@
       "required":["MeasurementType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "modifier_array":{
@@ -888,7 +888,7 @@
       "required":["Modifier"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "numeric_range":{
@@ -983,7 +983,7 @@
       "required":["ObservationType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "observation_window":{
@@ -1037,7 +1037,7 @@
       "required":["Operator"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "ord_after":{
@@ -1048,11 +1048,11 @@
         "Value":{"format":"date","type": "string"}
       }
     },
-    "whitout_extent_before":{
-      "id":"whitout_extent_before",
+    "ord_before":{
+      "id":"ord_before",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "lt" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "lt" ]},
         "Value":{"format":"date","type": "string"}
       }
     },
@@ -1060,7 +1060,7 @@
       "id":"ord_between",
       "required":["Value","Op","Extent"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "bt" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "bt" ]},
         "Value":{"format":"date","type": "string"},
         "Extent":{"format":"date","type": "string"}
       }
@@ -1069,7 +1069,7 @@
       "id":"ord_not_between",
       "required":["Value","Op","Extent"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "!bt" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "!bt" ]},
         "Value":{"format":"date","type": "string"},
         "Extent":{"format":"date","type": "string"}
       }
@@ -1078,7 +1078,7 @@
       "id":"ord_on_or_after",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "gte" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "gte" ]},
         "Value":{"format":"date","type": "string"}
       }
     },
@@ -1086,7 +1086,7 @@
       "id":"ord_on_or_before",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "lte" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "lte" ]},
         "Value":{"format":"date","type": "string"}
       }
     },
@@ -1094,7 +1094,7 @@
       "id":"ord_on",
       "required":["Value","Op"],
       "properties":{
-        "Op":{"readOnly":"true","type": "string", "enum": [ "eq" ]},
+        "Op":{"readOnly":true,"type": "string", "enum": [ "eq" ]},
         "Value":{"format":"date","type": "string"}
       }
     },
@@ -1140,7 +1140,7 @@
       "required":["PeriodType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "place_of_service_array":{
@@ -1148,7 +1148,7 @@
       "required":["PlaceOfService"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "procedure_occurrence_criteria":{
@@ -1189,7 +1189,7 @@
       "required":["ProcedureType"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "provider_speciality_array":{
@@ -1197,7 +1197,7 @@
       "required":["ProviderSpeciality"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "qty_all":{
@@ -1207,7 +1207,7 @@
       "additionalProperties":false,
       "properties":{
         "Type":{
-          "readOnly":"true",
+          "readOnly": true,
           "type": "string",
           "enum": [ "ALL" ]
         },
@@ -1226,7 +1226,7 @@
       "additionalProperties":false,
       "properties":{
         "Type":{
-          "readOnly":"true",
+          "readOnly": true,
           "type": "string",
           "enum": [ "ANY" ]
         },
@@ -1245,7 +1245,7 @@
       "additionalProperties":false,
       "properties":{
         "Type":{
-          "readOnly":"true",
+          "readOnly": true,
           "type": "string",
           "enum": [ "AT_LEAST" ]
         },
@@ -1265,7 +1265,7 @@
       "additionalProperties":false,
       "properties":{
         "Type":{
-          "readOnly":"true",
+          "readOnly": true,
           "type": "string",
           "enum": [ "AT_MOST" ]
         },
@@ -1283,7 +1283,7 @@
       "required":["Qualifier"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "route_concept_array":{
@@ -1291,7 +1291,7 @@
       "required":["RouteConcept"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "rules":{
@@ -1345,7 +1345,7 @@
       "required":["SpecimenType"],
       "type":"array",
       "items":{
-        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+        "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "text_filter":{
@@ -1370,7 +1370,7 @@
       "required":["Unit"],
       "type":"array",
       "items":{
-      "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+      "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "value_as_concept_array":{
@@ -1378,7 +1378,7 @@
       "required":["ValueAsConcept"],
       "type":"array",
       "items":{
-        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+        "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "visit_occurrence_criteria":{
@@ -1420,25 +1420,25 @@
       "required":["VisitType"],
       "type":"array",
       "items":{
-        "aditionalProperties":"false","$ref":"#/definitions/concept_core"
+        "additionalProperties":false,"$ref":"#/definitions/concept_core"
       }
     },
     "window_coeff_options":{
       "id":"window_coeff_options",
       "type":"integer",
-      "required":true,
+      "options": {"required":true},
       "enum":[-1,1]
     },
     "window_day_options":{
       "id":"window_day_options",
       "type":"string",
-      "required":true,
+      "options": {"required":true},
       "enum":["", "0", "1", "7", "14", "21", "30", "60", "90", "120", "180", "365", "548", "730", "1095"]
     },
     "window_limit":{
       "id":"window_limit",
       "type":"object",
-      "required":["UseEventEnd","Start","UseIndextEnd","End"],
+      "required":["UseEventEnd","Start","UseIndexEnd","End"],
       "properties":{
         "UseEventEnd":{
           "type":"boolean",
@@ -1459,7 +1459,7 @@
             "Coeff":{"default":1,"$ref":"#/definitions/window_coeff_options"}
           }
         },
-        "UseIndextEnd":{
+        "UseIndexEnd":{
           "type":"boolean",
           "enum":[true,false]
         }
