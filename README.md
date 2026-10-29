@@ -52,7 +52,7 @@ A cohort example of [ACE inhibitor](http://atlas-demo.ohdsi.org/#/cohortdefiniti
 ### Testing validation
 To test validation can be used an online validator like:
 
-- http://play-json-schema-validator.herokuapp.com/
+- https://jsonviewertool.com/json-schema-validator
 
 On the JSON Schema side, paste:
 
